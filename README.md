@@ -151,7 +151,10 @@ every forgery gives F; every theorem file equals its record in `kernel/expected/
 soundness theorems read back exactly as stated, with no hypothesis and no tag but `DISK_THM`. If `HOLDIR` points to
 HOL4 built at the pin, the toolchain step is skipped. HOL4's own build takes 15–20 minutes on 8 cores. The replay
 writes everything under `_replay/`. A GitHub Actions workflow (`.github/workflows/replay.yml`) runs it on every push.
-`--cakeml` was run on a machine with 8 vCPU and 64 GB, from cert-machine's layout. In this repository's layout it has not been run yet; in CI it runs by hand or weekly.
+`--cakeml` runs in CI by hand or weekly. CakeML job green on CI (82 min): run
+[45687039594](https://github.com/carlostoledo1891/delta3-hol4/actions/runs/45687039594), 25 Nov 2026, at commit
+`a0973f6`, on GitHub's runner from nothing — CakeML's basis, the translation, the compile and the 52 binary runs. It
+was first run on a machine with 8 vCPU and 64 GB, from cert-machine's layout.
 
 **Data and the exporter.** The kernel and the binary read the `.d3` files in `data/`, and those bytes are checked
 against `SHA256SUMS`. They were exported from the certificate JSONs in `certs/` by `export/export.js` and
