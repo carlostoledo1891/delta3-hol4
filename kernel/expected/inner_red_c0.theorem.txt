@@ -1,0 +1,4 @@
+⊢ inner_check inner_red_c0_ab inner_red_c0_cut inner_red_c0_full
+    inner_red_c0_grid 1 5 inner_red_c0_lam inner_red_c0_nu 0 1
+    inner_red_c0_nn inner_red_c0_cc 2476408049007329280 73 inner_red_c0_ds
+    inner_red_c0_L ⇔ F

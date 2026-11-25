@@ -1,0 +1,9 @@
+# hol4/delta3/cakeml/hol/prog — the frozen checker translated to CakeML, the main, its
+# whole-program specification, and the S-expression of the program for the cake binary.
+# Built inside a CakeML v3671 checkout (examples/delta3_cakeml/prog), so that CakeML's
+# holproject.toml resolves basis/, translator/, characteristic/ and misc/.
+INCLUDES = ../checker $(CAKEMLDIR)/unverified/sexpr-bootstrap
+
+ifdef POLY
+HOLHEAP = $(CAKEMLDIR)/basis/basis-heap
+endif

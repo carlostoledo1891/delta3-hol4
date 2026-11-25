@@ -1,0 +1,30 @@
+{
+ "isolation": "mac",
+ "mode": "prove",
+ "base_before": "3222d0c21b01a5c95478bdb3de1523e313ecf5cc0c4908f97f304099b536672a",
+ "build": {
+  "rc": 0,
+  "wall_s": 14.73,
+  "cpu_s": 13.25,
+  "max_rss_kb": 368384,
+  "peak_group_rss_kb": 368384,
+  "killed": null
+ },
+ "holmake_tail": "Scanning <cert-machine>/hol4/delta3/cleanroom/judge/harness/base\nScanned 2 directories\nBuilding 1 theory file\nStarting work on attemptTheory\nattemptTheory                                              (12s)   [1/1]     OK\n",
+ "judge_run": {
+  "rc": 0,
+  "wall_s": 9.07,
+  "cpu_s": 10.8,
+  "max_rss_kb": 429920,
+  "peak_group_rss_kb": 429920,
+  "killed": null
+ },
+ "judge": {
+  "EXACT": "true",
+  "HYPS": "0",
+  "ORACLES": "DISK_THM",
+  "AXIOMS": "",
+  "THEORY_AXIOMS": "0"
+ },
+ "base_after": "3222d0c21b01a5c95478bdb3de1523e313ecf5cc0c4908f97f304099b536672a"
+}

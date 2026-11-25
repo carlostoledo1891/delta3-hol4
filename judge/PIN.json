@@ -1,0 +1,15 @@
+{
+ "note": "THE pin of the toolchain, in one place. Consumers: attempt.py (HOLDIR defaults to hol_dir_mac; local runs refuse another commit), pod/client.py (a pod at another commit is refused), pod/runner.py (HOL at hol_dir_pod), pod/setup-pod.sh + push.sh (the pod is built at these tags), build-base.sh and regen-key.sh (HOL at hol_dir_mac unless HOLDIR is set; any other commit refused). To move the package: change this file, build HOL at it (Mac and pod), rebuild the bases, re-run the controls, freeze again.",
+ "hol_tag": "trindemossen-2-v10",
+ "hol_commit": "9783a49979c94c401ff8c0e51b2eefae7ea95ae3",
+ "poly_tag": "v5.9.2",
+ "poly_commit": "4557554077078decce4ce5f90da00a713cfc32e4",
+ "previous": {
+  "hol_tag": "trindemossen-2-v9",
+  "hol_commit": "652d1f0aad5cd537ed1e5d470ba3444e70ba470e",
+  "until_utc": "2026-11-25T02:15:00Z",
+  "why_moved": "the released CakeML compiler binary was built with trindemossen-2-v10; the CakeML agent found aligning on -v9 not cheap and the frozen checker's -v10 kernel verdicts equal to the -v9 ones on all 52 inputs (hol4/delta3/cakeml/WORKLOG.md); the operator's decision: move everything to -v10"
+ },
+ "hol_dir_mac": "~/Projects/hol4-toolchain/HOL-v10",
+ "hol_dir_pod": "/root/work/HOL"
+}

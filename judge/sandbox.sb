@@ -1,0 +1,48 @@
+;; sandbox.sb — the macOS Seatbelt profile every judged attempt runs under (judgelib.py, mode "mac").
+;; hol4/delta3/harness · 2026-11-24 (added after the freeze of 22:03:28Z; see JUDGE.json).
+;;
+;;   sandbox-exec -f sandbox.sb -D BUILD=<the attempt's fresh build directory> -D HOLDIR=<HOL> -D POLY=<poly prefix> <cmd>
+;;
+;; Reads stay open: the proving agents can read the disk with their own tools anyway, so a read
+;; denial here would blind nothing (AUDIT-BLINDING.md says how blinding is checked instead).
+;; Every allowance below was found by experiment (WORKLOG.md, 2026-11-24 23:15-23:40 UTC).
+(version 1)
+(allow default)
+
+;; 1. No network of any kind (TCP/UDP/unix-domain connect, bind, listen).
+(deny network*)
+
+;; 2. No file writes except:
+;;    - the attempt's own build directory (Holmake writes .hol/, the theory files, the logs; the
+;;      judge writes judge.out there);
+;;    - Poly/ML's temporary files. Poly/ML's OS.FileSys.tmpName ignores TMPDIR on macOS and
+;;      creates /var/tmp/MLTEMPxxxxxx (libpolyml: "/var/tmp/" ^ "MLTEMPXXXXXX"); HOL's tautLib
+;;      (via HolSatLib) writes its DIMACS problem and the solver's answer next to it with a suffix.
+;;      Without this rule TAUT_PROVE fails while loading intLib. Nothing trusted reads these files.
+;;    - /dev/null.
+(deny file-write*)
+(allow file-write*
+  (subpath (param "BUILD"))
+  (regex #"^/private/var/tmp/MLTEMP[A-Za-z0-9]+(\.[A-Za-z0-9]+)*$")
+  (literal "/dev/null"))
+
+;; 3. Only the toolchain may be executed (so no shell, no curl, no open, no launchctl, no osascript):
+;;    HOL's own executables (hol, Holmake, the heaps Holmake builds in BUILD, HolSat's minisat), the
+;;    Poly/ML installation, and nice.
+(deny process-exec*)
+(allow process-exec*
+  (subpath (param "HOLDIR"))
+  (subpath (param "POLY"))
+  (subpath (param "BUILD"))
+  (literal "/usr/bin/nice"))
+
+;; 4. Signals only inside this sandbox (an attempt cannot kill the watcher, another attempt or
+;;    anything else of the same user).
+(deny signal)
+(allow signal (target same-sandbox))
+
+;; 5. No Mach service lookups and no POSIX shared memory: closes the XPC routes to services that
+;;    run OUTSIDE this sandbox (LaunchServices "open", launchd jobs, the pasteboard, ...).
+;;    HOL and Poly/ML were found not to need any (the controls pass with this on).
+(deny mach-lookup)
+(deny ipc-posix-shm*)

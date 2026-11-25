@@ -1,0 +1,6 @@
+⊢ slab_check slabC_red_negmu_ab slabC_red_negmu_cut slabC_red_negmu_full
+    slabC_red_negmu_grid 2 5 9 20 121069422 440674361311 89417096
+    420991270241538035 50963377393403307885655938
+    185520059131196374275938963885 slabC_red_negmu_theta
+    slabC_red_negmu_forms 306282245123206917810360594773058309529482035200 90
+    slabC_red_negmu_ds slabC_red_negmu_L ⇔ F

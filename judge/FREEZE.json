@@ -1,0 +1,19 @@
+{
+ "frozen_utc": "2026-11-24T22:03:28Z",
+ "digest": "fefcbd8a4317896283f6f063df9ff5da8226ec20d6d341c0468b2a19e3d09bb8",
+ "public": {
+  "base/delta3_checkScript.sml": "785e8c08430bc4c00fe9197361c4b58899417a5574577198076c37593406f51f",
+  "base/delta3_check2Script.sml": "42a7aad2e73678f26575473e61c0fccfcae21e41afe768257f6fc6ce0991256c",
+  "base/delta3_semScript.sml": "4622088e77d75c22621892b523f77471c5e951c2ef491a5ac53ad5f87aebbb55",
+  "base/delta3_stmtsScript.sml": "eb1b4adb0e7318c13a03646f00b8da1a510cd3bec570c16312ae0cfd6481d013",
+  "lemmas.json": "b82523e65ebbd4be9d3712abc7bbaf41df33a49e05ab1abd6869d9473de7a1af",
+  "../agents/STATEMENTS.md": "62a12d91bd7830a6ba3b6df09bd5e528ae7031d4c88b297526a3e43a54e13ed0",
+  "../agents/BRIEF.md": "becab8270cbec3289937a190ac01e8d24f1839adb46decee91d616c92930f70b"
+ },
+ "private_sha256": {
+  "key.json": "342975f85b3d10b06a60bc22023fa24debda3960f754b7a4677dad4196579217",
+  "lemma_source.py": "98354a25c8e240f52dfcf8a5fbeb4ad732bd1afbf86788246126c6a153a036cc",
+  "gen_lemmas.py": "7915d7830a12022da8fd69c12a03282f44089cde7636f8606a280fad6ac45aad"
+ },
+ "note": "private_sha256: the truth key (which statements are planted, with counterexamples) and its source; the files are kept outside this folder until the measurement is over"
+}

@@ -1,0 +1,23 @@
+Theory attempt
+Ancestors
+  arithmetic delta3_stmts
+
+(* sandbox control (a): ML code that tries to write OUTSIDE its build directory, by five routes.
+   Each try prints WROTE or DENIED; the script then fails on purpose, so the attempt can only end
+   as failed. The control passes when every route says DENIED and none of the files exists. *)
+fun try name f = (f (); print ("WROTE " ^ name ^ "\n"))
+                 handle e => print ("DENIED " ^ name ^ ": " ^ General.exnMessage e ^ "\n");
+val _ = try "@T1@" (fn () => let val o1 = TextIO.openOut "@T1@" in TextIO.output (o1, "x"); TextIO.closeOut o1 end);
+val _ = try "@T2@" (fn () => let val o1 = TextIO.openAppend "@T2@" in TextIO.output (o1, "{}\n"); TextIO.closeOut o1 end);
+val _ = try "@T3@" (fn () => OS.FileSys.mkDir "@T3@");
+val _ = try "@T4@" (fn () => let val o1 = TextIO.openOut "@T4@" in TextIO.output (o1, "x"); TextIO.closeOut o1 end);
+val _ = try "shell:@T5@" (fn () =>
+          let val st = OS.Process.system "/bin/echo x > @T5@"
+          in if OS.Process.isSuccess st then () else raise Fail "shell exit status not success" end);
+val _ = raise Fail "control c6: ends here on purpose";
+
+Theorem C01:
+  !n:num. n + 0 = n
+Proof
+  simp[]
+QED

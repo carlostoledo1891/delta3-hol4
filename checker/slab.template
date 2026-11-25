@@ -1,0 +1,75 @@
+(*
+  delta3_@NAME@ — one slab certificate, loaded as data and decided in the kernel.
+  GENERATED from slab.template by gen.sh; data file: @NAME@.d3 (written by export.js).
+  hol4/delta3 · cert-machine · Day 1 (2026-11-24)
+
+  The theorem saved here is     |- slab_check <data> = @EXPECT@
+  and nothing more: the function returns that value on this data.
+
+  [no_sig_docs] (Manual/Description/modern-syntax.smd): without it Holmake pretty-prints
+  the data constants into .hol/docs/<theory>.html — 1.9 GB and about 70 s for the
+  smallest slab, measured on the first run of this file.
+*)
+Theory delta3_@NAME@[no_sig_docs]
+Ancestors
+  delta3_check
+Libs
+  cv_transLib delta3DataLib
+
+val thy = "@NAME@";
+val expect = "@EXPECT@";
+
+(* (a) the data: file -> ML strings -> HOL4 terms -> constants *)
+val dat = timed thy "a1_read_file" read_dat (thy ^ ".d3");
+val sec = section dat;
+
+val (grid_tm, theta_tm, forms_tm, ab_tm, cut_tm, full_tm, ds_tm, L_tm) =
+  timed thy "a2_build_terms" (fn () =>
+    (nums_tm (hd (sec "grid")),
+     rows_tm "in" (sec "theta"),
+     rows_tm "nnnniiiin" (sec "forms"),
+     rows_tm "inin" (sec "ab"),
+     rows_tm "nninn" (sec "cut"),
+     rows_tm "nni" (sec "full"),
+     nums_tm (hd (sec "ds")),
+     intss_tm (sec "L"))) ();
+
+val names = ["grid", "theta", "forms", "ab", "cut", "full", "ds", "L"];
+val tms = [grid_tm, theta_tm, forms_tm, ab_tm, cut_tm, full_tm, ds_tm, L_tm];
+
+val defs = timed thy "a3_define_constants" (fn () =>
+  ListPair.map (fn (nm, tm) => define (thy ^ "_" ^ nm) tm) (names, tms)) ();
+
+(* (a) continued: each constant as a cv literal (cv_trans_deep_embedding) *)
+val _ = timed thy "a4_deep_embedding" (fn () =>
+  List.app (cv_trans_deep_embedding from_conv) defs) ();
+
+(* (b) the check, run by cv_compute through cv_eval *)
+val [grid_c, theta_c, forms_c, ab_c, cut_c, full_c, ds_c, L_c] =
+  map (lhs o concl) defs;
+val [lp, lq, hp, hq, Bp, Bq, ep, eq, cp, cq] =
+  ListPair.map (fn (k, s) => if k = #"i" then int_tm s else num_tm s)
+               (String.explode "ininininin", hd (sec "scal"));
+val [D_s, T_s] = hd (sec "wit");
+
+val goal_tm =
+  “slab_check ^ab_c ^cut_c ^full_c ^grid_c ^lp ^lq ^hp ^hq ^Bp ^Bq ^ep ^eq ^cp ^cq
+              ^theta_c ^forms_c ^(num_tm D_s) ^(num_tm T_s) ^ds_c ^L_c”;
+
+val th = timed thy "b_cv_eval_check" cv_eval goal_tm;
+
+val got = term_to_string (rhs (concl th));
+val (oracles, axioms) = Tag.dest_tag (Thm.tag th);
+val _ = print ("D3RESULT\t" ^ thy ^ "\t" ^ got ^ "\texpected " ^ expect ^
+               "\toracles [" ^ String.concatWith "," oracles ^ "]" ^
+               "\taxioms [" ^ String.concatWith "," axioms ^ "]" ^
+               "\thyps " ^ Int.toString (length (hyp th)) ^ "\n");
+val _ = if got = expect andalso null (hyp th) then ()
+        else raise Fail ("delta3_" ^ thy ^ ": slab_check returned " ^ got ^
+                         ", expected " ^ expect);
+
+(* the statement, as the kernel holds it, written beside the data for the record *)
+val _ = let val out = TextIO.openOut (thy ^ ".theorem.txt") in
+          TextIO.output (out, thm_to_string th ^ "\n"); TextIO.closeOut out end;
+
+Theorem @NAME@_check = th

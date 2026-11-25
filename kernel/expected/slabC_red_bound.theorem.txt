@@ -1,0 +1,6 @@
+⊢ slab_check slabC_red_bound_ab slabC_red_bound_cut slabC_red_bound_full
+    slabC_red_bound_grid 2 5 9 20 561743783311 440674361311000 89417096
+    420991270241538035 236483436524599682161594901885
+    185520059131196374275938963885000 slabC_red_bound_theta
+    slabC_red_bound_forms 1531411225616034589051802973865291547647410176000
+    90 slabC_red_bound_ds slabC_red_bound_L ⇔ F

@@ -1,0 +1,50 @@
+{
+ "note": "delta3-hol4 pins (staged 2026-11-25 by the non-blind builder). Every file: SHA256SUMS.",
+ "hol_tag": "trindemossen-2-v10",
+ "hol_commit": "9783a49979c94c401ff8c0e51b2eefae7ea95ae3",
+ "poly_tag": "v5.9.2",
+ "poly_commit": "4557554077078decce4ce5f90da00a713cfc32e4",
+ "poly_version": "5.9.2",
+ "cakeml_toolchain": {
+  "polyml": {
+   "version": "5.9.2",
+   "tag": "v5.9.2",
+   "commit": "4557554077078decce4ce5f90da00a713cfc32e4",
+   "repository": "https://github.com/polyml/polyml",
+   "how": "./configure --with-gmp; make; make compiler; make install"
+  },
+  "hol4": {
+   "tag": "trindemossen-2-v10",
+   "commit": "9783a49979c94c401ff8c0e51b2eefae7ea95ae3",
+   "repository": "https://github.com/HOL-Theorem-Prover/HOL",
+   "how": "poly < tools/smart-configure.sml; bin/build",
+   "note": "NOT the Day-1 pin trindemossen-2-v9 (652d1f0aad5cd537ed1e5d470ba3444e70ba470e): no CakeML release names -v9; release v3671 names -v10, the next tag. The only CakeML revision documented with -v9 is 239aca184c1321d6f5fcfb8b923b91af20558d2f on the unreleased branch version-string (developers/changes-since-release.md at 67faf9d8174fdcb6523a5f238a8e188b3d18a295), which has no released compiler binary."
+  },
+  "cakeml": {
+   "release": "v3671",
+   "commit": "16bdb1aaaab64a6ac66504ad2e9f0ed6146060e9",
+   "repository": "https://github.com/CakeML/cakeml",
+   "releaseNotesSay": "Corresponding HOL commit: trindemossen-2-v10 (9783a49979c94c401ff8c0e51b2eefae7ea95ae3)",
+   "built": "basis/ (Holmake: semantics, translator, characteristic, basis, basis-heap); not the compiler proofs, not the bootstrap"
+  },
+  "cakeCompilerBinary": {
+   "asset": "https://github.com/CakeML/cakeml/releases/download/v3671/cake-x64-64.tar.gz",
+   "sha256": "e3edd113497bf7fce443e69c70f09c3df1942849251c86ce8e44e6327ade0d3d",
+   "sha256Source": "GitHub's asset digest (gh api repos/CakeML/cakeml/releases/tags/v3671); the download matched it",
+   "cakeVersionOutput": "CakeML: 16bdb1aaaab64a6ac66504ad2e9f0ed6146060e9 / HOL4: 9783a49979c94c401ff8c0e51b2eefae7ea95ae3 / PolyML: Poly/ML 5.9 Release (Fri Nov 06 06:41:32 2026 UTC)",
+   "how": "make cake  (gcc -O2 cake.S basis_ffi.c -lm, the release's own Makefile)"
+  },
+  "kernelSideForComparison": {
+   "hol4": "trindemossen-2-v9 652d1f0aad5cd537ed1e5d470ba3444e70ba470e (the Day-1 pin)",
+   "polyml": "5.9.2"
+  }
+ },
+ "certificates": {
+  "inner-r20-g24_4_8.json": "2edd22852d329458752a9e6d1495b3412fb3db2ec68fad591f9730fe99467c60",
+  "slab-1_5-3_10-g24_4_8.json": "f8c569e4a47bc6d958f2515485c355a016609a5f27178962a71ff749dce80c99",
+  "slab-2_5-9_20-g8_4_0.json": "bc23d33cb0db48a29e7bde319ef2e20dcd56d18b8ab498c06fec52624537d2c3",
+  "slab-3_10-4_10-g24_4_8.json": "d9b37a69505a3e642b479b2bd57b655d5fa33a716cf3ffdcd6b3869af524fbce",
+  "slab-9_20-1_2-g8_4_0.json": "b3f8615a9f1009624d87852859526056321eccc7b5fc5d57af502403ff5803d2"
+ },
+ "exporter_node": "v18.19.1 (the version Day 1 used; export.js is untrusted and optional)"
+}

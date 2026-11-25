@@ -1,0 +1,2 @@
+⊢ inner_check r27_ab r27_cut r27_full r27_grid 2 5 r27_lam r27_nu 0 1 r27_nn
+    r27_cc 2476408049007329280 73 r27_ds r27_L ⇔ F

@@ -1,0 +1,46 @@
+(*
+  delta3_@NAME@ — the inner certificate, loaded as data and decided in the kernel.
+  GENERATED from inner.template by gen_inner.sh; data file: @NAME@.d3 (export_inner.js).
+  The theorem saved here is  |- inner_check <data> = @EXPECT@  and nothing more.
+*)
+Theory delta3_@NAME@[no_sig_docs]
+Ancestors
+  delta3_check delta3_check2
+Libs
+  cv_transLib delta3DataLib
+
+val thy = "@NAME@";
+val expect = "@EXPECT@";
+val dat = timed thy "a1_read_file" read_dat (thy ^ ".d3");
+val sec = section dat;
+val names = ["grid", "lam", "nu", "nn", "cc", "ab", "cut", "full", "ds", "L"];
+val tms = timed thy "a2_build_terms" (fn () =>
+  [nums_tm (hd (sec "grid")), rows_tm "nnin" (sec "lam"), rows_tm "in" (sec "nu"),
+   rows_tm "nnin" (sec "nn"), rows_tm "in" (sec "cc"), rows_tm "inin" (sec "ab"),
+   rows_tm "nninn" (sec "cut"), rows_tm "nni" (sec "full"), nums_tm (hd (sec "ds")),
+   intss_tm (sec "L")]) ();
+val defs = timed thy "a3_define_constants" (fn () =>
+  ListPair.map (fn (nm, tm) => define (thy ^ "_" ^ nm) tm) (names, tms)) ();
+val _ = timed thy "a4_deep_embedding" (fn () =>
+  List.app (cv_trans_deep_embedding from_conv) defs) ();
+val [grid_c, lam_c, nu_c, nn_c, cc_c, ab_c, cut_c, full_c, ds_c, L_c] = map (lhs o concl) defs;
+val [rp, rq, kp, kq] =
+  ListPair.map (fn (k, s) => if k = #"i" then int_tm s else num_tm s)
+               (String.explode "inin", hd (sec "scal"));
+val [D_s, T_s] = hd (sec "wit");
+val goal_tm =
+  “inner_check ^ab_c ^cut_c ^full_c ^grid_c ^rp ^rq ^lam_c ^nu_c ^kp ^kq ^nn_c ^cc_c
+               ^(num_tm D_s) ^(num_tm T_s) ^ds_c ^L_c”;
+val th = timed thy "b_cv_eval_check" cv_eval goal_tm;
+val got = term_to_string (rhs (concl th));
+val (oracles, axioms) = Tag.dest_tag (Thm.tag th);
+val _ = print ("D3RESULT\t" ^ thy ^ "\t" ^ got ^ "\texpected " ^ expect ^
+               "\toracles [" ^ String.concatWith "," oracles ^ "]" ^
+               "\taxioms [" ^ String.concatWith "," axioms ^ "]" ^
+               "\thyps " ^ Int.toString (length (hyp th)) ^ "\n");
+val _ = if got = expect andalso null (hyp th) then ()
+        else raise Fail ("delta3_" ^ thy ^ ": inner_check returned " ^ got ^ ", expected " ^ expect);
+val _ = let val out = TextIO.openOut (thy ^ ".theorem.txt") in
+          TextIO.output (out, thm_to_string th ^ "\n"); TextIO.closeOut out end;
+
+Theorem @NAME@_check = th

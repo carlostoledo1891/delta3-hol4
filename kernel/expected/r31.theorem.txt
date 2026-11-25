@@ -1,0 +1,2 @@
+⊢ inner_check r31_ab r31_cut r31_full r31_grid 1 5 r31_lam r31_nu 0 1 r31_nn
+    r31_cc 2476408049007329280 73 r31_ds r31_L ⇔ F

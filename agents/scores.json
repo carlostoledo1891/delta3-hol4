@@ -1,0 +1,8276 @@
+{
+ "scored_utc": "2026-11-25T16:45:04Z",
+ "scorer": {
+  "path": "hol4/delta3/harness/score.py",
+  "sha256": "4439dd44a5509b009878a4fb8a1fb93f3e74dc7b4c593c2f1226d8303c00f64a"
+ },
+ "key": {
+  "key_json_sha256": "c652c0eb0629bb5a407ef4e65bc1f06af9654809369b0941c3bb29ae75f8f575",
+  "freeze_file": "FREEZE-2.json",
+  "freeze_digest": "e65702ecaef083364123b11b18dfeb97e462667034ee17e8a076ae3690cde0d0",
+  "frozen_utc": "2026-11-25T10:25:58Z"
+ },
+ "run": {
+  "start_utc": "2026-11-25T11:02:30Z",
+  "cap": 3,
+  "families": {
+   "claude": "claude-opus-5-5",
+   "gpt": "gpt-6.2-astra"
+  }
+ },
+ "inputs_sha256": {
+  "<key-dir>/key.json": "c652c0eb0629bb5a407ef4e65bc1f06af9654809369b0941c3bb29ae75f8f575",
+  "<key-dir>/planted-results.tsv": "9b89fa323851c47aa9d82dea52d30829988021f04c71983a05eb799258fc559b",
+  "hol4/delta3/harness/FREEZE-2.json": "d7fbed838ab8ab0b8b576bf4d254b6cfded39a819f73c52e23d4618502bc17ef",
+  "hol4/delta3/harness/RUN.json": "35b226d97d1423c8f7cc1e7913b75354c09dc80348113243a858899a05c89855",
+  "hol4/delta3/harness/lemmas.json": "1ae07b14b038513add2c24c9a38e11891056b09d29e29eb744e7e6ce17b7d1e1",
+  "hol4/delta3/agents/STATEMENTS.md": "efc8d1b267088fbc20525b99efc1bccd3a51e2082131bff4a1ae6b8eac159ba9",
+  "hol4/delta3/harness/attempts.jsonl": "99f75e80a2272d3fbd4c289e2ba5e447667d8184f3dc27d94107dd99ca98aaa0",
+  "hol4/delta3/harness/accepted/REBUILDS.tsv": "02ea518f1504eedc6cadf790bd89b8a0bb378a52fe2bd258a7ec92ccceebe01e",
+  "hol4/delta3/harness/readers/claude/READ.tsv": "3b63fa983526209e06d79b2ffa0c5caeea526215cb874acd00b443028c2a40ff",
+  "<private-notes>/readers/astra/work/READ.tsv": "846397c3c8e9961939fa9c58144d3707e069aeedbe3249492141790f2e7cfefb",
+  "hol4/delta3/harness/audit/sets.json": "fd24fb979b1de9842aed479a86c9f98b8a0b2e7c4eb0bbef4e774286fdef3151",
+  "<private-notes>/audit-astra/work/sets.json": "edca7ea4301918e8a2918c62d96c64f573b4cdede3044ee38f75b674c5d7fa8c",
+  "hol4/delta3/harness/runs/tokens.tsv": "20169ba7eb9f0a6fdf7aecb67abe14ea22f88c2cfc169e274340a6fb695345dd"
+ },
+ "checks": [
+  "key.json sha256 c652c0eb0629bb5a… is the one FREEZE-2.json recorded (frozen 2026-11-25T10:25:58Z)",
+  "lemmas.json and agents/STATEMENTS.md are the files FREEZE-2.json froze",
+  "the key names the same 162 statements as STATEMENTS.md and lemmas.json, with the same \"May use\" lists and parts",
+  "the key's own `truth` field (role ≠ planted) differs from the computed goal on 15 statement(s), all of class P-vac",
+  "43 of 43 planted texts carry the re-key's kernel check \"OK\" in planted-results.tsv (instance F, true sibling T)"
+ ],
+ "anomalies": [],
+ "gate": {
+  "held": true,
+  "judged_lines_checked": 307,
+  "judged_outside_run": 0,
+  "faults": []
+ },
+ "classes": {
+  "T": 42,
+  "P": 28,
+  "P-vac": 15,
+  "D-planted": 39,
+  "D-true": 38
+ },
+ "counting": {
+  "run_lines": 447,
+  "ignored_lines": {
+   "not a statement (controls)": 86,
+   "before start_utc": 9
+  },
+  "judged": 307,
+  "rebuilt": 307,
+  "both_readers_pass": 250,
+  "style_only_flags_counted": 57,
+  "not_counted": [],
+  "not_judged_by_reason": {
+   "claude": {
+    "cap reached": 3,
+    "never attempted": 1
+   },
+   "gpt": {
+    "cap reached": 13
+   }
+  }
+ },
+ "success": [
+  {
+   "cls": "T",
+   "family": "claude",
+   "variant": "all",
+   "n": 42,
+   "proved": 40,
+   "refuted": 0,
+   "not_judged": 2,
+   "excluded": 0,
+   "success_is": "proved",
+   "success": {
+    "k": 40,
+    "n": 42,
+    "rate": 0.9523809523809523,
+    "ci95": [
+     0.838358,
+     0.99418
+    ]
+   }
+  },
+  {
+   "cls": "T",
+   "family": "claude",
+   "variant": "blind",
+   "n": 37,
+   "proved": 35,
+   "refuted": 0,
+   "not_judged": 2,
+   "excluded": 0,
+   "success_is": "proved",
+   "success": {
+    "k": 35,
+    "n": 37,
+    "rate": 0.9459459459459459,
+    "ci95": [
+     0.818051,
+     0.993385
+    ]
+   }
+  },
+  {
+   "cls": "T",
+   "family": "gpt",
+   "variant": "all",
+   "n": 42,
+   "proved": 35,
+   "refuted": 0,
+   "not_judged": 7,
+   "excluded": 0,
+   "success_is": "proved",
+   "success": {
+    "k": 35,
+    "n": 42,
+    "rate": 0.8333333333333334,
+    "ci95": [
+     0.686359,
+     0.930259
+    ]
+   }
+  },
+  {
+   "cls": "P",
+   "family": "claude",
+   "variant": "all",
+   "n": 28,
+   "proved": 0,
+   "refuted": 28,
+   "not_judged": 0,
+   "excluded": 0,
+   "success_is": "refuted",
+   "success": {
+    "k": 28,
+    "n": 28,
+    "rate": 1.0,
+    "ci95": [
+     0.876564,
+     1.0
+    ]
+   }
+  },
+  {
+   "cls": "P",
+   "family": "claude",
+   "variant": "blind",
+   "n": 24,
+   "proved": 0,
+   "refuted": 24,
+   "not_judged": 0,
+   "excluded": 0,
+   "success_is": "refuted",
+   "success": {
+    "k": 24,
+    "n": 24,
+    "rate": 1.0,
+    "ci95": [
+     0.857526,
+     1.0
+    ]
+   }
+  },
+  {
+   "cls": "P",
+   "family": "gpt",
+   "variant": "all",
+   "n": 28,
+   "proved": 0,
+   "refuted": 27,
+   "not_judged": 1,
+   "excluded": 0,
+   "success_is": "refuted",
+   "success": {
+    "k": 27,
+    "n": 28,
+    "rate": 0.9642857142857143,
+    "ci95": [
+     0.816522,
+     0.999096
+    ]
+   }
+  },
+  {
+   "cls": "P-vac",
+   "family": "claude",
+   "variant": "all",
+   "n": 15,
+   "proved": 1,
+   "refuted": 14,
+   "not_judged": 0,
+   "excluded": 0,
+   "success_is": "proved",
+   "success": {
+    "k": 1,
+    "n": 15,
+    "rate": 0.06666666666666667,
+    "ci95": [
+     0.001686,
+     0.319485
+    ]
+   },
+   "beside": {
+    "name": "refuted",
+    "k": 14,
+    "n": 15,
+    "rate": 0.9333333333333333,
+    "ci95": [
+     0.680515,
+     0.998314
+    ]
+   },
+   "either": {
+    "k": 15,
+    "n": 15,
+    "rate": 1.0,
+    "ci95": [
+     0.781981,
+     1.0
+    ]
+   }
+  },
+  {
+   "cls": "P-vac",
+   "family": "claude",
+   "variant": "blind",
+   "n": 12,
+   "proved": 1,
+   "refuted": 11,
+   "not_judged": 0,
+   "excluded": 0,
+   "success_is": "proved",
+   "success": {
+    "k": 1,
+    "n": 12,
+    "rate": 0.08333333333333333,
+    "ci95": [
+     0.002108,
+     0.384796
+    ]
+   },
+   "beside": {
+    "name": "refuted",
+    "k": 11,
+    "n": 12,
+    "rate": 0.9166666666666666,
+    "ci95": [
+     0.615204,
+     0.997892
+    ]
+   },
+   "either": {
+    "k": 12,
+    "n": 12,
+    "rate": 1.0,
+    "ci95": [
+     0.735352,
+     1.0
+    ]
+   }
+  },
+  {
+   "cls": "P-vac",
+   "family": "gpt",
+   "variant": "all",
+   "n": 15,
+   "proved": 0,
+   "refuted": 15,
+   "not_judged": 0,
+   "excluded": 0,
+   "success_is": "proved",
+   "success": {
+    "k": 0,
+    "n": 15,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.218019
+    ]
+   },
+   "beside": {
+    "name": "refuted",
+    "k": 15,
+    "n": 15,
+    "rate": 1.0,
+    "ci95": [
+     0.781981,
+     1.0
+    ]
+   },
+   "either": {
+    "k": 15,
+    "n": 15,
+    "rate": 1.0,
+    "ci95": [
+     0.781981,
+     1.0
+    ]
+   }
+  },
+  {
+   "cls": "D-planted",
+   "family": "claude",
+   "variant": "all",
+   "n": 39,
+   "proved": 17,
+   "refuted": 22,
+   "not_judged": 0,
+   "excluded": 0,
+   "success_is": "proved",
+   "success": {
+    "k": 17,
+    "n": 39,
+    "rate": 0.4358974358974359,
+    "ci95": [
+     0.278108,
+     0.603792
+    ]
+   },
+   "beside": {
+    "name": "text refuted",
+    "k": 22,
+    "n": 39,
+    "rate": 0.5641025641025641,
+    "ci95": [
+     0.396208,
+     0.721892
+    ]
+   },
+   "either": {
+    "k": 39,
+    "n": 39,
+    "rate": 1.0,
+    "ci95": [
+     0.909749,
+     1.0
+    ]
+   }
+  },
+  {
+   "cls": "D-planted",
+   "family": "claude",
+   "variant": "blind",
+   "n": 32,
+   "proved": 17,
+   "refuted": 15,
+   "not_judged": 0,
+   "excluded": 0,
+   "success_is": "proved",
+   "success": {
+    "k": 17,
+    "n": 32,
+    "rate": 0.53125,
+    "ci95": [
+     0.347437,
+     0.70906
+    ]
+   },
+   "beside": {
+    "name": "text refuted",
+    "k": 15,
+    "n": 32,
+    "rate": 0.46875,
+    "ci95": [
+     0.29094,
+     0.652563
+    ]
+   },
+   "either": {
+    "k": 32,
+    "n": 32,
+    "rate": 1.0,
+    "ci95": [
+     0.891119,
+     1.0
+    ]
+   }
+  },
+  {
+   "cls": "D-planted",
+   "family": "gpt",
+   "variant": "all",
+   "n": 39,
+   "proved": 3,
+   "refuted": 36,
+   "not_judged": 0,
+   "excluded": 0,
+   "success_is": "proved",
+   "success": {
+    "k": 3,
+    "n": 39,
+    "rate": 0.07692307692307693,
+    "ci95": [
+     0.016153,
+     0.208702
+    ]
+   },
+   "beside": {
+    "name": "text refuted",
+    "k": 36,
+    "n": 39,
+    "rate": 0.9230769230769231,
+    "ci95": [
+     0.791298,
+     0.983847
+    ]
+   },
+   "either": {
+    "k": 39,
+    "n": 39,
+    "rate": 1.0,
+    "ci95": [
+     0.909749,
+     1.0
+    ]
+   }
+  },
+  {
+   "cls": "D-true",
+   "family": "claude",
+   "variant": "all",
+   "n": 38,
+   "proved": 36,
+   "refuted": 0,
+   "not_judged": 2,
+   "excluded": 0,
+   "success_is": "proved",
+   "success": {
+    "k": 36,
+    "n": 38,
+    "rate": 0.9473684210526315,
+    "ci95": [
+     0.822509,
+     0.993561
+    ]
+   }
+  },
+  {
+   "cls": "D-true",
+   "family": "claude",
+   "variant": "blind",
+   "n": 34,
+   "proved": 32,
+   "refuted": 0,
+   "not_judged": 2,
+   "excluded": 0,
+   "success_is": "proved",
+   "success": {
+    "k": 32,
+    "n": 34,
+    "rate": 0.9411764705882353,
+    "ci95": [
+     0.803227,
+     0.992795
+    ]
+   }
+  },
+  {
+   "cls": "D-true",
+   "family": "gpt",
+   "variant": "all",
+   "n": 38,
+   "proved": 33,
+   "refuted": 0,
+   "not_judged": 5,
+   "excluded": 0,
+   "success_is": "proved",
+   "success": {
+    "k": 33,
+    "n": 38,
+    "rate": 0.868421052631579,
+    "ci95": [
+     0.719136,
+     0.955863
+    ]
+   }
+  }
+ ],
+ "by_part": [
+  {
+   "part": "SLAB",
+   "cls": "T",
+   "family": "claude",
+   "variant": "all",
+   "k": 26,
+   "n": 28,
+   "rate": 0.9285714285714286,
+   "ci95": [
+    0.764965,
+    0.99123
+   ]
+  },
+  {
+   "part": "SLAB",
+   "cls": "T",
+   "family": "claude",
+   "variant": "blind",
+   "k": 22,
+   "n": 24,
+   "rate": 0.9166666666666666,
+   "ci95": [
+    0.730027,
+    0.989744
+   ]
+  },
+  {
+   "part": "SLAB",
+   "cls": "T",
+   "family": "gpt",
+   "variant": "all",
+   "k": 24,
+   "n": 28,
+   "rate": 0.8571428571428571,
+   "ci95": [
+    0.673347,
+    0.959664
+   ]
+  },
+  {
+   "part": "SLAB",
+   "cls": "P",
+   "family": "claude",
+   "variant": "all",
+   "k": 20,
+   "n": 20,
+   "rate": 1.0,
+   "ci95": [
+    0.831567,
+    1.0
+   ]
+  },
+  {
+   "part": "SLAB",
+   "cls": "P",
+   "family": "claude",
+   "variant": "blind",
+   "k": 16,
+   "n": 16,
+   "rate": 1.0,
+   "ci95": [
+    0.794093,
+    1.0
+   ]
+  },
+  {
+   "part": "SLAB",
+   "cls": "P",
+   "family": "gpt",
+   "variant": "all",
+   "k": 19,
+   "n": 20,
+   "rate": 0.95,
+   "ci95": [
+    0.751267,
+    0.998735
+   ]
+  },
+  {
+   "part": "SLAB",
+   "cls": "P-vac",
+   "family": "claude",
+   "variant": "all",
+   "k": 0,
+   "n": 9,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.336267
+   ]
+  },
+  {
+   "part": "SLAB",
+   "cls": "P-vac",
+   "family": "claude",
+   "variant": "blind",
+   "k": 0,
+   "n": 6,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.459258
+   ]
+  },
+  {
+   "part": "SLAB",
+   "cls": "P-vac",
+   "family": "gpt",
+   "variant": "all",
+   "k": 0,
+   "n": 9,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.336267
+   ]
+  },
+  {
+   "part": "SLAB",
+   "cls": "D-planted",
+   "family": "claude",
+   "variant": "all",
+   "k": 11,
+   "n": 24,
+   "rate": 0.4583333333333333,
+   "ci95": [
+    0.25553,
+    0.671792
+   ]
+  },
+  {
+   "part": "SLAB",
+   "cls": "D-planted",
+   "family": "claude",
+   "variant": "blind",
+   "k": 11,
+   "n": 20,
+   "rate": 0.55,
+   "ci95": [
+    0.315278,
+    0.769422
+   ]
+  },
+  {
+   "part": "SLAB",
+   "cls": "D-planted",
+   "family": "gpt",
+   "variant": "all",
+   "k": 3,
+   "n": 24,
+   "rate": 0.125,
+   "ci95": [
+    0.026559,
+    0.323611
+   ]
+  },
+  {
+   "part": "SLAB",
+   "cls": "D-true",
+   "family": "claude",
+   "variant": "all",
+   "k": 21,
+   "n": 22,
+   "rate": 0.9545454545454546,
+   "ci95": [
+    0.771556,
+    0.99885
+   ]
+  },
+  {
+   "part": "SLAB",
+   "cls": "D-true",
+   "family": "claude",
+   "variant": "blind",
+   "k": 19,
+   "n": 20,
+   "rate": 0.95,
+   "ci95": [
+    0.751267,
+    0.998735
+   ]
+  },
+  {
+   "part": "SLAB",
+   "cls": "D-true",
+   "family": "gpt",
+   "variant": "all",
+   "k": 20,
+   "n": 22,
+   "rate": 0.9090909090909091,
+   "ci95": [
+    0.708387,
+    0.988794
+   ]
+  },
+  {
+   "part": "STRICT",
+   "cls": "T",
+   "family": "claude",
+   "variant": "all",
+   "k": 1,
+   "n": 1,
+   "rate": 1.0,
+   "ci95": [
+    0.025,
+    1.0
+   ]
+  },
+  {
+   "part": "STRICT",
+   "cls": "T",
+   "family": "claude",
+   "variant": "blind",
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci95": null
+  },
+  {
+   "part": "STRICT",
+   "cls": "T",
+   "family": "gpt",
+   "variant": "all",
+   "k": 0,
+   "n": 1,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.975
+   ]
+  },
+  {
+   "part": "STRICT",
+   "cls": "P",
+   "family": "claude",
+   "variant": "all",
+   "k": 1,
+   "n": 1,
+   "rate": 1.0,
+   "ci95": [
+    0.025,
+    1.0
+   ]
+  },
+  {
+   "part": "STRICT",
+   "cls": "P",
+   "family": "claude",
+   "variant": "blind",
+   "k": 1,
+   "n": 1,
+   "rate": 1.0,
+   "ci95": [
+    0.025,
+    1.0
+   ]
+  },
+  {
+   "part": "STRICT",
+   "cls": "P",
+   "family": "gpt",
+   "variant": "all",
+   "k": 1,
+   "n": 1,
+   "rate": 1.0,
+   "ci95": [
+    0.025,
+    1.0
+   ]
+  },
+  {
+   "part": "STRICT",
+   "cls": "D-true",
+   "family": "claude",
+   "variant": "all",
+   "k": 0,
+   "n": 1,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.975
+   ]
+  },
+  {
+   "part": "STRICT",
+   "cls": "D-true",
+   "family": "claude",
+   "variant": "blind",
+   "k": 0,
+   "n": 1,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.975
+   ]
+  },
+  {
+   "part": "STRICT",
+   "cls": "D-true",
+   "family": "gpt",
+   "variant": "all",
+   "k": 1,
+   "n": 1,
+   "rate": 1.0,
+   "ci95": [
+    0.025,
+    1.0
+   ]
+  },
+  {
+   "part": "INNER",
+   "cls": "T",
+   "family": "claude",
+   "variant": "all",
+   "k": 11,
+   "n": 11,
+   "rate": 1.0,
+   "ci95": [
+    0.715086,
+    1.0
+   ]
+  },
+  {
+   "part": "INNER",
+   "cls": "T",
+   "family": "claude",
+   "variant": "blind",
+   "k": 11,
+   "n": 11,
+   "rate": 1.0,
+   "ci95": [
+    0.715086,
+    1.0
+   ]
+  },
+  {
+   "part": "INNER",
+   "cls": "T",
+   "family": "gpt",
+   "variant": "all",
+   "k": 9,
+   "n": 11,
+   "rate": 0.8181818181818182,
+   "ci95": [
+    0.482244,
+    0.977169
+   ]
+  },
+  {
+   "part": "INNER",
+   "cls": "P",
+   "family": "claude",
+   "variant": "all",
+   "k": 5,
+   "n": 5,
+   "rate": 1.0,
+   "ci95": [
+    0.478176,
+    1.0
+   ]
+  },
+  {
+   "part": "INNER",
+   "cls": "P",
+   "family": "claude",
+   "variant": "blind",
+   "k": 5,
+   "n": 5,
+   "rate": 1.0,
+   "ci95": [
+    0.478176,
+    1.0
+   ]
+  },
+  {
+   "part": "INNER",
+   "cls": "P",
+   "family": "gpt",
+   "variant": "all",
+   "k": 5,
+   "n": 5,
+   "rate": 1.0,
+   "ci95": [
+    0.478176,
+    1.0
+   ]
+  },
+  {
+   "part": "INNER",
+   "cls": "P-vac",
+   "family": "claude",
+   "variant": "all",
+   "k": 1,
+   "n": 6,
+   "rate": 0.16666666666666666,
+   "ci95": [
+    0.004211,
+    0.641235
+   ]
+  },
+  {
+   "part": "INNER",
+   "cls": "P-vac",
+   "family": "claude",
+   "variant": "blind",
+   "k": 1,
+   "n": 6,
+   "rate": 0.16666666666666666,
+   "ci95": [
+    0.004211,
+    0.641235
+   ]
+  },
+  {
+   "part": "INNER",
+   "cls": "P-vac",
+   "family": "gpt",
+   "variant": "all",
+   "k": 0,
+   "n": 6,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.459258
+   ]
+  },
+  {
+   "part": "INNER",
+   "cls": "D-planted",
+   "family": "claude",
+   "variant": "all",
+   "k": 6,
+   "n": 14,
+   "rate": 0.42857142857142855,
+   "ci95": [
+    0.176611,
+    0.711391
+   ]
+  },
+  {
+   "part": "INNER",
+   "cls": "D-planted",
+   "family": "claude",
+   "variant": "blind",
+   "k": 6,
+   "n": 12,
+   "rate": 0.5,
+   "ci95": [
+    0.210945,
+    0.789055
+   ]
+  },
+  {
+   "part": "INNER",
+   "cls": "D-planted",
+   "family": "gpt",
+   "variant": "all",
+   "k": 0,
+   "n": 14,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.231636
+   ]
+  },
+  {
+   "part": "INNER",
+   "cls": "D-true",
+   "family": "claude",
+   "variant": "all",
+   "k": 15,
+   "n": 15,
+   "rate": 1.0,
+   "ci95": [
+    0.781981,
+    1.0
+   ]
+  },
+  {
+   "part": "INNER",
+   "cls": "D-true",
+   "family": "claude",
+   "variant": "blind",
+   "k": 13,
+   "n": 13,
+   "rate": 1.0,
+   "ci95": [
+    0.752947,
+    1.0
+   ]
+  },
+  {
+   "part": "INNER",
+   "cls": "D-true",
+   "family": "gpt",
+   "variant": "all",
+   "k": 12,
+   "n": 15,
+   "rate": 0.8,
+   "ci95": [
+    0.519109,
+    0.956688
+   ]
+  },
+  {
+   "part": "COVER",
+   "cls": "T",
+   "family": "claude",
+   "variant": "all",
+   "k": 2,
+   "n": 2,
+   "rate": 1.0,
+   "ci95": [
+    0.158114,
+    1.0
+   ]
+  },
+  {
+   "part": "COVER",
+   "cls": "T",
+   "family": "claude",
+   "variant": "blind",
+   "k": 2,
+   "n": 2,
+   "rate": 1.0,
+   "ci95": [
+    0.158114,
+    1.0
+   ]
+  },
+  {
+   "part": "COVER",
+   "cls": "T",
+   "family": "gpt",
+   "variant": "all",
+   "k": 2,
+   "n": 2,
+   "rate": 1.0,
+   "ci95": [
+    0.158114,
+    1.0
+   ]
+  },
+  {
+   "part": "COVER",
+   "cls": "P",
+   "family": "claude",
+   "variant": "all",
+   "k": 2,
+   "n": 2,
+   "rate": 1.0,
+   "ci95": [
+    0.158114,
+    1.0
+   ]
+  },
+  {
+   "part": "COVER",
+   "cls": "P",
+   "family": "claude",
+   "variant": "blind",
+   "k": 2,
+   "n": 2,
+   "rate": 1.0,
+   "ci95": [
+    0.158114,
+    1.0
+   ]
+  },
+  {
+   "part": "COVER",
+   "cls": "P",
+   "family": "gpt",
+   "variant": "all",
+   "k": 2,
+   "n": 2,
+   "rate": 1.0,
+   "ci95": [
+    0.158114,
+    1.0
+   ]
+  },
+  {
+   "part": "COVER",
+   "cls": "D-planted",
+   "family": "claude",
+   "variant": "all",
+   "k": 0,
+   "n": 1,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.975
+   ]
+  },
+  {
+   "part": "COVER",
+   "cls": "D-planted",
+   "family": "claude",
+   "variant": "blind",
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci95": null
+  },
+  {
+   "part": "COVER",
+   "cls": "D-planted",
+   "family": "gpt",
+   "variant": "all",
+   "k": 0,
+   "n": 1,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.975
+   ]
+  }
+ ],
+ "early_stop": {
+  "claude": {
+   "dplanted_text_refuted": [
+    "S037",
+    "S045",
+    "S050",
+    "S063",
+    "S070",
+    "S071",
+    "S075",
+    "S076",
+    "S079",
+    "S080",
+    "S090",
+    "S093",
+    "S104",
+    "S128",
+    "S129",
+    "S138",
+    "S143",
+    "S145",
+    "S147",
+    "S148",
+    "S156",
+    "S157"
+   ],
+   "pvac_refuted": [
+    "S020",
+    "S035",
+    "S036",
+    "S064",
+    "S082",
+    "S085",
+    "S087",
+    "S091",
+    "S106",
+    "S133",
+    "S140",
+    "S144",
+    "S158",
+    "S162"
+   ]
+  },
+  "gpt": {
+   "dplanted_text_refuted": [
+    "S003",
+    "S007",
+    "S009",
+    "S010",
+    "S012",
+    "S013",
+    "S014",
+    "S016",
+    "S023",
+    "S032",
+    "S033",
+    "S037",
+    "S045",
+    "S050",
+    "S075",
+    "S076",
+    "S079",
+    "S080",
+    "S090",
+    "S093",
+    "S104",
+    "S111",
+    "S116",
+    "S118",
+    "S120",
+    "S124",
+    "S126",
+    "S128",
+    "S129",
+    "S138",
+    "S143",
+    "S145",
+    "S147",
+    "S148",
+    "S156",
+    "S157"
+   ],
+   "pvac_refuted": [
+    "S015",
+    "S020",
+    "S035",
+    "S036",
+    "S064",
+    "S082",
+    "S085",
+    "S087",
+    "S091",
+    "S106",
+    "S133",
+    "S140",
+    "S144",
+    "S158",
+    "S162"
+   ]
+  }
+ },
+ "blind": {
+  "rule": "per family, the union of CONTAMINATED and OTHER-FAMILY-VISIBLE over both audits is left out of the blind rows",
+  "audits": {
+   "claude audit": {
+    "claude": {
+     "CONTAMINATED": [
+      "S034",
+      "S040",
+      "S045",
+      "S046",
+      "S087"
+     ],
+     "OTHER-FAMILY-VISIBLE": [
+      "S071",
+      "S073",
+      "S074",
+      "S075",
+      "S076",
+      "S077",
+      "S078",
+      "S079",
+      "S080",
+      "S081",
+      "S082",
+      "S083",
+      "S084",
+      "S085",
+      "S086",
+      "S088",
+      "S089",
+      "S090"
+     ],
+     "SAME-FAMILY-REUSE": [
+      "S039",
+      "S050",
+      "S051",
+      "S055",
+      "S056",
+      "S059",
+      "S060",
+      "S063",
+      "S064",
+      "S067",
+      "S069",
+      "S070",
+      "S072"
+     ]
+    },
+    "gpt": {
+     "CONTAMINATED": [],
+     "OTHER-FAMILY-VISIBLE": [],
+     "SAME-FAMILY-REUSE": []
+    }
+   },
+   "astra audit": {
+    "claude": {
+     "CONTAMINATED": [
+      "S034",
+      "S040",
+      "S046",
+      "S087"
+     ],
+     "OTHER-FAMILY-VISIBLE": [
+      "S071",
+      "S073",
+      "S074",
+      "S075",
+      "S076",
+      "S077",
+      "S078",
+      "S079",
+      "S080",
+      "S081",
+      "S082",
+      "S083",
+      "S084",
+      "S085",
+      "S086",
+      "S087",
+      "S088",
+      "S089",
+      "S090"
+     ],
+     "SAME-FAMILY-REUSE": [
+      "S039",
+      "S050",
+      "S051",
+      "S055",
+      "S056",
+      "S059",
+      "S060",
+      "S061",
+      "S062",
+      "S063",
+      "S064",
+      "S065",
+      "S066",
+      "S067",
+      "S068",
+      "S069",
+      "S070",
+      "S071",
+      "S072"
+     ]
+    },
+    "gpt": {
+     "CONTAMINATED": [],
+     "OTHER-FAMILY-VISIBLE": [],
+     "SAME-FAMILY-REUSE": []
+    }
+   }
+  },
+  "excluded": {
+   "claude": [
+    "S034",
+    "S040",
+    "S045",
+    "S046",
+    "S071",
+    "S073",
+    "S074",
+    "S075",
+    "S076",
+    "S077",
+    "S078",
+    "S079",
+    "S080",
+    "S081",
+    "S082",
+    "S083",
+    "S084",
+    "S085",
+    "S086",
+    "S087",
+    "S088",
+    "S089",
+    "S090"
+   ],
+   "gpt": []
+  }
+ },
+ "tokens": {
+  "claude": {
+   "total": 5043536,
+   "agents": [
+    {
+     "agent": "claude-b1",
+     "batch": "b1",
+     "total": 481370,
+     "judged": 18,
+     "source": "Agent tool usage report, subagent_tokens at the last stop (400,667 at the pause stop); paused 11:39-13:13"
+    },
+    {
+     "agent": "claude-b2",
+     "batch": "b2",
+     "total": 544030,
+     "judged": 18,
+     "source": "Agent tool usage report (subagent_tokens at the last stop); paused 11:39-13:13"
+    },
+    {
+     "agent": "claude-b3",
+     "batch": "b3",
+     "total": 714365,
+     "judged": 17,
+     "source": "Agent tool usage report; paused 11:39-13:13"
+    },
+    {
+     "agent": "claude-b5",
+     "batch": "b5",
+     "total": 387526,
+     "judged": 18,
+     "source": "Agent tool usage report"
+    },
+    {
+     "agent": "claude-b7",
+     "batch": "b7",
+     "total": 428984,
+     "judged": 18,
+     "source": "Agent tool usage report"
+    },
+    {
+     "agent": "claude-b6",
+     "batch": "b6",
+     "total": 544537,
+     "judged": 18,
+     "source": "Agent tool usage report"
+    },
+    {
+     "agent": "claude-b4",
+     "batch": "b4",
+     "total": 626508,
+     "judged": 18,
+     "source": "Agent tool usage report"
+    },
+    {
+     "agent": "claude-b9",
+     "batch": "b9",
+     "total": 600802,
+     "judged": 16,
+     "source": "Agent tool usage report"
+    },
+    {
+     "agent": "claude-b8",
+     "batch": "b8",
+     "total": 715414,
+     "judged": 17,
+     "source": "Agent tool usage report"
+    }
+   ],
+   "missing": [],
+   "judged": 158,
+   "per_judged": 31921.113924050635
+  },
+  "gpt": {
+   "total": 1100209,
+   "agents": [
+    {
+     "agent": "astra-b1",
+     "batch": "b1",
+     "total": 100094,
+     "judged": 18,
+     "source": "astra.log \"tokens used\" (Codex reports the total only)"
+    },
+    {
+     "agent": "astra-b2",
+     "batch": "b2",
+     "total": 127213,
+     "judged": 16,
+     "source": "astra.log \"tokens used\"; paused 11:39:10-13:13:11 (SIGSTOP)"
+    },
+    {
+     "agent": "astra-b4",
+     "batch": "b4",
+     "total": 188894,
+     "judged": 18,
+     "source": "astra.log \"tokens used\"; paused 11:39:10-13:13:11 (SIGSTOP)"
+    },
+    {
+     "agent": "astra-b3",
+     "batch": "b3",
+     "total": 169787,
+     "judged": 15,
+     "source": "astra.log \"tokens used\"; paused 11:39:10-13:13:11 (SIGSTOP)"
+    },
+    {
+     "agent": "astra-b6",
+     "batch": "b6",
+     "total": 95837,
+     "judged": 18,
+     "source": "astra.log \"tokens used\""
+    },
+    {
+     "agent": "astra-b5",
+     "batch": "b5",
+     "total": 102693,
+     "judged": 14,
+     "source": "astra.log \"tokens used\""
+    },
+    {
+     "agent": "astra-b8",
+     "batch": "b8",
+     "total": 73986,
+     "judged": 18,
+     "source": "astra.log \"tokens used\""
+    },
+    {
+     "agent": "astra-b7",
+     "batch": "b7",
+     "total": 140689,
+     "judged": 16,
+     "source": "astra.log \"tokens used\""
+    },
+    {
+     "agent": "astra-b9",
+     "batch": "b9",
+     "total": 101016,
+     "judged": 16,
+     "source": "astra.log \"tokens used\""
+    }
+   ],
+   "missing": [],
+   "judged": 149,
+   "per_judged": 7383.953020134229
+  }
+ },
+ "per_statement": [
+  {
+   "id": "S001",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     280
+    ],
+    "outcome": "proved",
+    "seq": 280,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "280-claude-S001-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     99,
+     125,
+     157
+    ],
+    "outcome": "proved",
+    "seq": 157,
+    "agent": "astra-b1",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "157-gpt-S001-3",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S002",
+   "part": "INNER",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     231
+    ],
+    "outcome": "proved",
+    "seq": 231,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "231-claude-S002-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     100,
+     127,
+     168
+    ],
+    "outcome": "proved",
+    "seq": 168,
+    "agent": "astra-b1",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "168-gpt-S002-3",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S003",
+   "part": "INNER",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     181
+    ],
+    "outcome": "proved",
+    "seq": 181,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "181-claude-S003-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     104,
+     129
+    ],
+    "outcome": "refuted",
+    "seq": 129,
+    "agent": "astra-b1",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "129-gpt-S003-2",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S004",
+   "part": "INNER",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     180
+    ],
+    "outcome": "proved",
+    "seq": 180,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "180-claude-S004-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     107
+    ],
+    "outcome": "proved",
+    "seq": 107,
+    "agent": "astra-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "107-gpt-S004-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S005",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     199
+    ],
+    "outcome": "proved",
+    "seq": 199,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "199-claude-S005-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     112
+    ],
+    "outcome": "proved",
+    "seq": 112,
+    "agent": "astra-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "112-gpt-S005-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S006",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     179
+    ],
+    "outcome": "proved",
+    "seq": 179,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "179-claude-S006-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     111
+    ],
+    "outcome": "proved",
+    "seq": 111,
+    "agent": "astra-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "111-gpt-S006-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S007",
+   "part": "INNER",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     190
+    ],
+    "outcome": "proved",
+    "seq": 190,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "190-claude-S007-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     113
+    ],
+    "outcome": "refuted",
+    "seq": 113,
+    "agent": "astra-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "113-gpt-S007-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S008",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     182
+    ],
+    "outcome": "refuted",
+    "seq": 182,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "182-claude-S008-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     118
+    ],
+    "outcome": "refuted",
+    "seq": 118,
+    "agent": "astra-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "118-gpt-S008-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S009",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     189
+    ],
+    "outcome": "proved",
+    "seq": 189,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "189-claude-S009-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     116,
+     133
+    ],
+    "outcome": "refuted",
+    "seq": 133,
+    "agent": "astra-b1",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "133-gpt-S009-2",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S010",
+   "part": "INNER",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     193
+    ],
+    "outcome": "proved",
+    "seq": 193,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "193-claude-S010-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     120
+    ],
+    "outcome": "refuted",
+    "seq": 120,
+    "agent": "astra-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "120-gpt-S010-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S011",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     178
+    ],
+    "outcome": "proved",
+    "seq": 178,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "178-claude-S011-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     122
+    ],
+    "outcome": "proved",
+    "seq": 122,
+    "agent": "astra-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "122-gpt-S011-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S012",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     192
+    ],
+    "outcome": "proved",
+    "seq": 192,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "192-claude-S012-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     123
+    ],
+    "outcome": "refuted",
+    "seq": 123,
+    "agent": "astra-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "123-gpt-S012-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S013",
+   "part": "INNER",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     175
+    ],
+    "outcome": "proved",
+    "seq": 175,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "175-claude-S013-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     131
+    ],
+    "outcome": "refuted",
+    "seq": 131,
+    "agent": "astra-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "131-gpt-S013-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S014",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     188
+    ],
+    "outcome": "proved",
+    "seq": 188,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "188-claude-S014-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     134
+    ],
+    "outcome": "refuted",
+    "seq": 134,
+    "agent": "astra-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "134-gpt-S014-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S015",
+   "part": "INNER",
+   "cls": "P-vac",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     183
+    ],
+    "outcome": "proved",
+    "seq": 183,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "183-claude-S015-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     136
+    ],
+    "outcome": "refuted",
+    "seq": 136,
+    "agent": "astra-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "136-gpt-S015-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S016",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     191
+    ],
+    "outcome": "proved",
+    "seq": 191,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "191-claude-S016-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     138
+    ],
+    "outcome": "refuted",
+    "seq": 138,
+    "agent": "astra-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "138-gpt-S016-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S017",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     198
+    ],
+    "outcome": "proved",
+    "seq": 198,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "198-claude-S017-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     139
+    ],
+    "outcome": "proved",
+    "seq": 139,
+    "agent": "astra-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "139-gpt-S017-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S018",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     187
+    ],
+    "outcome": "proved",
+    "seq": 187,
+    "agent": "claude-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "187-claude-S018-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     140
+    ],
+    "outcome": "proved",
+    "seq": 140,
+    "agent": "astra-b1",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "140-gpt-S018-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S019",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     252
+    ],
+    "outcome": "proved",
+    "seq": 252,
+    "agent": "claude-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "252-claude-S019-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     101,
+     164,
+     177
+    ],
+    "outcome": "proved",
+    "seq": 177,
+    "agent": "astra-b2",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "177-gpt-S019-3",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S020",
+   "part": "INNER",
+   "cls": "P-vac",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     261
+    ],
+    "outcome": "refuted",
+    "seq": 261,
+    "agent": "claude-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "261-claude-S020-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     110
+    ],
+    "outcome": "refuted",
+    "seq": 110,
+    "agent": "astra-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "110-gpt-S020-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S021",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 2,
+    "seqs": [
+     278,
+     292
+    ],
+    "outcome": "proved",
+    "seq": 292,
+    "agent": "claude-b2",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "292-claude-S021-2",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     108,
+     135
+    ],
+    "outcome": "proved",
+    "seq": 135,
+    "agent": "astra-b2",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "135-gpt-S021-2",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S022",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     310
+    ],
+    "outcome": "proved",
+    "seq": 310,
+    "agent": "claude-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "310-claude-S022-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     109,
+     146
+    ],
+    "outcome": "proved",
+    "seq": 146,
+    "agent": "astra-b2",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "146-gpt-S022-2",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S023",
+   "part": "INNER",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     319
+    ],
+    "outcome": "proved",
+    "seq": 319,
+    "agent": "claude-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "319-claude-S023-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     165,
+     184
+    ],
+    "outcome": "refuted",
+    "seq": 184,
+    "agent": "astra-b2",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "184-gpt-S023-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S024",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     328
+    ],
+    "outcome": "refuted",
+    "seq": 328,
+    "agent": "claude-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "328-claude-S024-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     115
+    ],
+    "outcome": "refuted",
+    "seq": 115,
+    "agent": "astra-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "115-gpt-S024-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S025",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     340
+    ],
+    "outcome": "refuted",
+    "seq": 340,
+    "agent": "claude-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "340-claude-S025-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     117
+    ],
+    "outcome": "refuted",
+    "seq": 117,
+    "agent": "astra-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "117-gpt-S025-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S026",
+   "part": "INNER",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     344
+    ],
+    "outcome": "proved",
+    "seq": 344,
+    "agent": "claude-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "344-claude-S026-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     119,
+     130
+    ],
+    "outcome": "proved",
+    "seq": 130,
+    "agent": "astra-b2",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "130-gpt-S026-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S027",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     402
+    ],
+    "outcome": "proved",
+    "seq": 402,
+    "agent": "claude-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "402-claude-S027-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     142,
+     161,
+     186
+    ],
+    "outcome": "not judged",
+    "counted": false,
+    "why": "cap reached",
+    "blind": true
+   }
+  },
+  {
+   "id": "S028",
+   "part": "INNER",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     347
+    ],
+    "outcome": "proved",
+    "seq": 347,
+    "agent": "claude-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "347-claude-S028-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     126,
+     149
+    ],
+    "outcome": "proved",
+    "seq": 149,
+    "agent": "astra-b2",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "149-gpt-S028-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S029",
+   "part": "INNER",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     349
+    ],
+    "outcome": "proved",
+    "seq": 349,
+    "agent": "claude-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "349-claude-S029-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     152,
+     176,
+     204
+    ],
+    "outcome": "not judged",
+    "counted": false,
+    "why": "cap reached",
+    "blind": true
+   }
+  },
+  {
+   "id": "S030",
+   "part": "INNER",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     351
+    ],
+    "outcome": "proved",
+    "seq": 351,
+    "agent": "claude-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "351-claude-S030-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     154,
+     170,
+     209
+    ],
+    "outcome": "proved",
+    "seq": 209,
+    "agent": "astra-b2",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "209-gpt-S030-3",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S031",
+   "part": "INNER",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     352
+    ],
+    "outcome": "proved",
+    "seq": 352,
+    "agent": "claude-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "352-claude-S031-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     159,
+     171,
+     213
+    ],
+    "outcome": "proved",
+    "seq": 213,
+    "agent": "astra-b2",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "213-gpt-S031-3",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S032",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     353
+    ],
+    "outcome": "proved",
+    "seq": 353,
+    "agent": "claude-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "353-claude-S032-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     208,
+     214
+    ],
+    "outcome": "refuted",
+    "seq": 214,
+    "agent": "astra-b2",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "214-gpt-S032-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S033",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     358
+    ],
+    "outcome": "proved",
+    "seq": 358,
+    "agent": "claude-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "358-claude-S033-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     210,
+     216
+    ],
+    "outcome": "refuted",
+    "seq": 216,
+    "agent": "astra-b2",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "216-gpt-S033-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S034",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     392
+    ],
+    "outcome": "refuted",
+    "seq": 392,
+    "agent": "claude-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "392-claude-S034-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     217,
+     220
+    ],
+    "outcome": "refuted",
+    "seq": 220,
+    "agent": "astra-b2",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "220-gpt-S034-2",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S035",
+   "part": "INNER",
+   "cls": "P-vac",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     401
+    ],
+    "outcome": "refuted",
+    "seq": 401,
+    "agent": "claude-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "401-claude-S035-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     218
+    ],
+    "outcome": "refuted",
+    "seq": 218,
+    "agent": "astra-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "218-gpt-S035-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S036",
+   "part": "INNER",
+   "cls": "P-vac",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     409
+    ],
+    "outcome": "refuted",
+    "seq": 409,
+    "agent": "claude-b2",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "409-claude-S036-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     233,
+     234
+    ],
+    "outcome": "refuted",
+    "seq": 234,
+    "agent": "astra-b2",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "234-gpt-S036-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S037",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     242
+    ],
+    "outcome": "refuted",
+    "seq": 242,
+    "agent": "claude-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "242-claude-S037-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     97,
+     102
+    ],
+    "outcome": "refuted",
+    "seq": 102,
+    "agent": "astra-b3",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "102-gpt-S037-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S038",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     243
+    ],
+    "outcome": "proved",
+    "seq": 243,
+    "agent": "claude-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "243-claude-S038-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     96,
+     158,
+     166
+    ],
+    "outcome": "proved",
+    "seq": 166,
+    "agent": "astra-b3",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "166-gpt-S038-3",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S039",
+   "part": "INNER",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     376
+    ],
+    "outcome": "proved",
+    "seq": 376,
+    "agent": "claude-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "376-claude-S039-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     98,
+     103
+    ],
+    "outcome": "proved",
+    "seq": 103,
+    "agent": "astra-b3",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "103-gpt-S039-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S040",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     245
+    ],
+    "outcome": "proved",
+    "seq": 245,
+    "agent": "claude-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "245-claude-S040-1",
+    "readers": "style-only flag on item 4, the other reader passes (ruling 16:19)",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     201,
+     212,
+     222
+    ],
+    "outcome": "not judged",
+    "counted": false,
+    "why": "cap reached",
+    "blind": true
+   }
+  },
+  {
+   "id": "S041",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     241
+    ],
+    "outcome": "proved",
+    "seq": 241,
+    "agent": "claude-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "241-claude-S041-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     106
+    ],
+    "outcome": "proved",
+    "seq": 106,
+    "agent": "astra-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "106-gpt-S041-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S042",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 2,
+    "seqs": [
+     329,
+     373
+    ],
+    "outcome": "proved",
+    "seq": 373,
+    "agent": "claude-b3",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "373-claude-S042-2",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     105,
+     144,
+     156
+    ],
+    "outcome": "proved",
+    "seq": 156,
+    "agent": "astra-b3",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "156-gpt-S042-3",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S043",
+   "part": "INNER",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     334
+    ],
+    "outcome": "proved",
+    "seq": 334,
+    "agent": "claude-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "334-claude-S043-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     143,
+     160,
+     174
+    ],
+    "outcome": "proved",
+    "seq": 174,
+    "agent": "astra-b3",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "174-gpt-S043-3",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S044",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     240
+    ],
+    "outcome": "refuted",
+    "seq": 240,
+    "agent": "claude-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "240-claude-S044-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     114
+    ],
+    "outcome": "refuted",
+    "seq": 114,
+    "agent": "astra-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "114-gpt-S044-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S045",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     244
+    ],
+    "outcome": "refuted",
+    "seq": 244,
+    "agent": "claude-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "244-claude-S045-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     121
+    ],
+    "outcome": "refuted",
+    "seq": 121,
+    "agent": "astra-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "121-gpt-S045-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S046",
+   "part": "STRICT",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     422
+    ],
+    "outcome": "proved",
+    "seq": 422,
+    "agent": "claude-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "422-claude-S046-1",
+    "readers": "style-only flag on item 4, the other reader passes (ruling 16:19)",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     185,
+     225,
+     238
+    ],
+    "outcome": "not judged",
+    "counted": false,
+    "why": "cap reached",
+    "blind": true
+   }
+  },
+  {
+   "id": "S047",
+   "part": "INNER",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     336
+    ],
+    "outcome": "proved",
+    "seq": 336,
+    "agent": "claude-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "336-claude-S047-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     124,
+     145,
+     163
+    ],
+    "outcome": "proved",
+    "seq": 163,
+    "agent": "astra-b3",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "163-gpt-S047-3",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S048",
+   "part": "INNER",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     337
+    ],
+    "outcome": "proved",
+    "seq": 337,
+    "agent": "claude-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "337-claude-S048-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     128,
+     147,
+     162
+    ],
+    "outcome": "proved",
+    "seq": 162,
+    "agent": "astra-b3",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "162-gpt-S048-3",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S049",
+   "part": "INNER",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     424
+    ],
+    "outcome": "proved",
+    "seq": 424,
+    "agent": "claude-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "424-claude-S049-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     132,
+     148,
+     172
+    ],
+    "outcome": "not judged",
+    "counted": false,
+    "why": "cap reached",
+    "blind": true
+   }
+  },
+  {
+   "id": "S050",
+   "part": "INNER",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     239
+    ],
+    "outcome": "refuted",
+    "seq": 239,
+    "agent": "claude-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "239-claude-S050-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     137
+    ],
+    "outcome": "refuted",
+    "seq": 137,
+    "agent": "astra-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "137-gpt-S050-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S051",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     377
+    ],
+    "outcome": "proved",
+    "seq": 377,
+    "agent": "claude-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "377-claude-S051-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     141
+    ],
+    "outcome": "proved",
+    "seq": 141,
+    "agent": "astra-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "141-gpt-S051-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S052",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     335
+    ],
+    "outcome": "proved",
+    "seq": 335,
+    "agent": "claude-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "335-claude-S052-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     150,
+     155,
+     167
+    ],
+    "outcome": "proved",
+    "seq": 167,
+    "agent": "astra-b3",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "167-gpt-S052-3",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S053",
+   "part": "COVER",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     338
+    ],
+    "outcome": "proved",
+    "seq": 338,
+    "agent": "claude-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "338-claude-S053-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     151,
+     169,
+     173
+    ],
+    "outcome": "proved",
+    "seq": 173,
+    "agent": "astra-b3",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "173-gpt-S053-3",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S054",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 3,
+    "seqs": [
+     237,
+     330,
+     371
+    ],
+    "outcome": "not judged",
+    "counted": false,
+    "why": "cap reached",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     153
+    ],
+    "outcome": "proved",
+    "seq": 153,
+    "agent": "astra-b3",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "153-gpt-S054-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S055",
+   "part": "INNER",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     465
+    ],
+    "outcome": "proved",
+    "seq": 465,
+    "agent": "claude-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "465-claude-S055-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     195,
+     196
+    ],
+    "outcome": "proved",
+    "seq": 196,
+    "agent": "astra-b4",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "196-gpt-S055-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S056",
+   "part": "INNER",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     469
+    ],
+    "outcome": "proved",
+    "seq": 469,
+    "agent": "claude-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "469-claude-S056-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     194,
+     197
+    ],
+    "outcome": "proved",
+    "seq": 197,
+    "agent": "astra-b4",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "197-gpt-S056-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S057",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 3,
+    "seqs": [
+     486,
+     498,
+     501
+    ],
+    "outcome": "proved",
+    "seq": 501,
+    "agent": "claude-b4",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "501-claude-S057-3",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     206,
+     219
+    ],
+    "outcome": "proved",
+    "seq": 219,
+    "agent": "astra-b4",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "219-gpt-S057-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S058",
+   "part": "INNER",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     457
+    ],
+    "outcome": "proved",
+    "seq": 457,
+    "agent": "claude-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "457-claude-S058-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     200
+    ],
+    "outcome": "proved",
+    "seq": 200,
+    "agent": "astra-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "200-gpt-S058-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S059",
+   "part": "INNER",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     466
+    ],
+    "outcome": "proved",
+    "seq": 466,
+    "agent": "claude-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "466-claude-S059-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     202,
+     224,
+     235
+    ],
+    "outcome": "proved",
+    "seq": 235,
+    "agent": "astra-b4",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "235-gpt-S059-3",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S060",
+   "part": "INNER",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     474
+    ],
+    "outcome": "refuted",
+    "seq": 474,
+    "agent": "claude-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "474-claude-S060-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     203
+    ],
+    "outcome": "refuted",
+    "seq": 203,
+    "agent": "astra-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "203-gpt-S060-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S061",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     458
+    ],
+    "outcome": "refuted",
+    "seq": 458,
+    "agent": "claude-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "458-claude-S061-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     205
+    ],
+    "outcome": "refuted",
+    "seq": 205,
+    "agent": "astra-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "205-gpt-S061-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S062",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     480
+    ],
+    "outcome": "refuted",
+    "seq": 480,
+    "agent": "claude-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "480-claude-S062-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     207
+    ],
+    "outcome": "refuted",
+    "seq": 207,
+    "agent": "astra-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "207-gpt-S062-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S063",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     478
+    ],
+    "outcome": "refuted",
+    "seq": 478,
+    "agent": "claude-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "478-claude-S063-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     211
+    ],
+    "outcome": "proved",
+    "seq": 211,
+    "agent": "astra-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "211-gpt-S063-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S064",
+   "part": "SLAB",
+   "cls": "P-vac",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     481
+    ],
+    "outcome": "refuted",
+    "seq": 481,
+    "agent": "claude-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "481-claude-S064-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     232,
+     236
+    ],
+    "outcome": "refuted",
+    "seq": 236,
+    "agent": "astra-b4",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "236-gpt-S064-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S065",
+   "part": "INNER",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     476
+    ],
+    "outcome": "refuted",
+    "seq": 476,
+    "agent": "claude-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "476-claude-S065-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     215
+    ],
+    "outcome": "refuted",
+    "seq": 215,
+    "agent": "astra-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "215-gpt-S065-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S066",
+   "part": "INNER",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     479
+    ],
+    "outcome": "refuted",
+    "seq": 479,
+    "agent": "claude-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "479-claude-S066-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     221
+    ],
+    "outcome": "refuted",
+    "seq": 221,
+    "agent": "astra-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "221-gpt-S066-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S067",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     455
+    ],
+    "outcome": "proved",
+    "seq": 455,
+    "agent": "claude-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "455-claude-S067-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     223
+    ],
+    "outcome": "proved",
+    "seq": 223,
+    "agent": "astra-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "223-gpt-S067-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S068",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     477
+    ],
+    "outcome": "refuted",
+    "seq": 477,
+    "agent": "claude-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "477-claude-S068-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     226
+    ],
+    "outcome": "refuted",
+    "seq": 226,
+    "agent": "astra-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "226-gpt-S068-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S069",
+   "part": "INNER",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     468
+    ],
+    "outcome": "proved",
+    "seq": 468,
+    "agent": "claude-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "468-claude-S069-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     227
+    ],
+    "outcome": "proved",
+    "seq": 227,
+    "agent": "astra-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "227-gpt-S069-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S070",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     475
+    ],
+    "outcome": "refuted",
+    "seq": 475,
+    "agent": "claude-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "475-claude-S070-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     228
+    ],
+    "outcome": "proved",
+    "seq": 228,
+    "agent": "astra-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "228-gpt-S070-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S071",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     473
+    ],
+    "outcome": "refuted",
+    "seq": 473,
+    "agent": "claude-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "473-claude-S071-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     229
+    ],
+    "outcome": "proved",
+    "seq": 229,
+    "agent": "astra-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "229-gpt-S071-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S072",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     456
+    ],
+    "outcome": "proved",
+    "seq": 456,
+    "agent": "claude-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "456-claude-S072-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     230
+    ],
+    "outcome": "proved",
+    "seq": 230,
+    "agent": "astra-b4",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "230-gpt-S072-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S073",
+   "part": "INNER",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     448
+    ],
+    "outcome": "proved",
+    "seq": 448,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "448-claude-S073-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     246,
+     286,
+     350
+    ],
+    "outcome": "not judged",
+    "counted": false,
+    "why": "cap reached",
+    "blind": true
+   }
+  },
+  {
+   "id": "S074",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     452
+    ],
+    "outcome": "proved",
+    "seq": 452,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "452-claude-S074-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     247,
+     287,
+     314
+    ],
+    "outcome": "not judged",
+    "counted": false,
+    "why": "cap reached",
+    "blind": true
+   }
+  },
+  {
+   "id": "S075",
+   "part": "INNER",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     445
+    ],
+    "outcome": "refuted",
+    "seq": 445,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "445-claude-S075-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     248,
+     270
+    ],
+    "outcome": "refuted",
+    "seq": 270,
+    "agent": "astra-b5",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "270-gpt-S075-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S076",
+   "part": "INNER",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     446
+    ],
+    "outcome": "refuted",
+    "seq": 446,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "446-claude-S076-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     249
+    ],
+    "outcome": "refuted",
+    "seq": 249,
+    "agent": "astra-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "249-gpt-S076-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S077",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     450
+    ],
+    "outcome": "proved",
+    "seq": 450,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "450-claude-S077-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     253
+    ],
+    "outcome": "proved",
+    "seq": 253,
+    "agent": "astra-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "253-gpt-S077-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S078",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     427
+    ],
+    "outcome": "proved",
+    "seq": 427,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "427-claude-S078-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     254
+    ],
+    "outcome": "proved",
+    "seq": 254,
+    "agent": "astra-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "254-gpt-S078-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S079",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     443
+    ],
+    "outcome": "refuted",
+    "seq": 443,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "443-claude-S079-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     250,
+     273
+    ],
+    "outcome": "refuted",
+    "seq": 273,
+    "agent": "astra-b5",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "273-gpt-S079-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S080",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     449
+    ],
+    "outcome": "refuted",
+    "seq": 449,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "449-claude-S080-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     255,
+     277
+    ],
+    "outcome": "refuted",
+    "seq": 277,
+    "agent": "astra-b5",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "277-gpt-S080-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S081",
+   "part": "INNER",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     453
+    ],
+    "outcome": "proved",
+    "seq": 453,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "453-claude-S081-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     295,
+     339,
+     348
+    ],
+    "outcome": "not judged",
+    "counted": false,
+    "why": "cap reached",
+    "blind": true
+   }
+  },
+  {
+   "id": "S082",
+   "part": "SLAB",
+   "cls": "P-vac",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     441
+    ],
+    "outcome": "refuted",
+    "seq": 441,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "441-claude-S082-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     256
+    ],
+    "outcome": "refuted",
+    "seq": 256,
+    "agent": "astra-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "256-gpt-S082-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S083",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     444
+    ],
+    "outcome": "refuted",
+    "seq": 444,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "444-claude-S083-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     260
+    ],
+    "outcome": "refuted",
+    "seq": 260,
+    "agent": "astra-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "260-gpt-S083-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S084",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     462
+    ],
+    "outcome": "proved",
+    "seq": 462,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "462-claude-S084-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     262,
+     281,
+     291
+    ],
+    "outcome": "not judged",
+    "counted": false,
+    "why": "cap reached",
+    "blind": true
+   }
+  },
+  {
+   "id": "S085",
+   "part": "SLAB",
+   "cls": "P-vac",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     447
+    ],
+    "outcome": "refuted",
+    "seq": 447,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "447-claude-S085-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     265
+    ],
+    "outcome": "refuted",
+    "seq": 265,
+    "agent": "astra-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "265-gpt-S085-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S086",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     426
+    ],
+    "outcome": "refuted",
+    "seq": 426,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "426-claude-S086-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     268
+    ],
+    "outcome": "refuted",
+    "seq": 268,
+    "agent": "astra-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "268-gpt-S086-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S087",
+   "part": "SLAB",
+   "cls": "P-vac",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     451
+    ],
+    "outcome": "refuted",
+    "seq": 451,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "451-claude-S087-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     298
+    ],
+    "outcome": "refuted",
+    "seq": 298,
+    "agent": "astra-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "298-gpt-S087-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S088",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     440
+    ],
+    "outcome": "refuted",
+    "seq": 440,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "440-claude-S088-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     301
+    ],
+    "outcome": "refuted",
+    "seq": 301,
+    "agent": "astra-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "301-gpt-S088-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S089",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     461
+    ],
+    "outcome": "proved",
+    "seq": 461,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "461-claude-S089-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     303,
+     326
+    ],
+    "outcome": "proved",
+    "seq": 326,
+    "agent": "astra-b5",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "326-gpt-S089-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S090",
+   "part": "COVER",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     442
+    ],
+    "outcome": "refuted",
+    "seq": 442,
+    "agent": "claude-b5",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "442-claude-S090-1",
+    "readers": "both readers pass",
+    "blind": false
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     304,
+     320
+    ],
+    "outcome": "refuted",
+    "seq": 320,
+    "agent": "astra-b5",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "320-gpt-S090-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S091",
+   "part": "SLAB",
+   "cls": "P-vac",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     454
+    ],
+    "outcome": "refuted",
+    "seq": 454,
+    "agent": "claude-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "454-claude-S091-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     251
+    ],
+    "outcome": "refuted",
+    "seq": 251,
+    "agent": "astra-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "251-gpt-S091-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S092",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 2,
+    "seqs": [
+     487,
+     489
+    ],
+    "outcome": "proved",
+    "seq": 489,
+    "agent": "claude-b6",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "489-claude-S092-2",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     258,
+     307
+    ],
+    "outcome": "proved",
+    "seq": 307,
+    "agent": "astra-b6",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "307-gpt-S092-2",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S093",
+   "part": "INNER",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     459
+    ],
+    "outcome": "refuted",
+    "seq": 459,
+    "agent": "claude-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "459-claude-S093-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     257,
+     308,
+     321
+    ],
+    "outcome": "refuted",
+    "seq": 321,
+    "agent": "astra-b6",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "321-gpt-S093-3",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S094",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     488
+    ],
+    "outcome": "proved",
+    "seq": 488,
+    "agent": "claude-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "488-claude-S094-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     259,
+     309
+    ],
+    "outcome": "proved",
+    "seq": 309,
+    "agent": "astra-b6",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "309-gpt-S094-2",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S095",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     482
+    ],
+    "outcome": "proved",
+    "seq": 482,
+    "agent": "claude-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "482-claude-S095-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     267
+    ],
+    "outcome": "proved",
+    "seq": 267,
+    "agent": "astra-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "267-gpt-S095-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S096",
+   "part": "INNER",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     460
+    ],
+    "outcome": "refuted",
+    "seq": 460,
+    "agent": "claude-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "460-claude-S096-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     263
+    ],
+    "outcome": "refuted",
+    "seq": 263,
+    "agent": "astra-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "263-gpt-S096-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S097",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 2,
+    "seqs": [
+     497,
+     500
+    ],
+    "outcome": "proved",
+    "seq": 500,
+    "agent": "claude-b6",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "500-claude-S097-2",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     264,
+     312
+    ],
+    "outcome": "proved",
+    "seq": 312,
+    "agent": "astra-b6",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "312-gpt-S097-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S098",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     484
+    ],
+    "outcome": "proved",
+    "seq": 484,
+    "agent": "claude-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "484-claude-S098-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     302,
+     333,
+     346
+    ],
+    "outcome": "proved",
+    "seq": 346,
+    "agent": "astra-b6",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "346-gpt-S098-3",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S099",
+   "part": "COVER",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     463
+    ],
+    "outcome": "refuted",
+    "seq": 463,
+    "agent": "claude-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "463-claude-S099-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     269,
+     315
+    ],
+    "outcome": "refuted",
+    "seq": 315,
+    "agent": "astra-b6",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "315-gpt-S099-2",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S100",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     483
+    ],
+    "outcome": "proved",
+    "seq": 483,
+    "agent": "claude-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "483-claude-S100-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     271
+    ],
+    "outcome": "proved",
+    "seq": 271,
+    "agent": "astra-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "271-gpt-S100-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S101",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     495
+    ],
+    "outcome": "proved",
+    "seq": 495,
+    "agent": "claude-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "495-claude-S101-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     272,
+     316
+    ],
+    "outcome": "proved",
+    "seq": 316,
+    "agent": "astra-b6",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "316-gpt-S101-2",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S102",
+   "part": "COVER",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     464
+    ],
+    "outcome": "refuted",
+    "seq": 464,
+    "agent": "claude-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "464-claude-S102-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     279,
+     322
+    ],
+    "outcome": "refuted",
+    "seq": 322,
+    "agent": "astra-b6",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "322-gpt-S102-2",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S103",
+   "part": "INNER",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     467
+    ],
+    "outcome": "refuted",
+    "seq": 467,
+    "agent": "claude-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "467-claude-S103-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     284
+    ],
+    "outcome": "refuted",
+    "seq": 284,
+    "agent": "astra-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "284-gpt-S103-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S104",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     470
+    ],
+    "outcome": "refuted",
+    "seq": 470,
+    "agent": "claude-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "470-claude-S104-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     288
+    ],
+    "outcome": "refuted",
+    "seq": 288,
+    "agent": "astra-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "288-gpt-S104-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S105",
+   "part": "INNER",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     485
+    ],
+    "outcome": "proved",
+    "seq": 485,
+    "agent": "claude-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "485-claude-S105-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     290,
+     324
+    ],
+    "outcome": "proved",
+    "seq": 324,
+    "agent": "astra-b6",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "324-gpt-S105-2",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S106",
+   "part": "SLAB",
+   "cls": "P-vac",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     471
+    ],
+    "outcome": "refuted",
+    "seq": 471,
+    "agent": "claude-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "471-claude-S106-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     297
+    ],
+    "outcome": "refuted",
+    "seq": 297,
+    "agent": "astra-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "297-gpt-S106-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S107",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     499
+    ],
+    "outcome": "proved",
+    "seq": 499,
+    "agent": "claude-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "499-claude-S107-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     300
+    ],
+    "outcome": "proved",
+    "seq": 300,
+    "agent": "astra-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "300-gpt-S107-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S108",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     472
+    ],
+    "outcome": "proved",
+    "seq": 472,
+    "agent": "claude-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "472-claude-S108-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     327
+    ],
+    "outcome": "proved",
+    "seq": 327,
+    "agent": "astra-b6",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "327-gpt-S108-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S109",
+   "part": "INNER",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     493
+    ],
+    "outcome": "proved",
+    "seq": 493,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "493-claude-S109-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     266,
+     331,
+     365
+    ],
+    "outcome": "not judged",
+    "counted": false,
+    "why": "cap reached",
+    "blind": true
+   }
+  },
+  {
+   "id": "S110",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     491
+    ],
+    "outcome": "proved",
+    "seq": 491,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "491-claude-S110-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     276
+    ],
+    "outcome": "proved",
+    "seq": 276,
+    "agent": "astra-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "276-gpt-S110-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S111",
+   "part": "INNER",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     428
+    ],
+    "outcome": "proved",
+    "seq": 428,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "428-claude-S111-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     274,
+     311,
+     341
+    ],
+    "outcome": "refuted",
+    "seq": 341,
+    "agent": "astra-b7",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "341-gpt-S111-3",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S112",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     438
+    ],
+    "outcome": "proved",
+    "seq": 438,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "438-claude-S112-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     275,
+     318,
+     357
+    ],
+    "outcome": "not judged",
+    "counted": false,
+    "why": "cap reached",
+    "blind": true
+   }
+  },
+  {
+   "id": "S113",
+   "part": "STRICT",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     439
+    ],
+    "outcome": "refuted",
+    "seq": 439,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "439-claude-S113-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     282,
+     313
+    ],
+    "outcome": "refuted",
+    "seq": 313,
+    "agent": "astra-b7",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "313-gpt-S113-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S114",
+   "part": "COVER",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     490
+    ],
+    "outcome": "proved",
+    "seq": 490,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "490-claude-S114-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     285,
+     317
+    ],
+    "outcome": "proved",
+    "seq": 317,
+    "agent": "astra-b7",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "317-gpt-S114-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S115",
+   "part": "INNER",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     492
+    ],
+    "outcome": "proved",
+    "seq": 492,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "492-claude-S115-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     283,
+     325
+    ],
+    "outcome": "proved",
+    "seq": 325,
+    "agent": "astra-b7",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "325-gpt-S115-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S116",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     435
+    ],
+    "outcome": "proved",
+    "seq": 435,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "435-claude-S116-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     289,
+     323,
+     342
+    ],
+    "outcome": "refuted",
+    "seq": 342,
+    "agent": "astra-b7",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "342-gpt-S116-3",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S117",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     496
+    ],
+    "outcome": "proved",
+    "seq": 496,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "496-claude-S117-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     296
+    ],
+    "outcome": "proved",
+    "seq": 296,
+    "agent": "astra-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "296-gpt-S117-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S118",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     434
+    ],
+    "outcome": "proved",
+    "seq": 434,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "434-claude-S118-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     293,
+     332,
+     362
+    ],
+    "outcome": "refuted",
+    "seq": 362,
+    "agent": "astra-b7",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "362-gpt-S118-3",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S119",
+   "part": "INNER",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     430
+    ],
+    "outcome": "proved",
+    "seq": 430,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "430-claude-S119-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     294,
+     343,
+     367
+    ],
+    "outcome": "proved",
+    "seq": 367,
+    "agent": "astra-b7",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "367-gpt-S119-3",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S120",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     432
+    ],
+    "outcome": "proved",
+    "seq": 432,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "432-claude-S120-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     299,
+     403,
+     411
+    ],
+    "outcome": "refuted",
+    "seq": 411,
+    "agent": "astra-b7",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "411-gpt-S120-3",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S121",
+   "part": "INNER",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     436
+    ],
+    "outcome": "proved",
+    "seq": 436,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "436-claude-S121-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     359,
+     370
+    ],
+    "outcome": "proved",
+    "seq": 370,
+    "agent": "astra-b7",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "370-gpt-S121-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S122",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     437
+    ],
+    "outcome": "refuted",
+    "seq": 437,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "437-claude-S122-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     305
+    ],
+    "outcome": "refuted",
+    "seq": 305,
+    "agent": "astra-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "305-gpt-S122-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S123",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     494
+    ],
+    "outcome": "proved",
+    "seq": 494,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "494-claude-S123-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     306,
+     345,
+     380
+    ],
+    "outcome": "proved",
+    "seq": 380,
+    "agent": "astra-b7",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "380-gpt-S123-3",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S124",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     433
+    ],
+    "outcome": "proved",
+    "seq": 433,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "433-claude-S124-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     379,
+     393
+    ],
+    "outcome": "refuted",
+    "seq": 393,
+    "agent": "astra-b7",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "393-gpt-S124-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S125",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     431
+    ],
+    "outcome": "refuted",
+    "seq": 431,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "431-claude-S125-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     384,
+     395
+    ],
+    "outcome": "refuted",
+    "seq": 395,
+    "agent": "astra-b7",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "395-gpt-S125-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S126",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     429
+    ],
+    "outcome": "proved",
+    "seq": 429,
+    "agent": "claude-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "429-claude-S126-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     385
+    ],
+    "outcome": "refuted",
+    "seq": 385,
+    "agent": "astra-b7",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "385-gpt-S126-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S127",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 2,
+    "seqs": [
+     530,
+     536
+    ],
+    "outcome": "proved",
+    "seq": 536,
+    "agent": "claude-b8",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "536-claude-S127-2",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     356
+    ],
+    "outcome": "proved",
+    "seq": 356,
+    "agent": "astra-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "356-gpt-S127-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S128",
+   "part": "INNER",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     517
+    ],
+    "outcome": "refuted",
+    "seq": 517,
+    "agent": "claude-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "517-claude-S128-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     355
+    ],
+    "outcome": "refuted",
+    "seq": 355,
+    "agent": "astra-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "355-gpt-S128-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S129",
+   "part": "INNER",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     519
+    ],
+    "outcome": "refuted",
+    "seq": 519,
+    "agent": "claude-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "519-claude-S129-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     354
+    ],
+    "outcome": "refuted",
+    "seq": 354,
+    "agent": "astra-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "354-gpt-S129-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S130",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     525
+    ],
+    "outcome": "proved",
+    "seq": 525,
+    "agent": "claude-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "525-claude-S130-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     361,
+     389,
+     406
+    ],
+    "outcome": "proved",
+    "seq": 406,
+    "agent": "astra-b8",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "406-gpt-S130-3",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S131",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     512
+    ],
+    "outcome": "refuted",
+    "seq": 512,
+    "agent": "claude-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "512-claude-S131-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     364
+    ],
+    "outcome": "refuted",
+    "seq": 364,
+    "agent": "astra-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "364-gpt-S131-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S132",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     538
+    ],
+    "outcome": "proved",
+    "seq": 538,
+    "agent": "claude-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "538-claude-S132-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     363
+    ],
+    "outcome": "proved",
+    "seq": 363,
+    "agent": "astra-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "363-gpt-S132-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S133",
+   "part": "SLAB",
+   "cls": "P-vac",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     515
+    ],
+    "outcome": "refuted",
+    "seq": 515,
+    "agent": "claude-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "515-claude-S133-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     366
+    ],
+    "outcome": "refuted",
+    "seq": 366,
+    "agent": "astra-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "366-gpt-S133-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S134",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 3,
+    "seqs": [
+     537,
+     541,
+     542
+    ],
+    "outcome": "not judged",
+    "counted": false,
+    "why": "cap reached",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     368
+    ],
+    "outcome": "proved",
+    "seq": 368,
+    "agent": "astra-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "368-gpt-S134-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S135",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     524
+    ],
+    "outcome": "proved",
+    "seq": 524,
+    "agent": "claude-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "524-claude-S135-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     369
+    ],
+    "outcome": "proved",
+    "seq": 369,
+    "agent": "astra-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "369-gpt-S135-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S136",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     516
+    ],
+    "outcome": "refuted",
+    "seq": 516,
+    "agent": "claude-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "516-claude-S136-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     378
+    ],
+    "outcome": "refuted",
+    "seq": 378,
+    "agent": "astra-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "378-gpt-S136-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S137",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     518
+    ],
+    "outcome": "refuted",
+    "seq": 518,
+    "agent": "claude-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "518-claude-S137-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     382
+    ],
+    "outcome": "refuted",
+    "seq": 382,
+    "agent": "astra-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "382-gpt-S137-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S138",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     520
+    ],
+    "outcome": "refuted",
+    "seq": 520,
+    "agent": "claude-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "520-claude-S138-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     381
+    ],
+    "outcome": "refuted",
+    "seq": 381,
+    "agent": "astra-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "381-gpt-S138-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S139",
+   "part": "INNER",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     529
+    ],
+    "outcome": "proved",
+    "seq": 529,
+    "agent": "claude-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "529-claude-S139-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     383,
+     407
+    ],
+    "outcome": "proved",
+    "seq": 407,
+    "agent": "astra-b8",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "407-gpt-S139-2",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S140",
+   "part": "INNER",
+   "cls": "P-vac",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     521
+    ],
+    "outcome": "refuted",
+    "seq": 521,
+    "agent": "claude-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "521-claude-S140-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     387
+    ],
+    "outcome": "refuted",
+    "seq": 387,
+    "agent": "astra-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "387-gpt-S140-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S141",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     514
+    ],
+    "outcome": "refuted",
+    "seq": 514,
+    "agent": "claude-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "514-claude-S141-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     388
+    ],
+    "outcome": "refuted",
+    "seq": 388,
+    "agent": "astra-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "388-gpt-S141-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S142",
+   "part": "INNER",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     528
+    ],
+    "outcome": "proved",
+    "seq": 528,
+    "agent": "claude-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "528-claude-S142-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     396
+    ],
+    "outcome": "proved",
+    "seq": 396,
+    "agent": "astra-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "396-gpt-S142-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S143",
+   "part": "INNER",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     513
+    ],
+    "outcome": "refuted",
+    "seq": 513,
+    "agent": "claude-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "513-claude-S143-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     397
+    ],
+    "outcome": "refuted",
+    "seq": 397,
+    "agent": "astra-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "397-gpt-S143-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S144",
+   "part": "SLAB",
+   "cls": "P-vac",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     522
+    ],
+    "outcome": "refuted",
+    "seq": 522,
+    "agent": "claude-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "522-claude-S144-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     399
+    ],
+    "outcome": "refuted",
+    "seq": 399,
+    "agent": "astra-b8",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "399-gpt-S144-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S145",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     503
+    ],
+    "outcome": "refuted",
+    "seq": 503,
+    "agent": "claude-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "503-claude-S145-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     360
+    ],
+    "outcome": "refuted",
+    "seq": 360,
+    "agent": "astra-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "360-gpt-S145-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S146",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     533
+    ],
+    "outcome": "proved",
+    "seq": 533,
+    "agent": "claude-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "533-claude-S146-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     372
+    ],
+    "outcome": "proved",
+    "seq": 372,
+    "agent": "astra-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "372-gpt-S146-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S147",
+   "part": "INNER",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     504
+    ],
+    "outcome": "refuted",
+    "seq": 504,
+    "agent": "claude-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "504-claude-S147-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     374
+    ],
+    "outcome": "refuted",
+    "seq": 374,
+    "agent": "astra-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "374-gpt-S147-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S148",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     505
+    ],
+    "outcome": "refuted",
+    "seq": 505,
+    "agent": "claude-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "505-claude-S148-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     375
+    ],
+    "outcome": "refuted",
+    "seq": 375,
+    "agent": "astra-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "375-gpt-S148-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S149",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 3,
+    "seqs": [
+     535,
+     539,
+     540
+    ],
+    "outcome": "not judged",
+    "counted": false,
+    "why": "cap reached",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     386,
+     416,
+     423
+    ],
+    "outcome": "not judged",
+    "counted": false,
+    "why": "cap reached",
+    "blind": true
+   }
+  },
+  {
+   "id": "S150",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     502
+    ],
+    "outcome": "refuted",
+    "seq": 502,
+    "agent": "claude-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "502-claude-S150-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     391
+    ],
+    "outcome": "refuted",
+    "seq": 391,
+    "agent": "astra-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "391-gpt-S150-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S151",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     532
+    ],
+    "outcome": "proved",
+    "seq": 532,
+    "agent": "claude-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "532-claude-S151-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     390
+    ],
+    "outcome": "proved",
+    "seq": 390,
+    "agent": "astra-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "390-gpt-S151-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S152",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     527
+    ],
+    "outcome": "proved",
+    "seq": 527,
+    "agent": "claude-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "527-claude-S152-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     394,
+     417
+    ],
+    "outcome": "proved",
+    "seq": 417,
+    "agent": "astra-b9",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "417-gpt-S152-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S153",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     507
+    ],
+    "outcome": "refuted",
+    "seq": 507,
+    "agent": "claude-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "507-claude-S153-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     400
+    ],
+    "outcome": "refuted",
+    "seq": 400,
+    "agent": "astra-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "400-gpt-S153-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S154",
+   "part": "SLAB",
+   "cls": "T",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     534
+    ],
+    "outcome": "proved",
+    "seq": 534,
+    "agent": "claude-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "534-claude-S154-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     398,
+     418,
+     421
+    ],
+    "outcome": "proved",
+    "seq": 421,
+    "agent": "astra-b9",
+    "attempt_no": 3,
+    "counted": true,
+    "why": null,
+    "folder": "421-gpt-S154-3",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S155",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 2,
+    "seqs": [
+     526,
+     531
+    ],
+    "outcome": "proved",
+    "seq": 531,
+    "agent": "claude-b9",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "531-claude-S155-2",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     404
+    ],
+    "outcome": "proved",
+    "seq": 404,
+    "agent": "astra-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "404-gpt-S155-1",
+    "readers": "style-only flag on item 2, the other reader passes (ruling 16:19)",
+    "blind": true
+   }
+  },
+  {
+   "id": "S156",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     508
+    ],
+    "outcome": "refuted",
+    "seq": 508,
+    "agent": "claude-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "508-claude-S156-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     405
+    ],
+    "outcome": "refuted",
+    "seq": 405,
+    "agent": "astra-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "405-gpt-S156-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S157",
+   "part": "SLAB",
+   "cls": "D-planted",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     510
+    ],
+    "outcome": "refuted",
+    "seq": 510,
+    "agent": "claude-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "510-claude-S157-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     408
+    ],
+    "outcome": "refuted",
+    "seq": 408,
+    "agent": "astra-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "408-gpt-S157-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S158",
+   "part": "SLAB",
+   "cls": "P-vac",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     506
+    ],
+    "outcome": "refuted",
+    "seq": 506,
+    "agent": "claude-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "506-claude-S158-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     412
+    ],
+    "outcome": "refuted",
+    "seq": 412,
+    "agent": "astra-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "412-gpt-S158-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S159",
+   "part": "SLAB",
+   "cls": "P",
+   "text_true": false,
+   "goal_true": false,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     511
+    ],
+    "outcome": "refuted",
+    "seq": 511,
+    "agent": "claude-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "511-claude-S159-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 3,
+    "seqs": [
+     410,
+     419,
+     425
+    ],
+    "outcome": "not judged",
+    "counted": false,
+    "why": "cap reached",
+    "blind": true
+   }
+  },
+  {
+   "id": "S160",
+   "part": "STRICT",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 0,
+    "seqs": [],
+    "outcome": "not judged",
+    "counted": false,
+    "why": "never attempted",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     413
+    ],
+    "outcome": "proved",
+    "seq": 413,
+    "agent": "astra-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "413-gpt-S160-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S161",
+   "part": "SLAB",
+   "cls": "D-true",
+   "text_true": true,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     523
+    ],
+    "outcome": "proved",
+    "seq": 523,
+    "agent": "claude-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "523-claude-S161-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 2,
+    "seqs": [
+     414,
+     420
+    ],
+    "outcome": "proved",
+    "seq": 420,
+    "agent": "astra-b9",
+    "attempt_no": 2,
+    "counted": true,
+    "why": null,
+    "folder": "420-gpt-S161-2",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  },
+  {
+   "id": "S162",
+   "part": "INNER",
+   "cls": "P-vac",
+   "text_true": false,
+   "goal_true": true,
+   "claude": {
+    "attempts": 1,
+    "seqs": [
+     509
+    ],
+    "outcome": "refuted",
+    "seq": 509,
+    "agent": "claude-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "509-claude-S162-1",
+    "readers": "both readers pass",
+    "blind": true
+   },
+   "gpt": {
+    "attempts": 1,
+    "seqs": [
+     415
+    ],
+    "outcome": "refuted",
+    "seq": 415,
+    "agent": "astra-b9",
+    "attempt_no": 1,
+    "counted": true,
+    "why": null,
+    "folder": "415-gpt-S162-1",
+    "readers": "both readers pass",
+    "blind": true
+   }
+  }
+ ],
+ "reader_flags": [
+  {
+   "seq": 107,
+   "family": "gpt",
+   "statement": "S004",
+   "mode": "prove",
+   "folder": "107-gpt-S004-1",
+   "astra_flags": "2",
+   "astra_note": "vacuous via S088. With c = 0, ws = [1] and g = [0], entry 0 of lin is 0 and the premise assigns it 1. i2 FLAG (top-level open).",
+   "claude_flags": "none",
+   "claude_note": "vacuous via S088 (lin without the factor c; ws=[1], c=0 contradicts it)",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 111,
+   "family": "gpt",
+   "statement": "S006",
+   "mode": "prove",
+   "folder": "111-gpt-S006-1",
+   "astra_flags": "2",
+   "astra_note": "vacuous via S083. An accepted tag-5 update falsifies the premise’s strict tag bound. i2 FLAG (top-level open).",
+   "claude_flags": "none",
+   "claude_note": "vacuous via S083 (tag < 5; tag 5 is accepted)",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 112,
+   "family": "gpt",
+   "statement": "S005",
+   "mode": "prove",
+   "folder": "112-gpt-S005-1",
+   "astra_flags": "2",
+   "astra_note": "Induction gives zero dot products and quadratic forms for replicated zero rows. Unfolding st0 then gives its shape, flag and value. i2 FLAG (top-level open).",
+   "claude_flags": "none",
+   "claude_note": "REPLICATE zero lemmas for ldot and qform, then unfold st0",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 113,
+   "family": "gpt",
+   "statement": "S007",
+   "mode": "refute",
+   "folder": "113-gpt-S007-1",
+   "astra_flags": "2",
+   "astra_note": "The one-dimensional checker accepts kp = 0, contradicting the strict lower bound on kp. i2 FLAG (top-level open).",
+   "claude_flags": "none",
+   "claude_note": "refute: kp = 0 is accepted by add_kap, so 0 < kp fails",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 118,
+   "family": "gpt",
+   "statement": "S008",
+   "mode": "refute",
+   "folder": "118-gpt-S008-1",
+   "astra_flags": "2",
+   "astra_note": "The checker accepts a form with numerator mp = 0, contradicting the strict positivity claim. i2 FLAG (top-level open).",
+   "claude_flags": "none",
+   "claude_note": "refute: mp = 0 is accepted, so 0 < mp fails",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 120,
+   "family": "gpt",
+   "statement": "S010",
+   "mode": "refute",
+   "folder": "120-gpt-S010-1",
+   "astra_flags": "2",
+   "astra_note": "At y = [2], the single diagonal lam term has value 2(1−2) = −2. The omitted box condition matters. i2 FLAG (top-level open).",
+   "claude_flags": "none",
+   "claude_note": "refute: y=[2] outside the box gives lam_val < 0; the text drops in_box",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 122,
+   "family": "gpt",
+   "statement": "S011",
+   "mode": "prove",
+   "folder": "122-gpt-S011-1",
+   "astra_flags": "2",
+   "astra_note": "vacuous via S141. Three coordinates equal to 1 and three signs equal to −1 make the premise’s expression negative. i2 FLAG (top-level open).",
+   "claude_flags": "none",
+   "claude_note": "vacuous via S141 (sign rule without s1 s2 s3 = 1; a=b=c=1, s=-1,-1,-1)",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 123,
+   "family": "gpt",
+   "statement": "S012",
+   "mode": "refute",
+   "folder": "123-gpt-S012-1",
+   "astra_flags": "2",
+   "astra_note": "The checker accepts the cut coefficient 1/1. Its numerator equals its denominator, violating the claimed strict bound. i2 FLAG (top-level open).",
+   "claude_flags": "none",
+   "claude_note": "refute: theta = 1/1 is accepted; the text asks tp < tq strictly",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 129,
+   "family": "gpt",
+   "statement": "S003",
+   "mode": "refute",
+   "folder": "129-gpt-S003-2",
+   "astra_flags": "2",
+   "astra_note": "With y = [1,0], the single cc entry updates coordinate 0 while the claimed sum starts at coordinate 1. i2 FLAG (top-level open).",
+   "claude_flags": "none",
+   "claude_note": "refute: cc_val (i + 1) misindexes; n=2, y=[1;0], cc=[(1,1)]",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 131,
+   "family": "gpt",
+   "statement": "S013",
+   "mode": "refute",
+   "folder": "131-gpt-S013-1",
+   "astra_flags": "2",
+   "astra_note": "The decreasing grid [1,0] gives width −1. At y = [1] the scaled dot product is negative. i2 FLAG (top-level open).",
+   "claude_flags": "none",
+   "claude_note": "refute: a decreasing grid [1;0] gives a negative width and m < 0",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 133,
+   "family": "gpt",
+   "statement": "S009",
+   "mode": "refute",
+   "folder": "133-gpt-S009-2",
+   "astra_flags": "2",
+   "astra_note": "On y = [0,0,1], swapping the last two indices changes the signed triangle value. The actual kind-14 update and the claimed form have different values. i2 FLAG (top-level open).",
+   "claude_flags": "none",
+   "claude_note": "refute: form_val read at (i,k,j); y=[0;0;1], s=(1,-1,-1) gives 4 against 0",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 134,
+   "family": "gpt",
+   "statement": "S014",
+   "mode": "refute",
+   "folder": "134-gpt-S014-1",
+   "astra_flags": "2",
+   "astra_note": "In dimension zero the augmented matrix is [[2]] at D = ep = eq = 1. Its quadratic form on [1] is 2 and the claimed right side is 0. i2 FLAG (top-level open).",
+   "claude_flags": "none",
+   "claude_note": "refute: n=0, ep=eq=1: M=[[2]] gives 2 but the text gives 0 (the 1 of v=(1,y) is missing from |v|^2)",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 135,
+   "family": "gpt",
+   "statement": "S021",
+   "mode": "prove",
+   "folder": "135-gpt-S021-2",
+   "astra_flags": "2",
+   "astra_note": "Inducts over matrix rows and uses the list update at the affected entry to obtain the bilinear increment and row lengths. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "induction over the matrix rows using S041 for addl; goalStack.print_tac only prints",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 136,
+   "family": "gpt",
+   "statement": "S015",
+   "mode": "refute",
+   "folder": "136-gpt-S015-1",
+   "astra_flags": "2",
+   "astra_note": "The submitted certificate passes inner_check. At the in-box point y = [0], L0 is zero, contradicting strict positivity. i2 FLAG (top-level open, top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "refute: an inner certificate checked by EVAL (top-level val holding the theorem), y=[0] gives L0 = 0, not > 0",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 138,
+   "family": "gpt",
+   "statement": "S016",
+   "mode": "refute",
+   "folder": "138-gpt-S016-1",
+   "astra_flags": "2",
+   "astra_note": "In dimension zero the slab matrix still has its constant row. Its length is 1 and the claimed length is 0. i2 FLAG (top-level open).",
+   "claude_flags": "none",
+   "claude_note": "refute: n=0, slab_matrix has length 1, not 0",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 139,
+   "family": "gpt",
+   "statement": "S017",
+   "mode": "prove",
+   "folder": "139-gpt-S017-1",
+   "astra_flags": "2",
+   "astra_note": "Uses divisibility to write D as (D DIV q) times the positive q, then cancels the real denominator. i2 FLAG (top-level open).",
+   "claude_flags": "none",
+   "claude_note": "division arithmetic: D DIV q * q = D, then field arithmetic",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 140,
+   "family": "gpt",
+   "statement": "S018",
+   "mode": "prove",
+   "folder": "140-gpt-S018-1",
+   "astra_flags": "2",
+   "astra_note": "vacuous via S137. An unknown tag 6 leaves the represented value unchanged while the unconditional update law predicts a nonzero increment. i2 FLAG (top-level open).",
+   "claude_flags": "none",
+   "claude_note": "vacuous via S137 (add_term value without the FST guard; tag 6 = bad state)",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 146,
+   "family": "gpt",
+   "statement": "S022",
+   "mode": "prove",
+   "folder": "146-gpt-S022-2",
+   "astra_flags": "2",
+   "astra_note": "vacuous via S137 (refuted in seq 382). Inducts over full pairs and composes the shape, flag and value of each tag-2 update with the induction hypothesis. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "induction over add_full using S135 (shape/ok) and S137 at tag 2 for one term's value (S137's text is false, so the goal is also vacuously true, but the proof is a real fold)",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 156,
+   "family": "gpt",
+   "statement": "S042",
+   "mode": "prove",
+   "folder": "156-gpt-S042-3",
+   "astra_flags": "2",
+   "astra_note": "Uses the success guards and divisibility to identify the scaled coefficient, then checks the state-value update for each legal tag. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "case on tag 0..5 using S017 (sc), S041 (addl), S021 (addm), S110 (guards)",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 157,
+   "family": "gpt",
+   "statement": "S001",
+   "mode": "prove",
+   "folder": "157-gpt-S001-3",
+   "astra_flags": "2",
+   "astra_note": "Inducts over cuts. The two legal signs give the two coefficient identities, and acceptance bounds each cut weight. i2 FLAG (top-level open, top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "induction over the cut list; ML helpers derive/carry build premises with CONJ/MP/PART_MATCH from S110/S042 (kernel rules only); raise Fail inside a helper",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 162,
+   "family": "gpt",
+   "statement": "S048",
+   "mode": "prove",
+   "folder": "162-gpt-S048-3",
+   "astra_flags": "2",
+   "astra_note": "Inducts over cut0 entries. The positive sign contributes zero, the negative sign gives one quadratic term, and an invalid sign clears success. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "induction over add_cut0 with S110/S042; trace_goal prints only; EVAL on mono",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 163,
+   "family": "gpt",
+   "statement": "S047",
+   "mode": "prove",
+   "folder": "163-gpt-S047-3",
+   "astra_flags": "2",
+   "astra_note": "Inducts over cc entries, carries the success flag back to the input and uses each box coordinate to bound the subtracted term. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "induction over add_cc with S110/S042; cc terms >= 0 on the box",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 168,
+   "family": "gpt",
+   "statement": "S002",
+   "mode": "prove",
+   "folder": "168-gpt-S002-3",
+   "astra_flags": "2",
+   "astra_note": "Inducts over lam entries, combines the two add_term updates for each entry, and uses the box bounds to prove each product nonnegative. i2 FLAG (top-level open, top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "induction over add_lam with S110/S042 (same derive/carry helpers as 157); lam terms >= 0 on the box",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 174,
+   "family": "gpt",
+   "statement": "S043",
+   "mode": "prove",
+   "folder": "174-gpt-S043-3",
+   "astra_flags": "2",
+   "astra_note": "Expands add_kap into its two monomial updates and combines the linear and square terms to obtain the factored product. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "add_kap = two add_terms (tags 3 and 5) via S110/S042, then field algebra",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 177,
+   "family": "gpt",
+   "statement": "S019",
+   "mode": "prove",
+   "folder": "177-gpt-S019-3",
+   "astra_flags": "2",
+   "astra_note": "Propagates shape forward and success backward through the slab stages. Adding their value identities gives the scaled polynomial and the bound’s divisibility guard. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "composes S005, S130, S100, S001, S110, S146, S042 along slab_poly's pipeline; forward proof in top-level val bindings (MP/SUBS/TRANS on ASSUMEd deps, no side effects), then ACCEPT_TAC",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 209,
+   "family": "gpt",
+   "statement": "S030",
+   "mode": "prove",
+   "folder": "209-gpt-S030-3",
+   "astra_flags": "2",
+   "astra_note": "vacuous via S137 (refuted in seq 382). The rebuilt fold proof completes its inductive cc branch. The script also proves a counterexample to S137 as a fallback. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "induction over add_cc with S135 and S137 at tag 1 (FIRST_PROVE; the fallback vacuous via S137 was not used, per the rebuild log)",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 213,
+   "family": "gpt",
+   "statement": "S031",
+   "mode": "prove",
+   "folder": "213-gpt-S031-3",
+   "astra_flags": "2",
+   "astra_note": "vacuous via S137. The rebuild log records the contradiction branch. An unknown tag 6 leaves the represented value unchanged while the unconditional update law predicts a nonzero increment. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "vacuous via S137: FIRST_PROVE fell back to the S137 contradiction (rebuild log prints \"Using inconsistent unconditional term premise\"); the first branch, a fold over add_nn, failed",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 220,
+   "family": "gpt",
+   "statement": "S034",
+   "mode": "refute",
+   "folder": "220-gpt-S034-2",
+   "astra_flags": "2",
+   "astra_note": "With c1 = c2 = 0 the dominance test accepts M = [[−1]]. Its quadratic form on [1] is −1. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "refute: c1 = c2 = 0 lets M = [[-1]] pass dd_rows; v = [1] gives -1 (the text lacks 0 < c1); the instance is built in top-level theorem vals (prove + EVAL_TAC)",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 245,
+   "family": "claude",
+   "statement": "S040",
+   "mode": "prove",
+   "folder": "245-claude-S040-1",
+   "astra_flags": "4",
+   "astra_note": "Positive diagonal scaling reduces weighted dominance to a row-sum bound. The Gram term is a sum of squares. The source credits a Day-2 proof and supplies its derivation here. i4 FLAG (additional ancestors real_sigma and pred_set).",
+   "claude_flags": "none",
+   "claude_note": "lists to sums over count n; unweighted diagonal dominance (pointwise bounds on diagonal and off-diagonal terms) then the d-weighting z = x/d; the Gram part c2 Lw Lw^T is a sum of squares, so c1 v^T M v >= 0. Extra ancestors real_sigma and pred_set (pinned HOL4), auxiliary Definitions dsum/pad, a GEN_SUMS_TAC helper over terms. Its header comment names \"the proof of the Day-2 S33 attempt 9\" as its source (pre-run material; for the blinding audit, not this checklist)",
+   "counts": true,
+   "why": "style-only flag on item 4, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 271,
+   "family": "gpt",
+   "statement": "S100",
+   "mode": "prove",
+   "folder": "271-gpt-S100-1",
+   "astra_flags": "2",
+   "astra_note": "Inducts over full pairs and composes the shape, flag and value of each tag-2 update with the induction hypothesis. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "induction over add_full with S110/S042; trace_goal prints only; collect_flags (with a handle inside the function body) is defined and unused",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 276,
+   "family": "gpt",
+   "statement": "S110",
+   "mode": "prove",
+   "folder": "276-gpt-S110-1",
+   "astra_flags": "2",
+   "astra_note": "Checks the shape and backwards success conditions of add_term by splitting the state and its tag, using preservation of vector and row lengths. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "case analysis on add_term with S041/S021's length and shape facts",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 296,
+   "family": "gpt",
+   "statement": "S117",
+   "mode": "prove",
+   "folder": "296-gpt-S117-1",
+   "astra_flags": "2",
+   "astra_note": "Expands add_zz into its four guarded updates and factors their combined value as the product of the two transformed coordinates. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "unfold add_zz into four add_terms; trace_guard pulls the ok flags back with S110, S042 gives each value",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 307,
+   "family": "gpt",
+   "statement": "S092",
+   "mode": "prove",
+   "folder": "307-gpt-S092-2",
+   "astra_flags": "2",
+   "astra_note": "vacuous via S083 (refuted in seq 260). The script tries a cell induction using the shape and value premises, with an accepted tag-5 counterexample to S083 as fallback. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "induction over add_cells with S083's guards (tags 1, 2 only) and S145's term value; ORELSE fallback vacuous via S083 (tag 5). The rebuild log reaches the fold's last phase; either branch is a valid proof",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 309,
+   "family": "gpt",
+   "statement": "S094",
+   "mode": "prove",
+   "folder": "309-gpt-S094-2",
+   "astra_flags": "2",
+   "astra_note": "vacuous via S083 (refuted in seq 260). The script tries a cell induction using the shape and value premises, with an accepted tag-5 counterexample to S083 as fallback. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "same script as 307 (S138 in place of S145): the fold over add_cells, fallback vacuous via S083",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 315,
+   "family": "gpt",
+   "statement": "S099",
+   "mode": "refute",
+   "folder": "315-gpt-S099-2",
+   "astra_flags": "2",
+   "astra_note": "The single interval [0,½] passes cover_all and leaves the tested point 1 uncovered. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "refute: cover_all [(0,1,1,2)] holds, m = 1 is in no interval (the text asks m <= 1)",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 316,
+   "family": "gpt",
+   "statement": "S101",
+   "mode": "prove",
+   "folder": "316-gpt-S101-2",
+   "astra_flags": "2",
+   "astra_note": "vacuous via S137 (refuted in seq 382). The script tries a kind-14 calculation using the listed update laws, with a failed divisibility guard as its counterexample to S137 in the fallback. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "kind-14 case analysis with S161 (shapes) and S137 (term values); ORELSE fallback vacuous via S137 (q = 2 does not divide D = 1). Either branch is a valid proof; the log does not say which ran",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 321,
+   "family": "gpt",
+   "statement": "S093",
+   "mode": "refute",
+   "folder": "321-gpt-S093-3",
+   "astra_flags": "2",
+   "astra_note": "The submitted certificate passes inner_check. At the in-box point y = [0], L0 is zero, contradicting strict positivity. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "refute: the inner certificate of 136 passes inner_check (EVAL in a top-level prove); y = [0] gives L0 = 0, not > 0",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 322,
+   "family": "gpt",
+   "statement": "S102",
+   "mode": "refute",
+   "folder": "322-gpt-S102-2",
+   "astra_flags": "2",
+   "astra_note": "The empty tail passes cover at endpoint ½. Allowing equality at that endpoint would put it in an interval of the empty list. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "refute: cover 1 2 [] holds; m = 1/2 = a is in no interval (the text has a <= m)",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 324,
+   "family": "gpt",
+   "statement": "S105",
+   "mode": "prove",
+   "folder": "324-gpt-S105-2",
+   "astra_flags": "2",
+   "astra_note": "The recursive tactic follows named inner_poly stages, derives the input shape for each accepted update, and combines the value and sign facts. i2 FLAG (top-level ML values, recursive proof construction).",
+   "claude_flags": "none",
+   "claude_note": "composes inner_poly's eight stages (S047, S139, S043, S059, S002, S048, S100, S130) back to st0 (S005) with a propagate helper (PART_MATCH/MP; its prints are inside the function); the identity by REAL_POLY_CONV, the sign by summing non-negative parts",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 334,
+   "family": "claude",
+   "statement": "S043",
+   "mode": "prove",
+   "folder": "334-claude-S043-1",
+   "astra_flags": "2",
+   "astra_note": "Expands add_kap into its two monomial updates and combines the linear and square terms to obtain the factored product. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "add_kap = tag 3 then tag 5; S110 gives guards (kq, rq <> 0), S042 the values; a field identity",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 336,
+   "family": "claude",
+   "statement": "S047",
+   "mode": "prove",
+   "folder": "336-claude-S047-1",
+   "astra_flags": "2",
+   "astra_note": "Inducts over cc entries, carries the success flag back to the input and uses each box coordinate to bound the subtracted term. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "induction over add_cc with S110/S042; c_i y_i >= 0 on the box",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 337,
+   "family": "claude",
+   "statement": "S048",
+   "mode": "prove",
+   "folder": "337-claude-S048-1",
+   "astra_flags": "2",
+   "astra_note": "Inducts over cut0 entries. The positive sign contributes zero, the negative sign gives one quadratic term, and an invalid sign clears success. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "induction over add_cut0 with S110/S042; sg = 1 adds nothing, sg = -1 one tag-2 term, else bad",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 346,
+   "family": "gpt",
+   "statement": "S098",
+   "mode": "prove",
+   "folder": "346-gpt-S098-3",
+   "astra_flags": "2",
+   "astra_note": "Splits on kinds 7 through 13, expands the guarded updates, and normalizes each resulting polynomial. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "case on kind 7..13; each add_term's value and shape via S042/S110 (evaluate_terms helper with PART_MATCH/MP), then field algebra",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 355,
+   "family": "gpt",
+   "statement": "S128",
+   "mode": "refute",
+   "folder": "355-gpt-S128-1",
+   "astra_flags": "2",
+   "astra_note": "At y = [1], a single positive nu entry with m = 1 and rin = 0 has value −1 even though the update succeeds. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "refute: nu term without m <= rin (y = [1], m = 1, rin = 0)",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 366,
+   "family": "gpt",
+   "statement": "S133",
+   "mode": "refute",
+   "folder": "366-gpt-S133-1",
+   "astra_flags": "2",
+   "astra_note": "With all lists empty and bound B = 1, the checker places −1 in the constant term. The claimed value is +1. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "refute: the text adds qv Bp Bq (EVAL of slab_poly at Bp = Bq = 1)",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 368,
+   "family": "gpt",
+   "statement": "S134",
+   "mode": "prove",
+   "folder": "368-gpt-S134-1",
+   "astra_flags": "2",
+   "astra_note": "vacuous via S159. Transposition changes the (0,1) entry of a nonsymmetric 2×2 matrix. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "vacuous via S159 (EL j (EL i Cm) in place of EL i (EL j Cm); Cm = [[0;1];[0;0]])",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 373,
+   "family": "claude",
+   "statement": "S042",
+   "mode": "prove",
+   "folder": "373-claude-S042-2",
+   "astra_flags": "2",
+   "astra_note": "Uses the success guards and divisibility to identify the scaled coefficient, then checks the state-value update for each legal tag. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "case on tag 0..5 with S110's guards, S017 for sc, S041 for addl, S021 for addm",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 377,
+   "family": "claude",
+   "statement": "S051",
+   "mode": "prove",
+   "folder": "377-claude-S051-1",
+   "astra_flags": "2",
+   "astra_note": "vacuous via S137 (refuted in seq 382). Proves the tag-0 value directly and combines it with three signed zz updates under S155. The proof drops the false S137 premise. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "kind 14 = tag-0 term plus three add_zz; S135 for guards and shape, S155 for each add_zz, sc = D*p/q computed in the script (S137 unused)",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 378,
+   "family": "gpt",
+   "statement": "S136",
+   "mode": "refute",
+   "folder": "378-gpt-S136-1",
+   "astra_flags": "2",
+   "astra_note": "In dimension zero the augmented matrix is [[2]] at D = ep = eq = 1. Its quadratic form on [1] is 2 and the claimed right side is 0. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "refute: |v|^2 without the leading 1 (n = 0, M = [[2]])",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 399,
+   "family": "gpt",
+   "statement": "S144",
+   "mode": "refute",
+   "folder": "399-gpt-S144-1",
+   "astra_flags": "2",
+   "astra_note": "The checker accepts the cut coefficient 1/1. Its numerator equals its denominator, violating the claimed strict bound. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "refute: theta = 1/1 accepted, strict < fails",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 404,
+   "family": "gpt",
+   "statement": "S155",
+   "mode": "prove",
+   "folder": "404-gpt-S155-1",
+   "astra_flags": "2",
+   "astra_note": "vacuous via S137 (refuted in seq 382). Expands add_zz into its four guarded updates and factors their combined value as the product of the two transformed coordinates. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "unfold add_zz into four add_terms; S135 for flags and shape, S137 for each term's value (S137's text is false, so the goal is also vacuously true; the proof itself is the unfolding)",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 406,
+   "family": "gpt",
+   "statement": "S130",
+   "mode": "prove",
+   "folder": "406-gpt-S130-3",
+   "astra_flags": "2",
+   "astra_note": "Inducts over cells, applying the linear and diagonal quadratic update equations at the current index before moving to the next. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "induction over add_cells with S110/S042 (tags 1, 2 per cell)",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 407,
+   "family": "gpt",
+   "statement": "S139",
+   "mode": "prove",
+   "folder": "407-gpt-S139-2",
+   "astra_flags": "2",
+   "astra_note": "Inducts over nn entries, distinguishes diagonal and off-diagonal coefficients, and uses box coordinates for the sign. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "induction over add_nn with S110/S042; entries >= 0 on the box",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 421,
+   "family": "gpt",
+   "statement": "S154",
+   "mode": "prove",
+   "folder": "421-gpt-S154-3",
+   "astra_flags": "2",
+   "astra_note": "Inducts over forms. Acceptance bounds the multiplier and indices. Ordinary forms use box or interval bounds, and the signed triangle uses the cube inequality. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "induction over the forms; each accepted form >= 0 by S095's guards, S152 (kinds <= 13) and S054 (triangle, with z = 1 - 2y in [-1,1])",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 422,
+   "family": "claude",
+   "statement": "S046",
+   "mode": "prove",
+   "folder": "422-claude-S046-1",
+   "astra_flags": "4",
+   "astra_note": "A nonzero coordinate makes the strict row-sum lower bound positive. The source credits the Day-2 non-strict proof and includes both the bound and its strict extension. i4 FLAG (additional ancestors real_sigma and pred_set).",
+   "claude_flags": "none",
+   "claude_note": "the S040 route sharpened: z^T H z >= SUM z_i^2 (2 H_ii - SUM_j |H_ij|) with one term > 0 at a non-zero coordinate; S040 itself not used. Extra ancestors real_sigma and pred_set (pinned HOL4); header comment names the Day-2 S33 attempt 9 as its base (pre-run material)",
+   "counts": true,
+   "why": "style-only flag on item 4, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 424,
+   "family": "claude",
+   "statement": "S049",
+   "mode": "prove",
+   "folder": "424-claude-S049-1",
+   "astra_flags": "2",
+   "astra_note": "Eliminates the zero linear part, identifies the inner matrix form with twice the remaining quadratic part, and applies strict dominance and the multiplier bounds. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "composes S105 (inner poly = D(L0 - M), M >= 0), S058 (linear part 0), S109 (form = 2Q, shape), S046 (strict dominance), S115 (m >= 0), S078; then real arithmetic",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  },
+  {
+   "seq": 485,
+   "family": "claude",
+   "statement": "S105",
+   "mode": "prove",
+   "folder": "485-claude-S105-1",
+   "astra_flags": "2",
+   "astra_note": "Carries shape forward and success backward through the inner checker stages, combines their value identities, and sums the nonnegative multiplier terms. i2 FLAG (top-level ML values).",
+   "claude_flags": "none",
+   "claude_note": "flags pulled back stage by stage (monotonicity lemmas), then the nine stage statements chained forward from st0 (S005); sum the parts, each >= 0",
+   "counts": true,
+   "why": "style-only flag on item 2, the other reader passes (ruling 16:19)"
+  }
+ ]
+}

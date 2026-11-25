@@ -1,0 +1,3 @@
+# hol4/delta3/cakeml/hol/checker — build-binary.sh copies the checker's two script files here from the
+# directory it is given (on 2026-11-25: hol4/delta3/harness/base, sha256 785e8c08… and 42a7aad2…).
+# Built with plain HOL (cv_transLib is in HOL's sigobj); no CakeML heap here.

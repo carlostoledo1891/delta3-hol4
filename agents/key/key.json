@@ -1,0 +1,3264 @@
+{
+ "S001": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L09",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S110",
+   "S042"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S002": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L31",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S110",
+   "S042"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S003": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L35",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S161",
+   "S137"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S004": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L37",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S159",
+   "S088"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S159",
+   "S088"
+  ],
+  "f_index": null
+ },
+ "S005": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L06",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S006": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L13",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S145"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S007": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L33",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S161",
+   "S137"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S008": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L11",
+  "group": "SLAB",
+  "kind": "inequality turned strict",
+  "why": "a zero multiplier is accepted: kind 5, mp = 0",
+  "inst": {
+   "D": "1",
+   "n": "1",
+   "lp": "0",
+   "lq": "1",
+   "hp": "1",
+   "hq": "1",
+   "kind": "5",
+   "i": "0",
+   "j": "0",
+   "k": "0",
+   "s1": "1",
+   "s2": "1",
+   "s3": "1",
+   "mp": "0",
+   "mq": "1",
+   "st": "st0 1"
+  },
+  "deps": [
+   "S135"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 10
+ },
+ "S009": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L14",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S135",
+   "S138",
+   "S082"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S082"
+  ],
+  "f_index": null
+ },
+ "S010": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L31",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S145"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S011": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L18",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S157",
+   "S062",
+   "S141"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S062",
+   "S141"
+  ],
+  "f_index": null
+ },
+ "S012": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L09",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S145"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S013": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L39",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S150"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S150"
+  ],
+  "f_index": null
+ },
+ "S014": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L23",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S159",
+   "S088"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S159",
+   "S088"
+  ],
+  "f_index": null
+ },
+ "S015": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L40",
+  "group": "INNER",
+  "kind": "inequality turned strict",
+  "why": "at y = 0, L0 = 0: one cell with L0 = y^2",
+  "inst": {
+   "ab": "[(0,1,1,1)]",
+   "cuts": "[]",
+   "full": "[]",
+   "grid": "[0;1096]",
+   "rp": "1",
+   "rq": "1",
+   "lam": "[]",
+   "nu": "[(0,1)]",
+   "kp": "0",
+   "kq": "1",
+   "nn": "[]",
+   "cc": "[(0,1)]",
+   "D": "1096 * 1096",
+   "T2": "0",
+   "ds": "[1]",
+   "Lw": "[[]]",
+   "y": "[0]"
+  },
+  "deps": [
+   "S078",
+   "S046",
+   "S028",
+   "S050",
+   "S058",
+   "S115"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 41
+ },
+ "S016": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L22",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S159",
+   "S088"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S159",
+   "S088"
+  ],
+  "f_index": null
+ },
+ "S017": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L01",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S018": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L08",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S161",
+   "S137"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S019": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L19",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S110",
+   "S042",
+   "S005",
+   "S130",
+   "S100",
+   "S001",
+   "S146"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S020": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L32",
+  "group": "INNER",
+  "kind": "dropped hypothesis",
+  "why": "beyond the radius: nu = [(1,1)], y = [1], m = 2, rin = 1 gives -1",
+  "inst": {
+   "D": "1096",
+   "n": "1",
+   "rp": "1",
+   "rq": "1",
+   "j": "0",
+   "nu": "[(1,1)]",
+   "st": "st0 1",
+   "y": "[1]",
+   "ws": "[0]",
+   "m": "2",
+   "rin": "1"
+  },
+  "deps": [
+   "S161",
+   "S145"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 33
+ },
+ "S021": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L03",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S041"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S022": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L08",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S135",
+   "S137"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S023": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L34",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S145"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S024": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L27",
+  "group": "SLAB",
+  "kind": "dropped hypothesis",
+  "why": "cq = 0: the integer test passes, the claim reads 0 and the bound is -1",
+  "inst": {
+   "cp": "0",
+   "Bq": "1",
+   "eq": "1",
+   "Bp": "-1",
+   "ep": "0",
+   "n": "0",
+   "cq": "0"
+  },
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 28
+ },
+ "S025": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L24",
+  "group": "SLAB",
+  "kind": "inequality turned strict",
+  "why": "n = 1, y = [1]",
+  "inst": {
+   "n": "1",
+   "y": "[1]"
+  },
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 24
+ },
+ "S026": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L34",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S138"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S027": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L22",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S052",
+   "S038"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S028": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L36",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S153",
+   "S092",
+   "S158",
+   "S029",
+   "S056",
+   "S069",
+   "S035",
+   "S031",
+   "S075"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S153",
+   "S158",
+   "S035"
+  ],
+  "f_index": null
+ },
+ "S029": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L30",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S135",
+   "S137"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S030": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L35",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S135",
+   "S137"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S031": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L34",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S135",
+   "S137"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S032": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L12",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S161",
+   "S137"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S033": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L07",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S072"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S034": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L26",
+  "group": "SLAB",
+  "kind": "dropped hypothesis",
+  "why": "with c1 = 0 the test says nothing about M: M = [[-1]], v = [1]",
+  "inst": {
+   "c1": "0",
+   "c2": "0",
+   "M": "[[-1]]",
+   "Lw": "[[]]",
+   "ds": "[1]",
+   "v": "[1]"
+  },
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 27
+ },
+ "S035": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L33",
+  "group": "INNER",
+  "kind": "inequality turned strict",
+  "why": "kap = 0 is accepted",
+  "inst": {
+   "D": "1096 * 1096",
+   "n": "1",
+   "rp": "1",
+   "rq": "1",
+   "kp": "0",
+   "kq": "1",
+   "st": "st0 1",
+   "y": "[0]",
+   "ws": "[0]"
+  },
+  "deps": [
+   "S161",
+   "S138"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 34
+ },
+ "S036": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L36",
+  "group": "INNER",
+  "kind": "sign flipped",
+  "why": "only c = [1], y = [1]: value -D, claimed +D",
+  "inst": {
+   "D": "1096 * 1096",
+   "n": "1",
+   "ab": "[]",
+   "cuts": "[]",
+   "full": "[]",
+   "rp": "1",
+   "rq": "1",
+   "lam": "[]",
+   "nu": "[]",
+   "kp": "0",
+   "kq": "1",
+   "nn": "[]",
+   "cc": "[(1,1)]",
+   "y": "[1]",
+   "ws": "[0]",
+   "m": "0",
+   "rin": "1"
+  },
+  "deps": [
+   "S005",
+   "S092",
+   "S018",
+   "S142",
+   "S055",
+   "S128",
+   "S076",
+   "S023",
+   "S030"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 37
+ },
+ "S037": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L15",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S008",
+   "S151",
+   "S112",
+   "S101"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S008"
+  ],
+  "f_index": null
+ },
+ "S038": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L21",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S039": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L36",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S153",
+   "S085",
+   "S158",
+   "S066",
+   "S010",
+   "S119",
+   "S007",
+   "S026",
+   "S003"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S153",
+   "S085",
+   "S158",
+   "S066"
+  ],
+  "f_index": null
+ },
+ "S040": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L26",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S041": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L02",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S042": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L05",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S017",
+   "S041",
+   "S021",
+   "S110"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S043": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L33",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S110",
+   "S042"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S044": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L12",
+  "group": "SLAB",
+  "kind": "wrong bound",
+  "why": "kind 7 depends on m, which is free here: D = 1096, mp = 1, m = 5, lo = 0, y = [0]: value 0, claimed -5480",
+  "inst": {
+   "D": "1096",
+   "n": "1",
+   "lp": "0",
+   "lq": "1",
+   "hp": "1",
+   "hq": "1",
+   "kind": "7",
+   "i": "0",
+   "j": "0",
+   "k": "0",
+   "s1": "1",
+   "s2": "1",
+   "s3": "1",
+   "mp": "1",
+   "mq": "1",
+   "st": "st0 1",
+   "y": "[0]",
+   "ws": "[0]",
+   "m": "5",
+   "lo": "0",
+   "hi": "1"
+  },
+  "deps": [
+   "S135",
+   "S072"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 11
+ },
+ "S045": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L28",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S131",
+   "S074",
+   "S132",
+   "S125",
+   "S014",
+   "S025",
+   "S150",
+   "S034",
+   "S024"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S131",
+   "S125",
+   "S025",
+   "S150",
+   "S034",
+   "S024"
+  ],
+  "f_index": null
+ },
+ "S046": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L29",
+  "group": "STRICT",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S040"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S047": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L35",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S110",
+   "S042"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S048": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L30",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S110",
+   "S042"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S049": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L40",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S078",
+   "S046",
+   "S105",
+   "S109",
+   "S058",
+   "S115"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S050": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L37",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S159",
+   "S088"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S159",
+   "S088"
+  ],
+  "f_index": null
+ },
+ "S051": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L14",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S135",
+   "S137",
+   "S155"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S052": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L20",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S053": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L41",
+  "group": "COVER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S054": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L17",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S055": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L31",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S135",
+   "S137"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S056": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L31",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S161",
+   "S137"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S057": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L23",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S052",
+   "S038"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S058": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L38",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S038"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S059": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L32",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S110",
+   "S042"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S060": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L39",
+  "group": "INNER",
+  "kind": "dropped hypothesis",
+  "why": "a decreasing grid has a negative width: grid = [1096;0], y = [1] gives m = -1",
+  "inst": {
+   "grid": "[1096;0]",
+   "y": "[1]"
+  },
+  "deps": [
+   "S078"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 40
+ },
+ "S061": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L02",
+  "group": "SLAB",
+  "kind": "mutated constant",
+  "why": "l = [0], n = 0, v = 1, y = [1]: left 1, right 2",
+  "inst": {
+   "n": "0",
+   "v": "1",
+   "l": "[0]",
+   "y": "[1]"
+  },
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 1
+ },
+ "S062": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L16",
+  "group": "SLAB",
+  "kind": "dropped hypothesis",
+  "why": "kind 7 is m - lo: m = 0, lo = 1",
+  "inst": {
+   "n": "0",
+   "y": "[]",
+   "m": "0",
+   "lo": "1",
+   "hi": "2",
+   "kind": "7",
+   "i": "0",
+   "j": "0",
+   "k": "0",
+   "s1": "1",
+   "s2": "1",
+   "s3": "1"
+  },
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 15
+ },
+ "S063": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L28",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S131",
+   "S011",
+   "S116",
+   "S070",
+   "S136",
+   "S025",
+   "S150",
+   "S034",
+   "S024"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S131",
+   "S136",
+   "S025",
+   "S150",
+   "S034",
+   "S024"
+  ],
+  "f_index": null
+ },
+ "S064": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L14",
+  "group": "SLAB",
+  "kind": "mutated index",
+  "why": "j and k swapped: s = (1,-1,-1), y = [0;0;1]: the form is 4, the swapped one 0",
+  "inst": {
+   "D": "1",
+   "n": "3",
+   "lp": "0",
+   "lq": "1",
+   "hp": "1",
+   "hq": "1",
+   "kind": "14",
+   "i": "0",
+   "j": "1",
+   "k": "2",
+   "s1": "1",
+   "s2": "-1",
+   "s3": "-1",
+   "mp": "1",
+   "mq": "1",
+   "st": "st0 3",
+   "y": "[0;0;1]",
+   "ws": "[0;0;0]",
+   "m": "0",
+   "lo": "0",
+   "hi": "1"
+  },
+  "deps": [
+   "S161",
+   "S138",
+   "S077"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 13
+ },
+ "S065": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L38",
+  "group": "INNER",
+  "kind": "sign flipped",
+  "why": "ws = [1], g = [0], mL = 1, y = [1]: value 1, claimed -1",
+  "inst": {
+   "ws": "[1]",
+   "g": "[0]",
+   "mL": "1",
+   "y": "[1]",
+   "l": "[]"
+  },
+  "deps": [
+   "S038"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 39
+ },
+ "S066": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L30",
+  "group": "INNER",
+  "kind": "sign flipped",
+  "why": "one pair with s_i s_j = -1, y = [1]: value -1, claimed +1",
+  "inst": {
+   "D": "1096 * 1096",
+   "n": "1",
+   "cuts": "[(0,0,-1,1,0)]",
+   "st": "st0 1",
+   "y": "[1]",
+   "ws": "[0]"
+  },
+  "deps": [
+   "S161",
+   "S072"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 31
+ },
+ "S067": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L03",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S061"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S061"
+  ],
+  "f_index": null
+ },
+ "S068": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L18",
+  "group": "SLAB",
+  "kind": "dropped hypothesis",
+  "why": "outside the box: one form y_0 with mu = 1, y = [-1]",
+  "inst": {
+   "D": "1",
+   "n": "1",
+   "lp": "0",
+   "lq": "1",
+   "hp": "1",
+   "hq": "1",
+   "forms": "[(5,0,0,0,1,1,1,1,1)]",
+   "st": "st0 1",
+   "y": "[-1]",
+   "m": "0",
+   "lo": "0",
+   "hi": "0"
+  },
+  "deps": [
+   "S095",
+   "S152",
+   "S054"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 18
+ },
+ "S069": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L32",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S161",
+   "S137"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S070": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L22",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S052",
+   "S088"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S088"
+  ],
+  "f_index": null
+ },
+ "S071": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L09",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S072"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S072": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L05",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S131",
+   "S061",
+   "S122",
+   "S135"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S131",
+   "S061",
+   "S122"
+  ],
+  "f_index": null
+ },
+ "S073": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L40",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S150",
+   "S160",
+   "S039",
+   "S103",
+   "S143",
+   "S013"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S150",
+   "S103"
+  ],
+  "f_index": null
+ },
+ "S074": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L18",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S008",
+   "S062",
+   "S086"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S008",
+   "S062",
+   "S086"
+  ],
+  "f_index": null
+ },
+ "S075": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L35",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S072"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S076": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L33",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S072"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S077": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L10",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S072"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S078": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L25",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S079": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L10",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S145"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S080": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L08",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S145"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S081": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L33",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S161",
+   "S137"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S082": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L10",
+  "group": "SLAB",
+  "kind": "sign flipped",
+  "why": "D = 1, c = q = 1, a = b = 0, y = [0]: value -1, claimed +1",
+  "inst": {
+   "D": "1",
+   "n": "1",
+   "c": "1",
+   "q": "1",
+   "a": "0",
+   "b": "0",
+   "st": "st0 1",
+   "y": "[0]",
+   "ws": "[0]"
+  },
+  "deps": [
+   "S161",
+   "S138"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 9
+ },
+ "S083": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L04",
+  "group": "SLAB",
+  "kind": "inequality turned strict",
+  "why": "tag = 5 is accepted: D = 1, n = 1, i = j = 0, p = 0, q = 1 on the empty state",
+  "inst": {
+   "D": "1",
+   "n": "1",
+   "tag": "5",
+   "i": "0",
+   "j": "0",
+   "p": "0",
+   "q": "1",
+   "st": "st0 1"
+  },
+  "deps": [
+   "S041",
+   "S021"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 3
+ },
+ "S084": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L12",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S110",
+   "S042"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S085": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L07",
+  "group": "SLAB",
+  "kind": "mutated index",
+  "why": "n = 2, i = 0, ab = [(1,1,0,1)], y = [1;0]: value 1, claimed 0",
+  "inst": {
+   "D": "1",
+   "n": "2",
+   "i": "0",
+   "ab": "[(1,1,0,1)]",
+   "st": "st0 2",
+   "y": "[1;0]",
+   "ws": "[0;0]"
+  },
+  "deps": [
+   "S161",
+   "S145"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 6
+ },
+ "S086": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L17",
+  "group": "SLAB",
+  "kind": "inequality turned strict",
+  "why": "s = (1,1,1), a = b = 1, c = -1: the value is 0",
+  "inst": {
+   "a": "1",
+   "b": "1",
+   "c": "-1",
+   "s1": "1",
+   "s2": "1",
+   "s3": "1"
+  },
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 17
+ },
+ "S087": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L28",
+  "group": "SLAB",
+  "kind": "dropped hypothesis",
+  "why": "below the slab the bound fails: one cell, L_theta = 10y, region [1/2,1], form 10(m - 1/2), B = claim = 4; at y = 0 L_theta = 0 < 4",
+  "inst": {
+   "ab": "[(10,1,0,1)]",
+   "cuts": "[]",
+   "full": "[]",
+   "grid": "[0;1096]",
+   "lp": "1",
+   "lq": "2",
+   "hp": "1",
+   "hq": "1",
+   "Bp": "4",
+   "Bq": "1",
+   "ep": "0",
+   "eq": "1",
+   "cp": "4",
+   "cq": "1",
+   "theta": "[]",
+   "forms": "[(7,0,0,0,1,1,1,10,1)]",
+   "D": "1096",
+   "T2": "0",
+   "ds": "[1;1]",
+   "Lw": "[[];[]]",
+   "y": "[0]"
+  },
+  "deps": [
+   "S017",
+   "S118",
+   "S127",
+   "S134",
+   "S124",
+   "S123",
+   "S078",
+   "S040",
+   "S108"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 29
+ },
+ "S088": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L21",
+  "group": "SLAB",
+  "kind": "mutated constant",
+  "why": "ws = [1], g = [1], c = 2: entry 3, claimed 2",
+  "inst": {
+   "ws": "[1]",
+   "g": "[1]",
+   "c": "2",
+   "i": "0"
+  },
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 21
+ },
+ "S089": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L14",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S110",
+   "S042",
+   "S117"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S090": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L42",
+  "group": "COVER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S102"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S102"
+  ],
+  "f_index": null
+ },
+ "S091": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L15",
+  "group": "SLAB",
+  "kind": "sign flipped",
+  "why": "one form y_0 with mu = 1, y = [1]: value -1, claimed +1",
+  "inst": {
+   "D": "1",
+   "n": "1",
+   "lp": "0",
+   "lq": "1",
+   "hp": "1",
+   "hq": "1",
+   "forms": "[(5,0,0,0,1,1,1,1,1)]",
+   "st": "st0 1",
+   "y": "[1]",
+   "ws": "[0]"
+  },
+  "deps": [
+   "S095",
+   "S032",
+   "S006",
+   "S009"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 14
+ },
+ "S092": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L07",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S145"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S093": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L40",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S150",
+   "S160",
+   "S036",
+   "S004",
+   "S143",
+   "S060"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S150",
+   "S036",
+   "S060"
+  ],
+  "f_index": null
+ },
+ "S094": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L07",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S138"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S095": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L11",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S110"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S096": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L31",
+  "group": "INNER",
+  "kind": "dropped hypothesis",
+  "why": "outside the box: lam = [(0,0,1,1)], y = [2] gives -2",
+  "inst": {
+   "D": "1",
+   "n": "1",
+   "lam": "[(0,0,1,1)]",
+   "st": "st0 1",
+   "y": "[2]",
+   "ws": "[0]"
+  },
+  "deps": [
+   "S161",
+   "S072"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 32
+ },
+ "S097": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L15",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S157",
+   "S156",
+   "S106",
+   "S064"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S106",
+   "S064"
+  ],
+  "f_index": null
+ },
+ "S098": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L13",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S110",
+   "S042"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S099": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L42",
+  "group": "COVER",
+  "kind": "wrong bound",
+  "why": "ivs = [[0, 1/2]], m = 1",
+  "inst": {
+   "ivs": "[(0,1,1,2)]",
+   "m": "1"
+  },
+  "deps": [
+   "S053"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 43
+ },
+ "S100": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L08",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S110",
+   "S042"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S101": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L14",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S161",
+   "S137",
+   "S079"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S102": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L41",
+  "group": "COVER",
+  "kind": "inequality turned non-strict",
+  "why": "a = 1/2, no interval left, m = 1/2",
+  "inst": {
+   "ap": "1",
+   "aq": "2",
+   "ivs": "[]",
+   "m": "1 / 2"
+  },
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 42
+ },
+ "S103": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L37",
+  "group": "INNER",
+  "kind": "mutated constant",
+  "why": "Cm = [[1]], y = [1]: the form is 2, claimed 1",
+  "inst": {
+   "n": "1",
+   "ok": "T",
+   "k": "0",
+   "g": "[0]",
+   "Cm": "[[1]]",
+   "mL": "0",
+   "mY": "[0]",
+   "mM": "0",
+   "ws": "[0]",
+   "y": "[1]"
+  },
+  "deps": [
+   "S052",
+   "S038"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 38
+ },
+ "S104": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L09",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S138"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S105": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L36",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S005",
+   "S130",
+   "S100",
+   "S048",
+   "S002",
+   "S059",
+   "S043",
+   "S139",
+   "S047"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S106": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L13",
+  "group": "SLAB",
+  "kind": "mutated constant",
+  "why": "with 548 for 1096: kind 7, D = 1096, ws = [1096], y = [1]: value -1096, claimed -2192",
+  "inst": {
+   "D": "1096",
+   "n": "1",
+   "lp": "0",
+   "lq": "1",
+   "hp": "1",
+   "hq": "1",
+   "kind": "7",
+   "i": "0",
+   "j": "0",
+   "k": "0",
+   "s1": "1",
+   "s2": "1",
+   "s3": "1",
+   "mp": "1",
+   "mq": "1",
+   "st": "st0 1",
+   "y": "[1]",
+   "ws": "[1096]"
+  },
+  "deps": [
+   "S135",
+   "S145"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 12
+ },
+ "S107": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L15",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S008",
+   "S044",
+   "S148",
+   "S051"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S008",
+   "S044"
+  ],
+  "f_index": null
+ },
+ "S108": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L27",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S109": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L37",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S052",
+   "S038"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S110": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L04",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S041",
+   "S021"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S111": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L36",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S153",
+   "S085",
+   "S022",
+   "S147",
+   "S096",
+   "S020",
+   "S081",
+   "S162",
+   "S140"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S153",
+   "S085",
+   "S096",
+   "S020",
+   "S162",
+   "S140"
+  ],
+  "f_index": null
+ },
+ "S112": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L13",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S135",
+   "S137"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S113": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L29",
+  "group": "STRICT",
+  "kind": "inequality turned non-strict",
+  "why": "non-strict dominance allows the zero matrix: M = [[0]], v = [1]",
+  "inst": {
+   "c1": "1",
+   "c2": "0",
+   "M": "[[0]]",
+   "Lw": "[[]]",
+   "ds": "[1]",
+   "v": "[1]"
+  },
+  "deps": [
+   "S040"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 30
+ },
+ "S114": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L42",
+  "group": "COVER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S053"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S115": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L39",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S078"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S116": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L19",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S135",
+   "S137",
+   "S153",
+   "S033",
+   "S158",
+   "S071",
+   "S107"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S137",
+   "S153",
+   "S158"
+  ],
+  "f_index": null
+ },
+ "S117": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L10",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S110",
+   "S042"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S118": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L18",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S157",
+   "S062",
+   "S141"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S062",
+   "S141"
+  ],
+  "f_index": null
+ },
+ "S119": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L32",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S135",
+   "S137"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S120": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L23",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S159",
+   "S038"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S159"
+  ],
+  "f_index": null
+ },
+ "S121": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L37",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S159",
+   "S038"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S159"
+  ],
+  "f_index": null
+ },
+ "S122": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L03",
+  "group": "SLAB",
+  "kind": "mutated index",
+  "why": "Cm = 2x2 zero, i = 0, j = 1, v = 1, u = [1;0], y = [0;1]: left 1, right 0",
+  "inst": {
+   "i": "0",
+   "j": "1",
+   "v": "1",
+   "Cm": "[[0;0];[0;0]]",
+   "n": "2",
+   "u": "[1;0]",
+   "y": "[0;1]"
+  },
+  "deps": [
+   "S041"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 2
+ },
+ "S123": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L24",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S124": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L23",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S052",
+   "S088"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S088"
+  ],
+  "f_index": null
+ },
+ "S125": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L22",
+  "group": "SLAB",
+  "kind": "mutated constant",
+  "why": "n = 0: the matrix is 1 x 1",
+  "inst": {
+   "n": "0",
+   "st": "st0 0",
+   "ws": "[]",
+   "D": "1",
+   "ep": "0",
+   "eq": "1"
+  },
+  "deps": [
+   "S052",
+   "S038"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 22
+ },
+ "S126": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L28",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S131",
+   "S068",
+   "S133",
+   "S016",
+   "S120",
+   "S025",
+   "S150",
+   "S034",
+   "S024"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S131",
+   "S068",
+   "S133",
+   "S025",
+   "S150",
+   "S034",
+   "S024"
+  ],
+  "f_index": null
+ },
+ "S127": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L19",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S161",
+   "S145",
+   "S153",
+   "S092",
+   "S158",
+   "S104",
+   "S091"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S153",
+   "S158",
+   "S091"
+  ],
+  "f_index": null
+ },
+ "S128": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L32",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S135",
+   "S137"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S129": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L40",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S150",
+   "S113",
+   "S111",
+   "S121",
+   "S065",
+   "S013"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S150",
+   "S113",
+   "S065"
+  ],
+  "f_index": null
+ },
+ "S130": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L07",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S110",
+   "S042"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S131": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L01",
+  "group": "SLAB",
+  "kind": "dropped hypothesis",
+  "why": "D = 1, q = 2, p = 1: sc = 1 * &(1 DIV 2) = 0, but D * p/q = 1/2",
+  "inst": {
+   "D": "1",
+   "q": "2",
+   "p": "1"
+  },
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 0
+ },
+ "S132": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L19",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S145",
+   "S153",
+   "S085",
+   "S080",
+   "S144",
+   "S097"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S083",
+   "S153",
+   "S085",
+   "S144"
+  ],
+  "f_index": null
+ },
+ "S133": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L19",
+  "group": "SLAB",
+  "kind": "sign flipped",
+  "why": "everything empty but B = 1, n = 1, y = [0]: value -1, claimed +1",
+  "inst": {
+   "D": "1",
+   "n": "1",
+   "ab": "[]",
+   "cuts": "[]",
+   "full": "[]",
+   "Bp": "1",
+   "Bq": "1",
+   "lp": "0",
+   "lq": "1",
+   "hp": "1",
+   "hq": "1",
+   "theta": "[]",
+   "forms": "[]",
+   "y": "[0]",
+   "ws": "[0]"
+  },
+  "deps": [
+   "S135",
+   "S138",
+   "S005",
+   "S094",
+   "S080",
+   "S012",
+   "S037"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 19
+ },
+ "S134": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L22",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S159",
+   "S038"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S159"
+  ],
+  "f_index": null
+ },
+ "S135": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L04",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S061",
+   "S122"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S061",
+   "S122"
+  ],
+  "f_index": null
+ },
+ "S136": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L23",
+  "group": "SLAB",
+  "kind": "mutated constant",
+  "why": "n = 0, eps = 1: the form is 2, claimed 0",
+  "inst": {
+   "n": "0",
+   "st": "st0 0",
+   "ws": "[]",
+   "y": "[]",
+   "D": "1",
+   "ep": "1",
+   "eq": "1"
+  },
+  "deps": [
+   "S052",
+   "S038"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 23
+ },
+ "S137": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L05",
+  "group": "SLAB",
+  "kind": "dropped hypothesis",
+  "why": "without the ok flag q need not divide D: D = 1, q = 2, p = 1, tag 0: value 0, claimed 1/2",
+  "inst": {
+   "D": "1",
+   "n": "1",
+   "tag": "0",
+   "i": "0",
+   "j": "0",
+   "p": "1",
+   "q": "2",
+   "st": "st0 1",
+   "y": "[0]",
+   "ws": "[0]"
+  },
+  "deps": [
+   "S017",
+   "S041",
+   "S021",
+   "S135"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 4
+ },
+ "S138": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L05",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S131",
+   "S061",
+   "S122",
+   "S083"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S131",
+   "S061",
+   "S122",
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S139": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L34",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S110",
+   "S042"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S140": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L35",
+  "group": "INNER",
+  "kind": "mutated index",
+  "why": "n = 2, i = 0, cc = [(1,1)], y = [1;0]: value -1, claimed 0",
+  "inst": {
+   "D": "1",
+   "n": "2",
+   "i": "0",
+   "cc": "[(1,1)]",
+   "st": "st0 2",
+   "y": "[1;0]",
+   "ws": "[0;0]"
+  },
+  "deps": [
+   "S161",
+   "S145"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 36
+ },
+ "S141": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L17",
+  "group": "SLAB",
+  "kind": "dropped hypothesis",
+  "why": "s = (-1,-1,-1), a = b = c = 1: the value is -2",
+  "inst": {
+   "a": "1",
+   "b": "1",
+   "c": "1",
+   "s1": "-1",
+   "s2": "-1",
+   "s3": "-1"
+  },
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 16
+ },
+ "S142": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L30",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S161",
+   "S137"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S143": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L38",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S088"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S088"
+  ],
+  "f_index": null
+ },
+ "S144": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L09",
+  "group": "SLAB",
+  "kind": "inequality turned strict",
+  "why": "theta = 1 is accepted: zs = [((0,0,1,1,0),(1,1))], D = 4*1096^2",
+  "inst": {
+   "D": "4 * (1096 * 1096)",
+   "n": "1",
+   "zs": "[((0,0,1,1,0),(1,1))]",
+   "st": "st0 1",
+   "y": "[0]",
+   "ws": "[0]"
+  },
+  "deps": [
+   "S135",
+   "S138"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 8
+ },
+ "S145": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L05",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S131",
+   "S061",
+   "S067",
+   "S135"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S131",
+   "S061"
+  ],
+  "f_index": null
+ },
+ "S146": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L15",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S095",
+   "S084",
+   "S098",
+   "S089"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S147": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L30",
+  "group": "INNER",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S138"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S148": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L13",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S161",
+   "S137"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S149": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L28",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S017",
+   "S154",
+   "S019",
+   "S027",
+   "S057",
+   "S123",
+   "S078",
+   "S040",
+   "S108"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S150": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L25",
+  "group": "SLAB",
+  "kind": "mutated constant",
+  "why": "grid = [0]: no width",
+  "inst": {
+   "grid": "[0]"
+  },
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 25
+ },
+ "S151": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L12",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083",
+   "S145"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S152": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L16",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S153": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L06",
+  "group": "SLAB",
+  "kind": "mutated constant",
+  "why": "n = 0, y = []: the value is 0",
+  "inst": {
+   "n": "0",
+   "y": "[]",
+   "ws": "[]"
+  },
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 5
+ },
+ "S154": {
+  "role": "true",
+  "truth": true,
+  "lemma": "L18",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S095",
+   "S152",
+   "S054"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": null
+ },
+ "S155": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L10",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S135",
+   "S137"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S156": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L12",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S135",
+   "S137"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S137"
+  ],
+  "f_index": null
+ },
+ "S157": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L11",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S083"
+  ],
+  "text_of": "planted",
+  "planted_hyps": [
+   "S083"
+  ],
+  "f_index": null
+ },
+ "S158": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L08",
+  "group": "SLAB",
+  "kind": "mutated constant",
+  "why": "with 1096 for 1096^2: D = 1096^2, full = [(0,0,1)], y = [1]: value 1096, claimed 1",
+  "inst": {
+   "D": "1096 * 1096",
+   "n": "1",
+   "full": "[(0,0,1)]",
+   "st": "st0 1",
+   "y": "[1]",
+   "ws": "[0]"
+  },
+  "deps": [
+   "S135",
+   "S145"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 7
+ },
+ "S159": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L20",
+  "group": "SLAB",
+  "kind": "mutated index",
+  "why": "Cm = [[1;2];[3;4]]: entry (0,1) of the transpose is 3, not 2",
+  "inst": {
+   "n": "2",
+   "Cm": "[[1;2];[3;4]]",
+   "i": "0",
+   "j": "1"
+  },
+  "deps": [],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 20
+ },
+ "S160": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L29",
+  "group": "STRICT",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S034"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S034"
+  ],
+  "f_index": null
+ },
+ "S161": {
+  "role": "decoy",
+  "truth": true,
+  "lemma": "L04",
+  "group": "SLAB",
+  "kind": null,
+  "why": null,
+  "inst": null,
+  "deps": [
+   "S061",
+   "S067"
+  ],
+  "text_of": "true",
+  "planted_hyps": [
+   "S061"
+  ],
+  "f_index": null
+ },
+ "S162": {
+  "role": "planted",
+  "truth": false,
+  "lemma": "L34",
+  "group": "INNER",
+  "kind": "mutated constant",
+  "why": "nn = [(0,0,1,1)], y = [1]: value -1, claimed -2",
+  "inst": {
+   "D": "1",
+   "n": "1",
+   "nn": "[(0,0,1,1)]",
+   "st": "st0 1",
+   "y": "[1]",
+   "ws": "[0]"
+  },
+  "deps": [
+   "S135",
+   "S145"
+  ],
+  "text_of": null,
+  "planted_hyps": null,
+  "f_index": 35
+ }
+}

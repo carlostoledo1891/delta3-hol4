@@ -1,0 +1,65 @@
+{
+ "written_utc": "2026-11-25T11:02:46Z",
+ "judge_code": "4b421d34e8f249b3a19ec14d3770da24fc04db55ed452dce75b7adf904f89a88",
+ "judge_code_is": "sha256 over the files in judgelib.JUDGE_FILES, in that order (name then bytes); every attempts.jsonl line since seq 11 carries it",
+ "judge_files_sha256": {
+  "judgelib.py": "51a243ac9b9fdf3f2425262cb705f37fd9eaac1d3c933cfb3a43d93cebedc2be",
+  "attempt.py": "4b61a85295c966ccae5b64310738eeab0375e6375cd796e1aeb48dc38055e82a",
+  "attempt.sh": "276ff54e594218fad78e84311159dfe2eba6536187cc89e15cb47f4a05e4712d",
+  "sandbox.sb": "e31c87eca6761f6d5a373c493d0719ccb1a16a32f3ab8e7a25c7175d8f3c08ac",
+  "PIN.json": "63df502488fbb7e6c36188c613aa73bc510860cbf412a6c0cbd19c12b86841ae",
+  "pod/runner.py": "60853e0c8e33dbadce497589af64f1a585b44e4dc08c8764c568f2cea7de2077",
+  "pod/jail.c": "612e40a4a666a31ed5f9eefbc2a384a66b57cfecf1eace3df9aa24e88050ca14",
+  "pod/client.py": "b90ecd3c13c626736ff010dae0943595b20dbc8a3e8b2f2b76e0a0cda8a187c0"
+ },
+ "harness_files_sha256": {
+  "run-controls.py": "6aa31fbbce33daec6dde4bf28c86cd9ce9f5b87a1a6e98721d1d462b9b15643a",
+  "judge-queue.py": "ab98a07a8a6094ce655da5f5de17f824b09b5a9166d9e601c73ab41e9406487d",
+  "audit-blinding.py": "22b7df2adb0903974c319452effa236dcbdfa01ed0827dcc29765d5d6bfb4b01",
+  "freeze.py": "49f70de343f7e1d294e47eb00407e23e01f2bfded8ebf84b53d6088e106aedb6",
+  "regen-key.sh": "c2a0069225d849abe481e7d6241a84ad66650f34ec2a20de40cf60d3c6e6bf60",
+  "unlock-key.sh": "f4a4b1c5bf4aa200748f2dcc10b532344d033d2014cac9e335e41c585a007741",
+  "pod/setup-pod.sh": "72347b8cc3e6faa1ded675588351cf0eeac0c8c2e303dbfaba67b22a621a6013",
+  "pod/push.sh": "a2794b4e9d0306eb9a576046152161b3527979e524fd8ead72a94677ccae1798",
+  "RUN.json.example": "9e743ea3fe43a6455199183dfbe4e02947a58b3b5494c7ff5abf07f84d42be8c",
+  "QUEUE.md": "e5ad3a94e26ecdc9bd5c2e53eb86d6ab7cbf803dac8c0a48a0599c26e04fd779",
+  "POD.md": "1d76c0d047b60563de7057b91e2157033e76d7a427e9c151b707088edc81513c",
+  "RUN-PROTOCOL.md": "a93349971cd2edc7376a55e42eb6368a044bf2b568a20a807449a0a4e53345f7",
+  "AUDIT-BLINDING.md": "7e8460839345e8ad6989778c4c251a57127f06893bc0d756a450bdb5f72acb29",
+  "../agents/BRIEF.next.md": "2e9a8aad3d360cb6629e2ea97130038b0aeef15599cc97d05179298d6f4c74e3",
+  "gen-statements.py": "7a51cb220a3aa56183a4c5a62a30cdb8c5ae029017c2f302a5e3a9233630919e",
+  "leak-check.py": "79abc6e243d07fd2d1fc03df0ca0a820bb8125b10adafd696c3f0399abd7a2fe",
+  "rebuild-accepted.py": "d45abd2d44bafdbd2a1a235de96391ca2ae833a8061ad20daaabdedab7c2797e",
+  "../agents/PITFALLS.md": "e964cf0bbc894b044872cc49f37b68808e2962ddad39b6e47c4719e1a52d495b",
+  "pod/build-hol-alt.sh": "e1ec05cec486598ac8cc25fd0cd3ffda193581ac74f8ee99782ac699aa6b7e90",
+  "install-mac-hol.sh": "dadb9dc348bf841fbf6f4c3dbaad07fe7ea6265213c267680e866801bc966200"
+ },
+ "frozen_inputs": "FREEZE-2.json (2026-11-25T10:25:58Z, digest e65702ec..., written by the operator with regen-key.sh) supersedes FREEZE.json",
+ "changed_after_the_freeze": [
+  "attempt.py: the build and the judge run through judgelib.build_and_judge under an isolation (mac: sandbox-exec + sandbox.sb; or the pod) with three limits (wall, RLIMIT_CPU per process, resident memory of the process group); attempt numbers reserved under a lock (several attempts may run at once); FREEZE-2.json used when present; on the Mac it waits while any other HOL build runs; --host for the pod; new record fields: cpu_s, peak_rss_mb, cpu_limit_s, mem_limit_gb, host, isolation, judge_code, freeze_file, waited_for_mac_s, notes, pod",
+  "judgelib.py (new): the build-and-judge step and the decision, in one place for the Mac and the pod; the text check keeps the Day-2 deny-list and adds whole-identifier tokens (disk_thm, Thm, TextIO, BinIO, OS, Posix, Unix, PolyML, Foreign, Systeml, HOLFileSys, Portable, TheoryReader, SharingTables, adjoin_to_theory, loadPath, use, load, system, open_out, ...), the English-word ones checked outside comments only",
+  "sandbox.sb (new): the macOS profile",
+  "pod/runner.py, pod/jail.c, pod/client.py (new): the remote judge; not yet run on a pod",
+  "2026-11-25 00:38-00:42: refute mode (--refute; theorem <id>_refuted = ~statement; outcome refuted), the run cap from RUN.json, PIN.json (the one toolchain pin, now one of the judge files), the queue passes \"mode\"; the pod client/runner carry the mode",
+  "2026-11-25 01:00-01:20: attempt.py checks FREEZE-2.json against freeze.PUBLIC2 (adds agents/PITFALLS.md and gen-statements.py); judge-queue accepts 3-digit ids; new: gen-statements.py (decoys, kernel-confirmed planted only), leak-check.py, rebuild-accepted.py (fresh rebuild of accepted attempts, the replay interface)",
+  "2026-11-25 01:33: pod/runner.py also returns the built theory files (outbox/theory/) for the replay interface; pod/client.py copies directories back; rebuild-accepted.py --host rebuilds on the pod. The previous digest 865705a7... differs only in these two pod files.",
+  "2026-11-25 02:13-02:18: the package moved to HOL trindemossen-2-v10 (9783a499...): PIN.json (+ hol_dir_mac, hol_dir_pod), attempt.py (HOLDIR from PIN.json; a pod attempt needs no HOL on the Mac), pod/runner.py (HOL at PIN hol_dir_pod), setup-pod.sh / push.sh / build-base.sh / regen-key.sh follow PIN.json",
+  "2026-11-25 10:27: PIN.json hol_dir_pod -> /root/work/HOL for the new judge pod 3ozt1qbwggn6un (setup-pod.sh builds the pinned HOL there); nothing else"
+ ],
+ "judge_code_versions_in_the_log": [
+  "387525ee39644bcc4eb8325b972c819b9a7446790639bc56f3e43943047adafe",
+  "38db38e6c7f0c29809798be1c2069962045dfc7dfd750b2460b8b3db77c0e73e",
+  "3bf82e086a6ee4a15982c1af709852f0d201a632bc098677d7032df7dddbc663",
+  "6b38e2646ad26a80d752d93173930708b4d895efbdd9088f2ec3dc62731956ee",
+  "865705a7dc0c4d5f18380f58cafe74f1a8f33aa211bbdc502a1e7c43f6211e3a",
+  "8d15e6d51519ffbb23226de0ba7e862de4e9e7262d114fe6b08efc87462958d4",
+  "952be6351bc8374b893073d3c053b4b195109e559fb1c3a8c69f06c7fca6f99b",
+  "c7acc24048bba2277fbe85abcaa621841b6358b78cf9a416e1c9a8af5edd7bfe"
+ ],
+ "not_covered": [
+  "The attempt's ML code runs inside the processes that write attemptTheory.dat and judge.out. HOL4 trusts its own disk format (Thm.disk_thm makes a theorem of whatever a .dat file says) and an ML program can print anything. A DELIBERATE forgery from inside the build is stopped only by the identifier deny-list (a text filter, not a proof) and by reading every proved script. The fix is a proof that leaves the attempt's processes: the pinned tree has a draft proof-trace format and replayer (src/postkernel/prooftrace, pft-format.md \"Draft\"); replaying each proved attempt's trace in a clean process against the frozen base would close it. Not done.",
+  "Reads are not restricted (AUDIT-BLINDING.md): the blinding rule is checked on the agents' tool logs.",
+  "mach-lookup is denied but the Mach bootstrap port itself is not mediated by a sandbox profile; an attempt with FFI could still talk to launchd. Foreign/RunCall are deny-listed tokens."
+ ],
+ "controls_on_this_code": "judge code 4b421d34e8f2, FREEZE-2 (2026-11-25T10:25:58Z), judge pod 3ozt1qbwggn6un (<judge-pod>, HOL -v10 at /root/work/HOL), 2026-11-25 10:53:31-11:00:38Z: controls 1-9 PASS (9/9), memory limit PASS, refuting C01 fails (PASS), refuting C02 refuted (PASS) (seq 85-95). rebuild-accepted: seq 1 (C01) REBUILT; seq 26 (S33 of the first freeze) MISMATCH by construction: the statement constant S33 does not exist under FREEZE-2. The pod base theory files differ byte-wise from the Mac base of FREEZE-2 (the .dat files embed absolute source paths and parents' hashes; .sig identical), but every theorem, definition, axiom, tag and constant of the four theories is identical (both loaded on the pod: 4451 lines, sha256 237f0700...)."
+}

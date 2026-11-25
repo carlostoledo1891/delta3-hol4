@@ -1,0 +1,2 @@
+⊢ inner_check r30_ab r30_cut r30_full r30_grid 1 5 r30_lam r30_nu 0 1 r30_nn
+    r30_cc 356888011735254564550374336925532160 73 r30_ds r30_L ⇔ F

@@ -1,0 +1,2 @@
+⊢ inner_check r29_ab r29_cut r29_full r29_grid 1 5 r29_lam r29_nu 0 1 r29_nn
+    r29_cc 2476408049007329280 73 r29_ds r29_L ⇔ F

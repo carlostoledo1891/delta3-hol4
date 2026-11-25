@@ -1,0 +1,38 @@
+id	base	class	name
+r01	slabC	kernel candidate	slab bound raised by 1e-3 (B, claim recomputed)
+r02	slabD	kernel candidate	slab bound raised by 1e-6 (B, claim recomputed)
+r03	slabD	kernel candidate	triangle forms dropped
+r04	slabB	kernel candidate	triangle forms dropped (most-triangle slab)
+r05	slabC	kernel candidate	all cut theta set to 1
+r06	slabC	kernel candidate	all cut theta set to 0
+r07	slabC	kernel candidate	slab widened: hi 9/20 → 1/2
+r08	slabC	kernel candidate	slab widened: lo 2/5 → 3/10
+r09	slabC	kernel candidate	eps inflated with B (S + εI still PSD, honest bound negative)
+r10	slabC	kernel candidate	eps set to 0 (claim recomputed)
+r11	slabD	kernel candidate	one tri sign flipped to s1·s2·s3 = −1
+r12	slabC	kernel candidate	grid with the edge 68/1096 removed
+r13	inner	kernel candidate	grid with the edge 548/1096 removed
+r14	slabC	kernel candidate	PLANTED claim raised by 2^−100 over B − ε(1+n)
+r15	slabC	kernel candidate	PLANTED negative multiplier (extra yy form, μ = −2^−100)
+r16	slabC	kernel candidate	PLANTED extra tri with s = (−1,−1,−1), μ = 2^−100
+r17	slabC	kernel candidate	PLANTED extra tri with a repeated index, μ = 2^−100
+r18	slabC	kernel candidate	PLANTED largest theta := 1 + 2^−100
+r19	slabC	kernel candidate	PLANTED smallest theta := −2^−100
+r20	slabC	kernel candidate	PLANTED unknown form kind "zz", μ = 2^−100
+r21	slabC	kernel candidate	PLANTED form index out of range, μ = 2^−100
+r22	slabC	kernel candidate	PLANTED eps = −2^−100
+r23	slabC	kernel candidate	PLANTED theta list one short
+r24	slabC	loader	PLANTED malformed rational "2.7e-4" for B
+r25	slabC	kernel candidate	PLANTED grid shifted off 1096
+r26	inner	kernel candidate	inner radius doubled (1/5 → 2/5)
+r27	inner	kernel candidate	inner radius doubled, c rebalanced to keep the identity
+r28	inner	kernel candidate	inner linear budget overspent: c[0] made negative
+r29	inner	kernel candidate	inner linear budget overspent: one λ doubled
+r30	inner	kernel candidate	inner budget overspent, rebalanced: λ raised by c_i + 2^−100
+r31	inner	kernel candidate	inner RLT multipliers dropped (lam = {})
+r32	inner	kernel candidate	inner RLT multipliers dropped, c rebalanced
+r33	inner	kernel candidate	inner nu dropped, c rebalanced
+r34	inner	kernel candidate	inner N[0,0] raised by 1 (P loses it)
+r35	inner	kernel candidate	PLANTED inner N lower-triangular key
+r36	inner	kernel candidate	PLANTED inner kap = −2^−100
+r37	inner	kernel candidate	PLANTED inner nu[3] = −2^−100

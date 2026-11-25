@@ -1,0 +1,446 @@
+# The theorems, as HOL4 trindemossen-2-v10 printed them while building (pod, 2026-11-25).
+# From pod-run/logs/theories/delta3_cmlProgTheory.log (D3CERT: every certificate theorem, after
+# update_precondition; none contains PRECONDITION, the build refuses otherwise) and
+# delta3_cmlMainTheory.log (D3SEM: main_semantics). Variables vN are the translator's.
+
+## D3TRANSLATE: the order the checker was translated in, and which definitions were rewritten
+D3TRANSLATE	delta3_check	addl	recursive
+D3TRANSLATE	delta3_check	addm	recursive
+D3TRANSLATE	delta3_check2	all_zero	recursive
+D3TRANSLATE	delta3_check	bad	non-recursive
+D3TRANSLATE	delta3_check2	cover	recursive
+D3TRANSLATE	delta3_check2	cover_all	non-recursive
+D3TRANSLATE	delta3_check	dot	recursive
+D3TRANSLATE	delta3_check	heads	recursive
+D3TRANSLATE	delta3_check	increasing	recursive
+D3TRANSLATE	delta3_check	last_is	recursive
+D3TRANSLATE	delta3_check	lin	recursive
+D3TRANSLATE	delta3_check	qrow	recursive
+D3TRANSLATE	delta3_check	qrows	recursive
+D3TRANSLATE	delta3_check	rowsum	recursive
+D3TRANSLATE	delta3_check	dd_rows	recursive
+D3TRANSLATE	delta3_check	sc	non-recursive	rewritten
+D3TRANSLATE	delta3_check	add_term	non-recursive	rewritten
+D3TRANSLATE	delta3_check2	add_cc	recursive
+D3TRANSLATE	delta3_check	add_cells	recursive
+D3TRANSLATE	delta3_check	add_cut	recursive
+D3TRANSLATE	delta3_check2	add_cut0	recursive
+D3TRANSLATE	delta3_check	add_full	recursive
+D3TRANSLATE	delta3_check2	add_kap	non-recursive
+D3TRANSLATE	delta3_check2	add_lam	recursive
+D3TRANSLATE	delta3_check2	add_nn	recursive
+D3TRANSLATE	delta3_check2	add_nu	recursive
+D3TRANSLATE	delta3_check	add_zz	non-recursive
+D3TRANSLATE	delta3_check	add_form	non-recursive
+D3TRANSLATE	delta3_check	add_forms	recursive
+D3TRANSLATE	delta3_check2	inner_poly	non-recursive
+D3TRANSLATE	delta3_check2	sdd_rows	recursive
+D3TRANSLATE	delta3_check	slab_poly	non-recursive
+D3TRANSLATE	delta3_check	tails	recursive
+D3TRANSLATE	delta3_check	transp	recursive
+D3TRANSLATE	delta3_check2	inner_matrix	non-recursive
+D3TRANSLATE	delta3_check	slab_matrix	non-recursive
+D3TRANSLATE	delta3_check	widths	recursive
+D3TRANSLATE	delta3_check2	inner_check	non-recursive	rewritten
+D3TRANSLATE	delta3_check	slab_check	non-recursive	rewritten
+D3COUNT	checker functions translated: 39
+
+## D3CERT: the certificate theorems  ⊢ (A --> ... --> B) f f_v
+D3CERT	tdiv	(NUM --> NUM --> NUM) tdiv tdiv_v
+
+D3CERT	tmod	(NUM --> NUM --> NUM) tmod tmod_v
+
+D3CERT	tsub1	(NUM --> NUM) tsub1 tsub1_v
+
+D3CERT	addl	(NUM --> INT --> LIST_TYPE INT --> LIST_TYPE INT) addl addl_v
+
+D3CERT	addm	(NUM --> NUM --> INT --> LIST_TYPE (LIST_TYPE INT) -->
+ LIST_TYPE (LIST_TYPE INT)) addm addm_v
+
+D3CERT	all_zero	(LIST_TYPE INT --> BOOL) all_zero all_zero_v
+
+D3CERT	bad	(PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (LIST_TYPE INT) INT))))) -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (LIST_TYPE INT) INT)))))) bad bad_v
+
+D3CERT	cover	(INT --> NUM -->
+ LIST_TYPE (PAIR_TYPE INT (PAIR_TYPE NUM (PAIR_TYPE INT NUM))) --> BOOL)
+  cover cover_v
+
+D3CERT	cover_all	(LIST_TYPE (PAIR_TYPE INT (PAIR_TYPE NUM (PAIR_TYPE INT NUM))) --> BOOL)
+  cover_all cover_all_v
+
+D3CERT	dot	(INT --> LIST_TYPE INT --> LIST_TYPE INT --> INT) $dot dot_v
+
+D3CERT	heads	(LIST_TYPE (LIST_TYPE INT) --> LIST_TYPE INT) heads heads_v
+
+D3CERT	increasing	(LIST_TYPE NUM --> BOOL) increasing increasing_v
+
+D3CERT	last_is	(NUM --> LIST_TYPE NUM --> BOOL) last_is last_is_v
+
+D3CERT	lin	(INT --> LIST_TYPE INT --> LIST_TYPE INT --> LIST_TYPE INT) lin lin_v
+
+D3CERT	qrow	(INT --> INT --> INT --> INT --> NUM --> NUM --> LIST_TYPE INT -->
+ LIST_TYPE INT --> LIST_TYPE INT --> LIST_TYPE INT --> LIST_TYPE INT) qrow
+  qrow_v
+
+D3CERT	qrows	(INT --> INT --> NUM --> LIST_TYPE (LIST_TYPE INT) -->
+ LIST_TYPE (LIST_TYPE INT) --> LIST_TYPE INT --> LIST_TYPE INT -->
+ LIST_TYPE INT --> LIST_TYPE INT --> LIST_TYPE INT -->
+ LIST_TYPE (LIST_TYPE INT)) qrows qrows_v
+
+D3CERT	rowsum	(INT --> INT --> NUM --> NUM --> LIST_TYPE INT --> LIST_TYPE INT -->
+ LIST_TYPE (LIST_TYPE INT) --> LIST_TYPE NUM --> INT --> INT) rowsum rowsum_v
+
+D3CERT	dd_rows	(INT --> INT --> NUM --> LIST_TYPE (LIST_TYPE INT) -->
+ LIST_TYPE (LIST_TYPE INT) --> LIST_TYPE (LIST_TYPE INT) -->
+ LIST_TYPE NUM --> LIST_TYPE NUM --> BOOL) dd_rows dd_rows_v
+
+D3CERT	sc	(NUM --> INT --> NUM --> INT) sc sc_v
+
+D3CERT	add_term	(NUM --> NUM --> NUM --> NUM --> NUM --> INT --> NUM -->
+ PAIR_TYPE BOOL (PAIR_TYPE INT (PAIR_TYPE (... ... ) (... ... (... ... )))) -->
+ PAIR_TYPE BOOL (PAIR_TYPE INT (PAIR_TYPE (... ... ) (... ... (... ... )))))
+  add_term add_term_v
+
+D3CERT	add_cc	(NUM --> NUM --> NUM --> LIST_TYPE (PAIR_TYPE INT NUM) -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (... ... ) INT))))) -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (... ... ) INT)))))) add_cc add_cc_v
+
+D3CERT	add_cells	(NUM --> NUM --> NUM -->
+ LIST_TYPE (PAIR_TYPE INT (PAIR_TYPE NUM (PAIR_TYPE INT NUM))) -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (... ... ) INT))))) -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (... ... ) INT)))))) add_cells
+  add_cells_v
+
+D3CERT	add_cut	(NUM --> NUM --> NUM -->
+ LIST_TYPE
+   (PAIR_TYPE
+      (PAIR_TYPE NUM (PAIR_TYPE NUM (PAIR_TYPE INT (PAIR_TYPE NUM NUM))))
+      (PAIR_TYPE INT NUM)) -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (... ... ) INT))))) -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (... ... ) INT)))))) add_cut add_cut_v
+
+D3CERT	add_cut0	(NUM --> NUM --> NUM -->
+ LIST_TYPE
+   (PAIR_TYPE NUM (PAIR_TYPE NUM (PAIR_TYPE INT (PAIR_TYPE NUM NUM)))) -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (... ... ) INT))))) -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (... ... ) INT)))))) add_cut0
+  add_cut0_v
+
+D3CERT	add_full	(NUM --> NUM --> NUM --> LIST_TYPE (PAIR_TYPE NUM (PAIR_TYPE NUM INT)) -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (... ... ) INT))))) -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (... ... ) INT)))))) add_full
+  add_full_v
+
+D3CERT	add_kap	(NUM --> NUM --> NUM --> INT --> NUM --> INT --> NUM -->
+ PAIR_TYPE BOOL (PAIR_TYPE INT (PAIR_TYPE (... ... ) (... ... (... ... )))) -->
+ PAIR_TYPE BOOL (PAIR_TYPE INT (PAIR_TYPE (... ... ) (... ... (... ... )))))
+  add_kap add_kap_v
+
+D3CERT	add_lam	(NUM --> NUM -->
+ LIST_TYPE (PAIR_TYPE NUM (PAIR_TYPE NUM (PAIR_TYPE INT NUM))) -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (LIST_TYPE INT) INT))))) -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (LIST_TYPE INT) INT)))))) add_lam
+  add_lam_v
+
+D3CERT	add_nn	(NUM --> NUM -->
+ LIST_TYPE (PAIR_TYPE NUM (PAIR_TYPE NUM (PAIR_TYPE INT NUM))) -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (LIST_TYPE INT) INT))))) -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (LIST_TYPE INT) INT)))))) add_nn
+  add_nn_v
+
+D3CERT	add_nu	(NUM --> NUM --> NUM --> INT --> NUM --> NUM -->
+ LIST_TYPE (PAIR_TYPE INT NUM) -->
+ PAIR_TYPE BOOL (PAIR_TYPE INT (PAIR_TYPE (... ... ) (... ... (... ... )))) -->
+ PAIR_TYPE BOOL (PAIR_TYPE INT (PAIR_TYPE (... ... ) (... ... (... ... )))))
+  add_nu add_nu_v
+
+D3CERT	add_zz	(NUM --> NUM --> INT --> NUM --> NUM --> NUM -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT) (PAIR_TYPE (... ... ) (... ... (... ... ))))) -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT) (PAIR_TYPE (... ... ) (... ... (... ... ))))))
+  add_zz add_zz_v
+
+D3CERT	add_form	(NUM --> NUM --> NUM --> INT --> NUM --> INT --> NUM --> NUM --> NUM -->
+ NUM --> NUM --> INT --> ... --> ... ) add_form add_form_v
+
+D3CERT	add_forms	(NUM --> NUM --> NUM --> INT --> NUM --> INT --> NUM -->
+ LIST_TYPE (PAIR_TYPE NUM (PAIR_TYPE NUM (... ... (... ... )))) -->
+ PAIR_TYPE BOOL (PAIR_TYPE INT (... ... (... ... ))) -->
+ PAIR_TYPE BOOL (PAIR_TYPE INT (... ... (... ... )))) add_forms add_forms_v
+
+D3CERT	inner_poly	(NUM --> NUM -->
+ LIST_TYPE (PAIR_TYPE INT (PAIR_TYPE NUM (PAIR_TYPE INT NUM))) -->
+ LIST_TYPE
+   (PAIR_TYPE NUM (PAIR_TYPE NUM (PAIR_TYPE INT (PAIR_TYPE NUM NUM)))) -->
+ LIST_TYPE (PAIR_TYPE NUM (PAIR_TYPE NUM INT)) --> INT --> NUM -->
+ LIST_TYPE (PAIR_TYPE NUM (PAIR_TYPE NUM (... ... NUM))) -->
+ LIST_TYPE (PAIR_TYPE INT NUM) --> INT --> NUM --> ... ... --> ... --> ... )
+  inner_poly inner_poly_v
+
+D3CERT	sdd_rows	(INT --> INT --> NUM --> LIST_TYPE (LIST_TYPE INT) -->
+ LIST_TYPE (LIST_TYPE INT) --> LIST_TYPE (LIST_TYPE INT) -->
+ LIST_TYPE NUM --> LIST_TYPE NUM --> BOOL) sdd_rows sdd_rows_v
+
+D3CERT	slab_poly	(NUM --> NUM -->
+ LIST_TYPE (PAIR_TYPE INT (PAIR_TYPE NUM (PAIR_TYPE INT NUM))) -->
+ LIST_TYPE
+   (PAIR_TYPE NUM (PAIR_TYPE NUM (PAIR_TYPE INT (PAIR_TYPE NUM NUM)))) -->
+ LIST_TYPE (PAIR_TYPE NUM (PAIR_TYPE NUM INT)) --> INT --> NUM --> INT -->
+ NUM --> INT --> NUM --> ... ... --> ... --> ... ) slab_poly slab_poly_v
+
+D3CERT	tails	(LIST_TYPE (LIST_TYPE INT) --> LIST_TYPE (LIST_TYPE INT)) tails tails_v
+
+D3CERT	transp	(NUM --> LIST_TYPE (LIST_TYPE INT) --> LIST_TYPE (LIST_TYPE INT)) transp
+  transp_v
+
+D3CERT	inner_matrix	(LIST_TYPE INT -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (LIST_TYPE INT) INT))))) -->
+ LIST_TYPE (LIST_TYPE INT)) inner_matrix inner_matrix_v
+
+D3CERT	slab_matrix	(NUM --> INT --> NUM --> LIST_TYPE INT -->
+ PAIR_TYPE BOOL
+   (PAIR_TYPE INT
+      (PAIR_TYPE (LIST_TYPE INT)
+         (PAIR_TYPE (LIST_TYPE (LIST_TYPE INT))
+            (PAIR_TYPE INT (PAIR_TYPE (... ... ) INT))))) -->
+ LIST_TYPE (LIST_TYPE INT)) slab_matrix slab_matrix_v
+
+D3CERT	widths	(LIST_TYPE NUM --> LIST_TYPE INT) widths widths_v
+
+D3CERT	inner_check	(LIST_TYPE (PAIR_TYPE INT (PAIR_TYPE NUM (PAIR_TYPE INT NUM))) -->
+ LIST_TYPE
+   (PAIR_TYPE NUM (PAIR_TYPE NUM (PAIR_TYPE INT (PAIR_TYPE NUM NUM)))) -->
+ LIST_TYPE (PAIR_TYPE NUM (PAIR_TYPE NUM INT)) --> LIST_TYPE NUM --> INT -->
+ NUM --> LIST_TYPE (PAIR_TYPE NUM (PAIR_TYPE NUM (PAIR_TYPE INT NUM))) -->
+ LIST_TYPE (PAIR_TYPE INT NUM) --> INT --> NUM --> LIST_TYPE (... ... ) -->
+ ... ... --> ... --> ... ) inner_check inner_check_v
+
+D3CERT	slab_check	(LIST_TYPE (PAIR_TYPE INT (PAIR_TYPE NUM (PAIR_TYPE INT NUM))) -->
+ LIST_TYPE
+   (PAIR_TYPE NUM (PAIR_TYPE NUM (PAIR_TYPE INT (PAIR_TYPE NUM NUM)))) -->
+ LIST_TYPE (PAIR_TYPE NUM (PAIR_TYPE NUM INT)) --> LIST_TYPE NUM --> INT -->
+ NUM --> INT --> NUM --> INT --> NUM --> INT --> NUM --> ... --> ... )
+  slab_check slab_check_v
+
+D3CERT	d3_ints	(LIST_TYPE STRING_TYPE --> OPTION_TYPE (LIST_TYPE INT)) d3_ints d3_ints_v
+
+D3CERT	d3_space	(CHAR --> BOOL) d3_space d3_space_v
+
+D3CERT	d3_group	(LIST_TYPE STRING_TYPE --> STRING_TYPE --> LIST_TYPE (LIST_TYPE INT) -->
+ LIST_TYPE (PAIR_TYPE STRING_TYPE (LIST_TYPE (LIST_TYPE INT))) -->
+ OPTION_TYPE (LIST_TYPE (PAIR_TYPE STRING_TYPE (LIST_TYPE (LIST_TYPE INT)))))
+  d3_group d3_group_v
+
+D3CERT	d3_parse	(STRING_TYPE -->
+ OPTION_TYPE (LIST_TYPE (PAIR_TYPE STRING_TYPE (LIST_TYPE (LIST_TYPE INT)))))
+  d3_parse d3_parse_v
+
+D3CERT	d3_sec	(STRING_TYPE -->
+ LIST_TYPE (PAIR_TYPE STRING_TYPE (LIST_TYPE (LIST_TYPE INT))) -->
+ OPTION_TYPE (LIST_TYPE (LIST_TYPE INT))) d3_sec d3_sec_v
+
+D3CERT	d3_one	(STRING_TYPE -->
+ LIST_TYPE (PAIR_TYPE STRING_TYPE (LIST_TYPE (LIST_TYPE INT))) -->
+ OPTION_TYPE (LIST_TYPE INT)) d3_one d3_one_v
+
+D3CERT	d3_has	(STRING_TYPE -->
+ LIST_TYPE (PAIR_TYPE STRING_TYPE (LIST_TYPE (LIST_TYPE INT))) --> BOOL)
+  d3_has d3_has_v
+
+D3CERT	d3_num	(INT --> OPTION_TYPE NUM) d3_num d3_num_v
+
+D3CERT	d3_map	((b --> OPTION_TYPE a) --> LIST_TYPE b --> OPTION_TYPE (LIST_TYPE a)) d3_map
+  d3_map_v
+
+D3CERT	d3_rows	((LIST_TYPE INT --> OPTION_TYPE a) --> STRING_TYPE -->
+ LIST_TYPE (PAIR_TYPE STRING_TYPE (LIST_TYPE (LIST_TYPE INT))) -->
+ OPTION_TYPE (LIST_TYPE a)) d3_rows d3_rows_v
+
+D3CERT	r_in	(LIST_TYPE INT --> OPTION_TYPE (PAIR_TYPE INT NUM)) r_in r_in_v
+
+D3CERT	r_inin	(LIST_TYPE INT -->
+ OPTION_TYPE (PAIR_TYPE INT (PAIR_TYPE NUM (PAIR_TYPE INT NUM)))) r_inin
+  r_inin_v
+
+D3CERT	r_nnin	(LIST_TYPE INT -->
+ OPTION_TYPE (PAIR_TYPE NUM (PAIR_TYPE NUM (PAIR_TYPE INT NUM)))) r_nnin
+  r_nnin_v
+
+D3CERT	r_nni	(LIST_TYPE INT --> OPTION_TYPE (PAIR_TYPE NUM (PAIR_TYPE NUM INT))) r_nni
+  r_nni_v
+
+D3CERT	r_nninn	(LIST_TYPE INT -->
+ OPTION_TYPE
+   (PAIR_TYPE NUM (PAIR_TYPE NUM (PAIR_TYPE INT (PAIR_TYPE NUM NUM)))))
+  r_nninn r_nninn_v
+
+D3CERT	r_form	(LIST_TYPE INT -->
+ OPTION_TYPE
+   (PAIR_TYPE NUM
+      (PAIR_TYPE NUM
+         (PAIR_TYPE NUM
+            (PAIR_TYPE NUM
+               (PAIR_TYPE INT
+                  (PAIR_TYPE INT (PAIR_TYPE INT (PAIR_TYPE INT NUM)))))))))
+  r_form r_form_v
+
+D3CERT	r_scal10	(LIST_TYPE INT -->
+ OPTION_TYPE
+   (PAIR_TYPE INT
+      (PAIR_TYPE NUM
+         (PAIR_TYPE INT
+            (PAIR_TYPE NUM
+               (PAIR_TYPE INT
+                  (PAIR_TYPE NUM
+                     (PAIR_TYPE INT (PAIR_TYPE NUM (PAIR_TYPE INT NUM))))))))))
+  r_scal10 r_scal10_v
+
+D3CERT	r_wit	(LIST_TYPE INT --> OPTION_TYPE (PAIR_TYPE NUM NUM)) r_wit r_wit_v
+
+D3CERT	d3_nums	(LIST_TYPE INT --> OPTION_TYPE (LIST_TYPE NUM)) d3_nums d3_nums_v
+
+D3CERT	d3_slab	(LIST_TYPE (PAIR_TYPE STRING_TYPE (LIST_TYPE (LIST_TYPE INT))) -->
+ OPTION_TYPE BOOL) d3_slab d3_slab_v
+
+D3CERT	d3_inner	(LIST_TYPE (PAIR_TYPE STRING_TYPE (LIST_TYPE (LIST_TYPE INT))) -->
+ OPTION_TYPE BOOL) d3_inner d3_inner_v
+
+D3CERT	d3_cover	(LIST_TYPE (PAIR_TYPE STRING_TYPE (LIST_TYPE (LIST_TYPE INT))) -->
+ OPTION_TYPE BOOL) d3_cover d3_cover_v
+
+D3CERT	d3_verdict	(STRING_TYPE --> STRING_TYPE --> OPTION_TYPE BOOL --> STRING_TYPE) d3_verdict
+  d3_verdict_v
+
+D3CERT	d3_main	(STRING_TYPE --> STRING_TYPE) d3_main d3_main_v
+
+## D3SEM: main_semantics
+D3SEM	⊢ stdin_content fs = SOME text ∧ wfcl cl ∧ wfFS fs ∧ STD_streams fs ⇒
+  sem_satisfies
+    (semantics_dec_list (init_state (basis_ffi ext cl fs)) init_env
+       delta3_prog)
+    (λbehavior.
+       ∃io_events.
+         behavior = Terminate Success io_events ∧
+         extract_fs ext (cl,fs) io_events =
+         SOME (add_stdout (fastForwardFD fs 0) (d3_main (implode text))))
+
+## delta3_sexp_reads_back (delta3_cmlSexpTheory; printed in full in pod-run/logs/sexp/delta3_sexp_reads_back.printed.txt)
+⊢ parse "<655,069 characters: byte-identical to pod-run/out/delta3.proved.sexp, sha256 1961132ad20fa800eb7d89e5191d0749df71a64cc5effeb197c97304e26974ba>" =
+     INR (from_dec_list delta3_prog,"") ∧
+  to_dec_list (from_dec_list delta3_prog) = SOME delta3_prog
+
+## delta3_cmlMeaning (printed by HOL with its default depth: "..." elides subterms; the full statements are in hol/prog/delta3_cmlMeaningScript.sml)
+MEANING d3_slab_SOME
+⊢ d3_slab secs = SOME b ⇒
+  ∃g0 grid0 s0 lp0 lq0 hp0 hq0 bp0 bq0 ep0 eq0 cp0 cq0 theta0 forms0 ab0 cut0
+      full0 w0 dd0 tt0 ds1 ds0 lw0.
+    d3_one «grid» secs = SOME g0 ∧ d3_nums g0 = SOME grid0 ∧
+    d3_one «scal» secs = SOME s0 ∧
+    r_scal10 s0 = SOME (lp0,lq0,hp0,hq0,bp0,bq0,... ,... ) ∧
+    d3_rows r_in «theta» secs = SOME theta0 ∧
+    d3_rows r_form «forms» secs = SOME forms0 ∧
+    d3_rows r_inin «ab» secs = SOME ab0 ∧
+    d3_rows r_nninn «cut» secs = SOME cut0 ∧
+    ... ... «full» secs = SOME full0 ∧ ... ... secs = SOME w0 ∧
+    ... ... = ... ... ∧ ... = ... ∧ ... ∧ ...
+
+MEANING d3_main_verdicts
+⊢ (d3_main s = «ACCEPT slab_check\n» ⇒
+   ∃secs. d3_parse s = SOME secs ∧ d3_slab secs = SOME T) ∧
+  (d3_main s = «REJECT slab_check\n» ⇒
+   ∃secs. d3_parse s = SOME secs ∧ d3_slab secs = SOME F) ∧
+  (d3_main s = «ACCEPT inner_check\n» ⇒
+   ∃secs. d3_parse s = SOME secs ∧ d3_inner secs = SOME T) ∧
+  (d3_main s = «REJECT inner_check\n» ⇒
+   ∃secs. d3_parse s = SOME secs ∧ d3_inner secs = SOME F) ∧
+  (d3_main s = «ACCEPT cover_all\n» ⇒
+   ∃secs. d3_parse s = SOME secs ∧ d3_cover secs = SOME T) ∧
+  (d3_main s = «REJECT cover_all\n» ⇒
+   ∃secs. d3_parse s = SOME secs ∧ d3_cover secs = SOME F)
+
+MEANING d3_inner_SOME
+⊢ d3_inner secs = SOME b ⇒
+  ∃g0 grid0 s0 rp0 rq0 kp0 kq0 lam0 nu0 nn0 cc0 ab0 cut0 full0 w0 dd0 tt0 ds1
+      ds0 lw0.
+    d3_one «grid» secs = SOME g0 ∧ d3_nums g0 = SOME grid0 ∧
+    d3_one «scal» secs = SOME s0 ∧ r_inin s0 = SOME (rp0,rq0,kp0,kq0) ∧
+    d3_rows r_nnin «lam» secs = SOME lam0 ∧
+    d3_rows r_in «nu» secs = SOME nu0 ∧ d3_rows r_nnin «nn» secs = SOME nn0 ∧
+    d3_rows r_in «cc» secs = SOME cc0 ∧ ... ... «ab» secs = SOME ab0 ∧
+    ... ... secs = SOME cut0 ∧ ... ... = ... ... ∧ ... = ... ∧ ... ∧ ...
+
+MEANING d3_cover_SOME
+⊢ d3_cover secs = SOME b ⇒
+  ∃ivs0. d3_rows r_inin «cover» secs = SOME ivs0 ∧ (b ⇔ cover_all ivs0)

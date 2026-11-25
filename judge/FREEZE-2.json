@@ -1,0 +1,39 @@
+{
+ "frozen_utc": "2026-11-25T10:25:58Z",
+ "digest": "e65702ecaef083364123b11b18dfeb97e462667034ee17e8a076ae3690cde0d0",
+ "public": {
+  "base/delta3_checkScript.sml": "785e8c08430bc4c00fe9197361c4b58899417a5574577198076c37593406f51f",
+  "base/delta3_check2Script.sml": "42a7aad2e73678f26575473e61c0fccfcae21e41afe768257f6fc6ce0991256c",
+  "base/delta3_semScript.sml": "4622088e77d75c22621892b523f77471c5e951c2ef491a5ac53ad5f87aebbb55",
+  "base/delta3_stmtsScript.sml": "100fc6e12e60b8709d5b24fb079dfaa14e55d49a3c0b02d4c2020d81ca2efa59",
+  "lemmas.json": "1ae07b14b038513add2c24c9a38e11891056b09d29e29eb744e7e6ce17b7d1e1",
+  "../agents/STATEMENTS.md": "efc8d1b267088fbc20525b99efc1bccd3a51e2082131bff4a1ae6b8eac159ba9",
+  "../agents/BRIEF.md": "2e9a8aad3d360cb6629e2ea97130038b0aeef15599cc97d05179298d6f4c74e3",
+  "../agents/PITFALLS.md": "e964cf0bbc894b044872cc49f37b68808e2962ddad39b6e47c4719e1a52d495b",
+  "gen-statements.py": "7a51cb220a3aa56183a4c5a62a30cdb8c5ae029017c2f302a5e3a9233630919e"
+ },
+ "base_digest": "335920fd64567d7e6f9f4ca5972909ab3ff96ce4d213397f305ab426a8c2bc89",
+ "archive": "<private>/KEY-ARCHIVE-2.tar.enc",
+ "archive_sha256": "4a4690c6b380b82a8e578af3e4315a38d930c513ae41062810208ed873e9016d",
+ "plaintext_sha256": {
+  "key.json": "c652c0eb0629bb5a407ef4e65bc1f06af9654809369b0941c3bb29ae75f8f575",
+  "key-freeze1.json": "48484f1e5252703b4d86ebd89534b0d53a6e756b1e179bb8c037b0399692e19e",
+  "lemma_source.py": "98354a25c8e240f52dfcf8a5fbeb4ad732bd1afbf86788246126c6a153a036cc",
+  "gen_lemmas.py": "7915d7830a12022da8fd69c12a03282f44089cde7636f8606a280fad6ac45aad",
+  "planted-results.tsv": "9b89fa323851c47aa9d82dea52d30829988021f04c71983a05eb799258fc559b",
+  "planted-results-pass1.tsv": "45a83594f1b4ea6f2f9d576d4468ef3beaf74366c7a5461152e0a33bc0b6d786",
+  "planted-map.json": "6ed0928c27a92cf4939aa399b7e59f7694b95aaaff1c0e7bfa125c5b757a4999",
+  "keep.json": "c93507078e3010fd63d52cc5ae97fb568af0151d79d766549d35e914b615f717",
+  "delta3_plantedScript.sml": "4a63f9443e334e933da61a02829d431b52d01d2c7dbef8c58fe3201d0f6d9b32",
+  "LEMMAS.md": "fb1510a168faf79f83223414c7e3df0d412c7ba5a7563f4cb82ad5542d0ba4e9",
+  "planted-results-freeze1.tsv": "b994a8b53e6acc18b7848d6caf3e36577071731732beedd273b4e3765deefe34"
+ },
+ "cipher": "openssl enc -aes-256-cbc -pbkdf2 -iter 600000 -salt (OpenSSL 3.6.5 29 Sep 2026 (Library: OpenSSL 3.6.5 29 Sep 2026))",
+ "supersedes": {
+  "file": "freeze-1/FREEZE.json",
+  "frozen_utc": "2026-11-24T22:03:28Z",
+  "why": "its truth key was printed into Claude session transcripts on this disk"
+ },
+ "dry_run": false,
+ "note": "the passphrase is held by the operator only; unlock-key.sh decrypts for scoring"
+}

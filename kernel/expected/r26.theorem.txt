@@ -1,0 +1,2 @@
+⊢ inner_check r26_ab r26_cut r26_full r26_grid 2 5 r26_lam r26_nu 0 1 r26_nn
+    r26_cc 2476408049007329280 73 r26_ds r26_L ⇔ F

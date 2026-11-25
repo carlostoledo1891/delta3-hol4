@@ -1,0 +1,2 @@
+⊢ inner_check r13_ab r13_cut r13_full r13_grid 1 5 r13_lam r13_nu 0 1 r13_nn
+    r13_cc 2476408049007329280 73 r13_ds r13_L ⇔ F

@@ -1,0 +1,19 @@
+Theory attempt
+Ancestors
+  arithmetic delta3_stmts
+
+(* sandbox control (b): ML code that tries to open a TCP connection to a listener on 127.0.0.1
+   that the control runner started OUTSIDE the sandbox. Prints CONNECTED or DENIED and then fails
+   on purpose. The control passes when it says DENIED and the listener saw no connection. *)
+val _ = (let
+           val s : Socket.active INetSock.stream_sock = INetSock.TCP.socket ()
+           val addr = INetSock.toAddr (valOf (NetHostDB.fromString "127.0.0.1"), @PORT@)
+         in Socket.connect (s, addr); print "CONNECTED\n"; Socket.close s end)
+        handle e => print ("DENIED connect: " ^ General.exnMessage e ^ "\n");
+val _ = raise Fail "control c7: ends here on purpose";
+
+Theorem C01:
+  !n:num. n + 0 = n
+Proof
+  simp[]
+QED

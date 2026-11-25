@@ -1,0 +1,2 @@
+⊢ inner_check r35_ab r35_cut r35_full r35_grid 1 5 r35_lam r35_nu 0 1 r35_nn
+    r35_cc 356888011735254564550374336925532160 73 r35_ds r35_L ⇔ F

@@ -1,0 +1,864 @@
+{
+  "mirrorEvaluated": true,
+  "cases": [
+    {
+      "id": "inner",
+      "base": "inner",
+      "class": "green",
+      "name": "inner-r20-g24_4_8.json",
+      "sha256": "2edd22852d329458752a9e6d1495b3412fb3db2ec68fad591f9730fe99467c60",
+      "n": 130,
+      "forms": 22808,
+      "region": [
+        "0",
+        "1/5"
+      ],
+      "innerDetails": {
+        "accepted": true,
+        "reason": null,
+        "minimumRow": 104,
+        "minimumIntegerSlack": "842677992378087316304324666556012049711938472398374830080",
+        "matrixSha256": "3d04e2562274f23c0b235cf3ba3034a9b4125780b4c09d7f59a63db3910b5f25",
+        "D": "2476408049007329280",
+        "factorExponent": 73,
+        "lambda": 14040,
+        "nu": 130,
+        "kappa": 1,
+        "N": 8507,
+        "c": 130,
+        "full": 7718,
+        "cut": 318
+      },
+      "matrixSha256": "3d04e2562274f23c0b235cf3ba3034a9b4125780b4c09d7f59a63db3910b5f25"
+    },
+    {
+      "id": "slabA",
+      "base": "slabA",
+      "class": "green",
+      "name": "slab-1_5-3_10-g24_4_8.json",
+      "sha256": "f8c569e4a47bc6d958f2515485c355a016609a5f27178962a71ff749dce80c99",
+      "n": 130,
+      "forms": 13324,
+      "region": [
+        "1/5",
+        "3/10"
+      ]
+    },
+    {
+      "id": "slabC",
+      "base": "slabC",
+      "class": "green",
+      "name": "slab-2_5-9_20-g8_4_0.json",
+      "sha256": "bc23d33cb0db48a29e7bde319ef2e20dcd56d18b8ab498c06fec52624537d2c3",
+      "n": 146,
+      "forms": 1998,
+      "region": [
+        "2/5",
+        "9/20"
+      ]
+    },
+    {
+      "id": "slabB",
+      "base": "slabB",
+      "class": "green",
+      "name": "slab-3_10-4_10-g24_4_8.json",
+      "sha256": "d9b37a69505a3e642b479b2bd57b655d5fa33a716cf3ffdcd6b3869af524fbce",
+      "n": 130,
+      "forms": 9849,
+      "region": [
+        "3/10",
+        "2/5"
+      ]
+    },
+    {
+      "id": "slabD",
+      "base": "slabD",
+      "class": "green",
+      "name": "slab-9_20-1_2-g8_4_0.json",
+      "sha256": "b3f8615a9f1009624d87852859526056321eccc7b5fc5d57af502403ff5803d2",
+      "n": 146,
+      "forms": 2332,
+      "region": [
+        "9/20",
+        "1/2"
+      ]
+    },
+    {
+      "id": "r01",
+      "base": "slabC",
+      "name": "slab bound raised by 1e-3 (B, claim recomputed)",
+      "certSha256": "6d8469cc4962421e6f0b0b6671f13be4120a8a1837e6c6c6a5f139fa48b792bd",
+      "class": "kernel candidate",
+      "reasons": [
+        "weighted DD"
+      ],
+      "edits": {}
+    },
+    {
+      "id": "r02",
+      "base": "slabD",
+      "name": "slab bound raised by 1e-6 (B, claim recomputed)",
+      "certSha256": "a5d2263899af0c777ea32def70c55e90e2a49fc708548641979de033d3fcf9df",
+      "class": "kernel candidate",
+      "reasons": [
+        "weighted DD"
+      ],
+      "edits": {}
+    },
+    {
+      "id": "r03",
+      "base": "slabD",
+      "name": "triangle forms dropped",
+      "certSha256": "aae72b21c5a5029a67c50ec4b91dfe82e3379e35cc7295c1b53fc655059bbb0d",
+      "class": "kernel candidate",
+      "reasons": [
+        "weighted DD"
+      ],
+      "edits": {
+        "forms": [
+          1862,
+          2332
+        ]
+      }
+    },
+    {
+      "id": "r04",
+      "base": "slabB",
+      "name": "triangle forms dropped (most-triangle slab)",
+      "certSha256": "4b006c7250891c6bf64a48176c11437da2464d440d4e0d2e31e5363d8409616f",
+      "class": "kernel candidate",
+      "reasons": [
+        "weighted DD"
+      ],
+      "edits": {
+        "forms": [
+          7645,
+          9849
+        ]
+      }
+    },
+    {
+      "id": "r05",
+      "base": "slabC",
+      "name": "all cut theta set to 1",
+      "certSha256": "634279cc9359adf16611d064c75b5e994bdf5cf7b34cf26fa793c18f6d3a1117",
+      "class": "kernel candidate",
+      "reasons": [
+        "weighted DD"
+      ],
+      "edits": {
+        "theta": [
+          0,
+          294
+        ]
+      }
+    },
+    {
+      "id": "r06",
+      "base": "slabC",
+      "name": "all cut theta set to 0",
+      "certSha256": "1742e112e3aa473b6267a381bca43febbbb0013f29b6cbe90b6ae05aad96c9d5",
+      "class": "kernel candidate",
+      "reasons": [
+        "weighted DD"
+      ],
+      "edits": {
+        "theta": [
+          0,
+          294
+        ]
+      }
+    },
+    {
+      "id": "r07",
+      "base": "slabC",
+      "name": "slab widened: hi 9/20 → 1/2",
+      "certSha256": "4d2761bcfc39cf0b2e35983b3e7df0a76e6625f091cd74f342a0f6ddcb307017",
+      "class": "kernel candidate",
+      "reasons": [
+        "weighted DD"
+      ],
+      "edits": {}
+    },
+    {
+      "id": "r08",
+      "base": "slabC",
+      "name": "slab widened: lo 2/5 → 3/10",
+      "certSha256": "c6f784badd1cfd283b71706290ebbec97baf8b36e2700db1953975d886a76c58",
+      "class": "kernel candidate",
+      "reasons": [
+        "weighted DD"
+      ],
+      "edits": {}
+    },
+    {
+      "id": "r09",
+      "base": "slabC",
+      "name": "eps inflated with B (S + εI still PSD, honest bound negative)",
+      "certSha256": "4c5dac7c874dd775068c3de23315fc232bb81cf3f9b01876dff12f2881a02c35",
+      "class": "kernel candidate",
+      "reasons": [
+        "nonpositive bound"
+      ],
+      "edits": {}
+    },
+    {
+      "id": "r10",
+      "base": "slabC",
+      "name": "eps set to 0 (claim recomputed)",
+      "certSha256": "082f2b79499753c2c35d8ff2f875b6a32e4540327824e96aa069d683d93696eb",
+      "class": "kernel candidate",
+      "reasons": [
+        "weighted DD"
+      ],
+      "edits": {}
+    },
+    {
+      "id": "r11",
+      "base": "slabD",
+      "name": "one tri sign flipped to s1·s2·s3 = −1",
+      "certSha256": "93f8253c90beb53de652a29c94a338a8d747f71b86e5a55d538e7322d82cfd93",
+      "class": "kernel candidate",
+      "reasons": [
+        "triangle signs"
+      ],
+      "edits": {
+        "forms": [
+          1862,
+          1863
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "base": "slabC",
+      "name": "grid with the edge 68/1096 removed",
+      "certSha256": "1f569a7740b41cd81211c5d54168c121b3ba3ea3ef8c9f2bc77feb175ab01afc",
+      "class": "kernel candidate",
+      "reasons": [
+        "missing block edge 68"
+      ],
+      "edits": {}
+    },
+    {
+      "id": "r13",
+      "base": "inner",
+      "name": "grid with the edge 548/1096 removed",
+      "certSha256": "43b9ea33006625f17964a026dd0e842a8ca619c1f6baf88a86fcb05c470067c9",
+      "class": "kernel candidate",
+      "reasons": [
+        "missing block edge 548"
+      ],
+      "edits": {}
+    },
+    {
+      "id": "r14",
+      "base": "slabC",
+      "name": "PLANTED claim raised by 2^−100 over B − ε(1+n)",
+      "certSha256": "2be914f5a52c4014787f020f2c77236072af0739f3ec5691fc1050274d1e7b58",
+      "class": "kernel candidate",
+      "reasons": [
+        "claim exceeds bound"
+      ],
+      "edits": {}
+    },
+    {
+      "id": "r15",
+      "base": "slabC",
+      "name": "PLANTED negative multiplier (extra yy form, μ = −2^−100)",
+      "certSha256": "55a3d4796f88635735135378a8fcaf747092d71f1a6e19f51105a9470ca42df0",
+      "class": "kernel candidate",
+      "reasons": [
+        "negative multiplier"
+      ],
+      "edits": {
+        "forms": [
+          1998,
+          1998
+        ]
+      }
+    },
+    {
+      "id": "r16",
+      "base": "slabC",
+      "name": "PLANTED extra tri with s = (−1,−1,−1), μ = 2^−100",
+      "certSha256": "f0b6c8adb493ecd005d3d771bab890f2acad72fd6a600838d2b2304b8753fa9b",
+      "class": "kernel candidate",
+      "reasons": [
+        "triangle signs"
+      ],
+      "edits": {
+        "forms": [
+          1998,
+          1998
+        ]
+      }
+    },
+    {
+      "id": "r17",
+      "base": "slabC",
+      "name": "PLANTED extra tri with a repeated index, μ = 2^−100",
+      "certSha256": "7efce29556d6bb8a3e1c993ec306f71e8badcb5157ad7f641ce42d4ae8cb3979",
+      "class": "kernel candidate",
+      "reasons": [
+        "repeated triangle index"
+      ],
+      "edits": {
+        "forms": [
+          1998,
+          1998
+        ]
+      }
+    },
+    {
+      "id": "r18",
+      "base": "slabC",
+      "name": "PLANTED largest theta := 1 + 2^−100",
+      "certSha256": "3f958f16fef92cdd857ef7a5d7e4100c8583d6187aef2bebe174d9aa06cf3a61",
+      "class": "kernel candidate",
+      "reasons": [
+        "theta outside [0,1]"
+      ],
+      "edits": {
+        "theta": [
+          136,
+          137
+        ]
+      }
+    },
+    {
+      "id": "r19",
+      "base": "slabC",
+      "name": "PLANTED smallest theta := −2^−100",
+      "certSha256": "aa3e8c4638e249569efd23563eb5bd9306b39a65d9308dbec0dfb2ade546ef09",
+      "class": "kernel candidate",
+      "reasons": [
+        "theta outside [0,1]"
+      ],
+      "edits": {
+        "theta": [
+          89,
+          90
+        ]
+      }
+    },
+    {
+      "id": "r20",
+      "base": "slabC",
+      "name": "PLANTED unknown form kind \"zz\", μ = 2^−100",
+      "certSha256": "e9cfd167d5827dec6f8ce50e894a8895bde34e2d5077b5cca92833202c05960e",
+      "class": "kernel candidate",
+      "reasons": [
+        "unknown form kind"
+      ],
+      "edits": {
+        "forms": [
+          1998,
+          1998
+        ]
+      }
+    },
+    {
+      "id": "r21",
+      "base": "slabC",
+      "name": "PLANTED form index out of range, μ = 2^−100",
+      "certSha256": "867d7366fe56dfd3d96dc1a9bd1848cac2ed01b41a1893f5c7192f98ada0242e",
+      "class": "kernel candidate",
+      "reasons": [
+        "form index outside grid"
+      ],
+      "edits": {
+        "forms": [
+          1998,
+          1998
+        ]
+      }
+    },
+    {
+      "id": "r22",
+      "base": "slabC",
+      "name": "PLANTED eps = −2^−100",
+      "certSha256": "f622518c4e818c87c7a8bb5c333999d602b19459ea509ebb06765afda4e5f990",
+      "class": "kernel candidate",
+      "reasons": [
+        "negative epsilon"
+      ],
+      "edits": {}
+    },
+    {
+      "id": "r23",
+      "base": "slabC",
+      "name": "PLANTED theta list one short",
+      "certSha256": "9e0f7ee956619d3f4f90b0e30a6a03799cf72db472753144e3eee9efa2c8aa88",
+      "class": "kernel candidate",
+      "reasons": [
+        "theta length"
+      ],
+      "edits": {
+        "theta": [
+          293,
+          294
+        ]
+      }
+    },
+    {
+      "id": "r24",
+      "base": "slabC",
+      "name": "PLANTED malformed rational \"2.7e-4\" for B",
+      "certSha256": "95565757268b330f5159e5083b2eaa03c4c2ff718d190223c2e1c11c94d12274",
+      "class": "loader",
+      "reasons": [
+        "not a rational string: 2.7e-4"
+      ]
+    },
+    {
+      "id": "r25",
+      "base": "slabC",
+      "name": "PLANTED grid shifted off 1096",
+      "certSha256": "d687bf73f1dae3e541f7036cda931f952019dbeb9d7a72388ff42348e0775d83",
+      "class": "kernel candidate",
+      "reasons": [
+        "grid endpoints"
+      ],
+      "edits": {}
+    },
+    {
+      "id": "r26",
+      "base": "inner",
+      "name": "inner radius doubled (1/5 → 2/5)",
+      "certSha256": "473ebe8db872b58990a9c89e452557f16396fd88ed3823747a54bb5d669fdb26",
+      "class": "kernel candidate",
+      "reasons": [
+        "linear residual at 0 = -1318903299/5497558138880"
+      ],
+      "edits": {}
+    },
+    {
+      "id": "r27",
+      "base": "inner",
+      "name": "inner radius doubled, c rebalanced to keep the identity",
+      "certSha256": "6edaf59354a0aa839592a5440290bb219b9e7f7950d58aa05d5d02352f1fc932",
+      "class": "kernel candidate",
+      "reasons": [
+        "negative c[129]"
+      ],
+      "edits": {
+        "cc": [
+          0,
+          130
+        ]
+      }
+    },
+    {
+      "id": "r28",
+      "base": "inner",
+      "name": "inner linear budget overspent: c[0] made negative",
+      "certSha256": "895c9022fcabbb968f92044c9a2741ff5b64cae700dcb91c9efad06f131f2344",
+      "class": "kernel candidate",
+      "reasons": [
+        "negative c[0]"
+      ],
+      "edits": {
+        "cc": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "r29",
+      "base": "inner",
+      "name": "inner linear budget overspent: one λ doubled",
+      "certSha256": "c32f0e4b5f8cc971f456dff43a2391d2c01c8c6c01911325347330759b61953b",
+      "class": "kernel candidate",
+      "reasons": [
+        "linear residual at 0 = -3974269/549755813888"
+      ],
+      "edits": {
+        "lam": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "r30",
+      "base": "inner",
+      "name": "inner budget overspent, rebalanced: λ raised by c_i + 2^−100",
+      "certSha256": "51f74b0591c15538897a0ef05f7cf16d500eb27d6476a77d799ed37e7e622d5e",
+      "class": "kernel candidate",
+      "reasons": [
+        "negative c[0]"
+      ],
+      "edits": {
+        "lam": [
+          0,
+          1
+        ],
+        "cc": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "r31",
+      "base": "inner",
+      "name": "inner RLT multipliers dropped (lam = {})",
+      "certSha256": "e6cd7967fbaf3487045b9c16179c7337e140219669e89cbcdcf08042838fd95a",
+      "class": "kernel candidate",
+      "reasons": [
+        "linear residual at 0 = 36520431/274877906944"
+      ],
+      "edits": {
+        "lam": [
+          0,
+          14040
+        ]
+      }
+    },
+    {
+      "id": "r32",
+      "base": "inner",
+      "name": "inner RLT multipliers dropped, c rebalanced",
+      "certSha256": "a1fafd05e1d03019b49e6642c8cb9021c07a0d728324b9037033aa5069f746a1",
+      "class": "kernel candidate",
+      "reasons": [
+        "strict weighted DD"
+      ],
+      "edits": {
+        "lam": [
+          0,
+          14040
+        ],
+        "cc": [
+          0,
+          130
+        ]
+      }
+    },
+    {
+      "id": "r33",
+      "base": "inner",
+      "name": "inner nu dropped, c rebalanced",
+      "certSha256": "9c4b0a0fa7bb9e05ce5a30aaa717767fbfd18313cfef748eeaf79b4cdaff48e3",
+      "class": "kernel candidate",
+      "reasons": [
+        "strict weighted DD"
+      ],
+      "edits": {
+        "nu": [
+          0,
+          130
+        ],
+        "cc": [
+          0,
+          130
+        ]
+      }
+    },
+    {
+      "id": "r34",
+      "base": "inner",
+      "name": "inner N[0,0] raised by 1 (P loses it)",
+      "certSha256": "5f8f0bfb9e3842e79e4474cf4ebb0a82b5121f696225b449d3b043c6ed4dbf6c",
+      "class": "kernel candidate",
+      "reasons": [
+        "strict weighted DD"
+      ],
+      "edits": {
+        "nn": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "r35",
+      "base": "inner",
+      "name": "PLANTED inner N lower-triangular key",
+      "certSha256": "8bd03f21dd280aa3598d4f214b5cb9801398ea4b3936c6a42b99a501e2e1edc6",
+      "class": "kernel candidate",
+      "reasons": [
+        "lower-triangular N key 5,2"
+      ],
+      "edits": {
+        "nn": [
+          8507,
+          8507
+        ]
+      }
+    },
+    {
+      "id": "r36",
+      "base": "inner",
+      "name": "PLANTED inner kap = −2^−100",
+      "certSha256": "c72c323254c9a803dc931000919cd950a73a0e3a1bf52c6eeb8d9f8d538ff4b4",
+      "class": "kernel candidate",
+      "reasons": [
+        "negative kappa"
+      ],
+      "edits": {}
+    },
+    {
+      "id": "r37",
+      "base": "inner",
+      "name": "PLANTED inner nu[3] = −2^−100",
+      "certSha256": "58e17ca9cb451028fe793f93f5b98fe50c3fae16d6cf92f0fd3e8622ff5ec671",
+      "class": "kernel candidate",
+      "reasons": [
+        "negative nu[3]"
+      ],
+      "edits": {
+        "nu": [
+          3,
+          4
+        ]
+      }
+    }
+  ],
+  "covers": [
+    {
+      "entries": [
+        {
+          "base": "inner",
+          "region": [
+            "0",
+            "1/5"
+          ]
+        },
+        {
+          "base": "slabA",
+          "region": [
+            "1/5",
+            "3/10"
+          ]
+        },
+        {
+          "base": "slabC",
+          "region": [
+            "2/5",
+            "9/20"
+          ]
+        },
+        {
+          "base": "slabB",
+          "region": [
+            "3/10",
+            "2/5"
+          ]
+        },
+        {
+          "base": "slabD",
+          "region": [
+            "9/20",
+            "1/2"
+          ]
+        }
+      ],
+      "intervals": [
+        [
+          "0",
+          "1/5"
+        ],
+        [
+          "1/5",
+          "3/10"
+        ],
+        [
+          "2/5",
+          "9/20"
+        ],
+        [
+          "3/10",
+          "2/5"
+        ],
+        [
+          "9/20",
+          "1/2"
+        ]
+      ],
+      "gap": null,
+      "complete": true
+    },
+    {
+      "entries": [
+        {
+          "base": "inner",
+          "region": [
+            "0",
+            "1/5"
+          ]
+        },
+        {
+          "base": "slabA",
+          "region": [
+            "1/5",
+            "3/10"
+          ]
+        },
+        {
+          "base": "slabC",
+          "region": [
+            "2/5",
+            "9/20"
+          ]
+        },
+        {
+          "base": "slabD",
+          "region": [
+            "9/20",
+            "1/2"
+          ]
+        }
+      ],
+      "intervals": [
+        [
+          "0",
+          "1/5"
+        ],
+        [
+          "1/5",
+          "3/10"
+        ],
+        [
+          "2/5",
+          "9/20"
+        ],
+        [
+          "9/20",
+          "1/2"
+        ]
+      ],
+      "gap": [
+        "3/10",
+        "2/5"
+      ],
+      "complete": false,
+      "name": "RED slab [3/10, 2/5] missing from the cover → THEOREM REFUSED"
+    },
+    {
+      "entries": [
+        {
+          "base": "slabA",
+          "region": [
+            "1/5",
+            "3/10"
+          ]
+        },
+        {
+          "base": "slabC",
+          "region": [
+            "2/5",
+            "9/20"
+          ]
+        },
+        {
+          "base": "slabB",
+          "region": [
+            "3/10",
+            "2/5"
+          ]
+        },
+        {
+          "base": "slabD",
+          "region": [
+            "9/20",
+            "1/2"
+          ]
+        }
+      ],
+      "intervals": [
+        [
+          "1/5",
+          "3/10"
+        ],
+        [
+          "2/5",
+          "9/20"
+        ],
+        [
+          "3/10",
+          "2/5"
+        ],
+        [
+          "9/20",
+          "1/2"
+        ]
+      ],
+      "gap": [
+        "0",
+        "1/5"
+      ],
+      "complete": false,
+      "name": "RED inner certificate missing → THEOREM REFUSED"
+    },
+    {
+      "entries": [
+        {
+          "base": "inner",
+          "region": [
+            "0",
+            "1/5"
+          ]
+        },
+        {
+          "base": "slabA",
+          "region": [
+            "1/5",
+            "3/10"
+          ]
+        },
+        {
+          "base": "slabC",
+          "region": [
+            "2/5",
+            "9/20"
+          ]
+        },
+        {
+          "base": "slabB",
+          "region": [
+            "3/10",
+            "2/5"
+          ]
+        },
+        {
+          "base": "slabD",
+          "region": [
+            "2/5",
+            "9/20"
+          ]
+        }
+      ],
+      "intervals": [
+        [
+          "0",
+          "1/5"
+        ],
+        [
+          "1/5",
+          "3/10"
+        ],
+        [
+          "2/5",
+          "9/20"
+        ],
+        [
+          "3/10",
+          "2/5"
+        ],
+        [
+          "2/5",
+          "9/20"
+        ]
+      ],
+      "gap": [
+        "9/20",
+        "1/2"
+      ],
+      "complete": false,
+      "name": "RED last slab relabelled [2/5, 9/20] (cover stops short of 1/2) → THEOREM REFUSED"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+# The replay of delta3-hol4 on every push: Poly/ML and HOL4 built from source at the commits in PINS.json (cached,
+# keyed on PINS.json and toolchain/setup.sh), then replay.sh — every file against SHA256SUMS, the checker, the 52
+# kernel runs, the 42 lemma proofs, the three soundness theorems, the Layer-1 theorem and its read-back.
+# The CakeML job (replay.sh --cakeml) is run by hand or weekly: it builds its own toolchain and CakeML's basis
+# (about 1 h of the basis alone on 8 cores, 10.7 GB peak on the pod of 2026-11-25), which fits a standard runner's
+# 6 h and 16 GB by that estimate but has not been run on one.
+name: replay
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * 1'
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      PREFIX: /home/runner/toolchain
+    steps:
+      - uses: actions/checkout@v4
+      - name: system packages
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq build-essential git curl ca-certificates libgmp-dev time python3 pkg-config
+      - name: toolchain cache (restore)
+        id: cache
+        uses: actions/cache/restore@v4
+        with:
+          path: /home/runner/toolchain
+          key: toolchain-${{ runner.os }}-${{ hashFiles('PINS.json', 'toolchain/setup.sh') }}
+      - name: Poly/ML and HOL4 at the pinned commits
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: SKIP_APT=1 bash toolchain/setup.sh
+      - name: toolchain cache (save, before the replay, so that a failing replay keeps it)
+        if: steps.cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: /home/runner/toolchain
+          key: toolchain-${{ runner.os }}-${{ hashFiles('PINS.json', 'toolchain/setup.sh') }}
+      - name: replay
+        run: |
+          export PATH="$PREFIX/polyml-install/bin:$PATH"
+          export LD_LIBRARY_PATH="$PREFIX/polyml-install/lib"
+          HOLDIR="$PREFIX/HOL" ./replay.sh
+      - name: the replay's records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: replay-records
+          path: |
+            _replay/replay.log
+            _replay/times.tsv
+            _replay/verdicts.tsv
+            _replay/check.out
+          if-no-files-found: warn
+  cakeml:
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    needs: replay
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - name: CakeML toolchain (Poly/ML, HOL4, CakeML v3671 and its basis, the released cake binary)
+        run: sudo env PREFIX=/root/cm bash cakeml/setup-cakeml.sh
+      - name: replay, then the binary on the 52 inputs
+        run: |
+          sudo env PATH="/root/cm/polyml-install/bin:/root/cm/HOL/bin:$PATH" LD_LIBRARY_PATH=/root/cm/polyml-install/lib \
+            HOLDIR=/root/cm/HOL PREFIX=/root/cm CAKEML_SETUP_DONE=1 ./replay.sh --cakeml

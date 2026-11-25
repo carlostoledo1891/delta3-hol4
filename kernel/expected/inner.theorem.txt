@@ -1,0 +1,2 @@
+⊢ inner_check inner_ab inner_cut inner_full inner_grid 1 5 inner_lam inner_nu
+    0 1 inner_nn inner_cc 2476408049007329280 73 inner_ds inner_L ⇔ T
